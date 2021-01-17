@@ -3,7 +3,7 @@
 <footer class="main-footer">
     <section class="row">
         <div class="container">
-            <h4>Knife Sharpening in Traverse City, Michigan and Surrounding Areas!</h4>            
+            <h4>Knife Sharpening In Traverse City & The Following Areas:</h4>            
         </div>
     </section>
     <section class="row">
@@ -28,16 +28,23 @@
         </div>
     </section>
     <section class="row footer-links">
-        <ul class="fa-ul">
-            {{range .Site.Pages }}
+        <ul>
+            {{range .Site.Menus.main }}
             <li>
-                <span class="fa-li">
-                    <i class="fas fa-chevron-right"></i>
-                </span>
-                <a href="{{ .Permalink }}">{{.Title }}</a>
+                <a href="{{ .URL }}">{{ .Name }}</a>
             </li>
             {{ end }}
         </ul>
+        <section class="row address">
+            <address>
+                <p>On Point Cutlery</p>
+                <p>8921 Gilbert Trail</p>
+                <p>PO BOX 291</p>
+                <p>Traverse City, Michigan 49685</p>
+                 <p>Phone: <a href="tel:+12316761314">231 676 1314</a> </p>
+                </address> 
+                    
+        </section>
     </section>
     <section class="row">
         <div class="container">

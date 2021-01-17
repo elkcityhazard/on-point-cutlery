@@ -1,3 +1,22 @@
-{{ define "main" }}
+{{ define "main"}}
+<main class="single-page">
+  <header>
+    <h1>{{ .Title }}</h1>
+  </header>
+  <div class="row">
+     
+          {{ .Content }}
+      
+  </div>
+  <div class="row">
+    <ul>
+      {{ range .Pages }}
+      <li>
+        <a href="{{ .Permalink}}" title="{{ .Title }}">{{ .Title }}</a>
+      </li>
+      {{ end }}
+    </ul>
+  </div>
+</main>
 
 {{ end }}
