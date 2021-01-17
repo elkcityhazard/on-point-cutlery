@@ -1,0 +1,59 @@
+{{ partial "components/cta.html" . }}
+
+<footer class="main-footer">
+    <section class="row">
+        <div class="container">
+            <h4>Knife Sharpening in Traverse City, Michigan and Surrounding Areas!</h4>            
+        </div>
+    </section>
+    <section class="row">
+        <div class="container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d45337.07039236789!2d-85.64002681197017!3d44.74885204923433!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x881e32b2d7da29dd%3A0x47bfdc3f3f745621!2sTraverse%20City%2C%20MI!5e0!3m2!1sen!2sus!4v1610551781092!5m2!1sen!2sus" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        </div>
+    </section>
+    <section class="row">
+        <div class="container">
+            {{ range .Site.Data.serviceArea }}
+            <div class="col">
+                <header>
+                    <h5>{{ .county }}</h5>
+                </header>
+                <ul>
+                    {{ range .cities }}
+                    <li>{{ . }}</li>
+                    {{ end }}
+                </ul>
+            </div>
+            {{ end }}
+        </div>
+    </section>
+    <section class="row footer-links">
+        <ul class="fa-ul">
+            {{range .Site.Pages }}
+            <li>
+                <span class="fa-li">
+                    <i class="fas fa-chevron-right"></i>
+                </span>
+                <a href="{{ .Permalink }}">{{.Title }}</a>
+            </li>
+            {{ end }}
+        </ul>
+    </section>
+    <section class="row">
+        <div class="container">
+            <p>&copy; <span id="year"></span>  On Point Cutlery - Residential & Commercial Knife Sharpening Traverse City, Michigan</p>
+        </div>
+        <div class="container">
+            <p>Site maintained by <a href="https://andrew-mccall.com/" title="Andrew M McCall">Andrew M McCall</a></p>
+        </div>
+    </section>
+    <section class="row">
+        <div class="container">
+        </div>
+    </section>
+</footer>
+
+<script async="true">
+    let year = new Date().getFullYear();
+    document.getElementById('year').textContent = year;
+</script>

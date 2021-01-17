@@ -1,0 +1,18 @@
+{
+    "0" : {
+        "name" : "Jane Doe",
+        "imgSrc" : "images/testimonials/portrait-1.jpg",
+        "text" : "I would never use another service!"
+    },
+    "1" : {
+        "name" : "John Doe",
+        "imgSrc" : "images/testimonials/portrait-1.jpg",
+        "text" : "It is so conveniet and has made me rich!"
+    },
+    "2" : {
+        "name" : "Sally Smith",
+        "imgSrc" : "images/testimonials/portrait-1.jpg",
+        "text" : "I can now stop wasting time sharpening my own knives.  Very affordable, too!  Thank you On Point Cutlery for helping our business run more efficiently"
+    }
+
+}

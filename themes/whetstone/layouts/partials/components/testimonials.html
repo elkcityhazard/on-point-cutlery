@@ -1,0 +1,75 @@
+<div class="row">
+    <div class="container">
+      <h2>Customer Testimonials</h2>
+    </div>
+  </div>
+<section class="row slides">
+    <div class="container inner-slides" id="imgContainer">
+        {{ range .Site.Data.testimonials  }}
+        <div class="col-100 slide">
+            <div class="row">
+                <div class="col-50">
+                    <figure>
+                        <img src="{{ .Site.BaseURL }}{{ .imgSrc }}" alt="{{ .name }}">
+                        <figcaption><span>{{ .name }}</span></figcaption>
+                    </figure>
+                </div>
+                <div class="col-50">
+                    <span class="testimonial">{{ .text }} </span>
+                </div>
+            </div>
+        </div>
+         {{ end }}
+    </div>
+    <!--
+        
+    <div class="buttons-container">
+        <button id="left">Prev</button>
+        <button id="right">Next</button>
+    </div>
+-->
+</section>
+
+<script>
+    const imgCont = document.getElementById('imgContainer');
+    const slides = document.querySelectorAll('.slide');
+    const leftBtn = document.getElementById('left');
+    const rightBtn = document.getElementById('right');
+    let innerSlide = document.querySelector('.inner-slides')
+    let interval = setInterval(run, 7000);
+    let slideCounter = 0;
+
+    run();
+
+    function run() {
+        slideCounter++;
+        changeImage();
+        }
+
+    function changeImage() {
+        if (slideCounter > slides.length - 1) {
+            slideCounter = 0;
+        } else if (slideCounter < 0) {
+            slideCounter = slides.length - 1;
+        }
+        imgCont.style.transform = `translateX(${-slideCounter * 100}%)`;
+    }
+
+    function resetInterval() {
+        clearInterval(interval);
+        interval = setInterval(run, 2000);
+    }
+
+    // rightBtn.addEventListener('click', () => {
+    //     slideCounter++;
+    //     changeImage();
+    //     resetInterval();
+    // })
+
+    // leftBtn.addEventListener('click', () => {
+    //     slideCounter--;
+    //     changeImage();
+    //     resetInterval();
+    // })
+    
+</script>

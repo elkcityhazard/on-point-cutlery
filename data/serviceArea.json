@@ -1,0 +1,38 @@
+{
+    "0" : {
+        "county" : "Grand Traverse County",
+        "cities" : ["Traverse City", "Fife Lake", "Kingsley", "Interlochen", "Grawn"]
+    },
+    "1" : {
+        "county" : "Leelanu County",
+        "cities" : ["Empire", "Northport", "Suttons Bay", "Cedar", "Glen Arbor"]
+    },
+    "2" : {
+        "county" : "Benzie County",
+        "cities" : ["Frankfort", "Benzonia", "Beulah", "Lake Ann", "Honor"]
+    },
+    "3" : {
+        "county" : "Kalkaska County",
+        "cities" : ["Kalkaska", "Rapid City", "Bear Lake"]
+    },
+    "4" : {
+        "county" : "Antrim County",
+        "cities" : ["Bellaire", "Central Lake", "Elk Rapids", "Ellsworth", "Mancelona"]
+    },
+    "5" : {
+        "county" : "Otsego County",
+        "cities" : ["Gaylord", "Vanderbilt", "Livingston Township", "Bagley Township"]
+    },
+    "6" : {
+        "county" : "Cheboygan County",
+        "cities" : ["Cheboygan", "Mackinaw City", "Wolverine", "Indian River"]
+    }, 
+    "7" : {
+        "county" : "Emmet County",
+        "cities" : ["Harbor Springs", "Petoskey", "Alanson", "Mackinaw City", "Pellston"]
+    },
+    "8" : {
+        "county" : "Charlevoix County",
+        "cities" : ["Boyne City", "Charlevoix", "East Jordan", "Boyne Falls", "Walloon Lake"]
+    } 
+}

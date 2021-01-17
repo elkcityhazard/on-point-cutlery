@@ -1,0 +1,55 @@
+baseURL = "/"
+languageCode = "en-us"
+title = "On Point Cutlery"
+theme = "whetstone"
+
+
+[params]
+    author = "Andrew M McCall"
+    description =  "On Point Cutlery offers expert knife sharpening and restoration services to both the professional and home chef in Traverse City, Michigan.  We come to your business or home and sharpen your knives and tools so they are like new."
+
+
+[menu]
+
+  [[menu.main]]
+    identifier = "posts"
+    name = "Blog"
+    pre = "&#8250;"
+    title = "Blog"
+    url = "/blog/"
+    weight = 5
+  [[menu.main]]
+    identifier = "about-us"
+    name = "About Us"
+    pre = "&#8250;"
+    title = "About Us"
+    url = "/about-us/"
+    weight = 2
+  [[menu.main]]
+    identifier = "contact-us"
+    name = "Contact Us"
+    pre = "&#8250;"
+    title = "Contact Us"
+    url = "/contact-us/"
+    weight = 5
+  [[menu.main]]
+    identifier = "Home"
+    name = "Home"
+    pre = "&#8250;"
+    title = "Home"
+    url = "/"
+    weight = 1
+  [[menu.main]]
+    identifier = "Gallery"
+    name = "Gallery"
+    pre = "&#8250;"
+    title = "Gallery"
+    url = "/gallery"
+    weight = 4
+  [[menu.main]]
+    identifier = "Services"
+    name = "Services"
+    pre = "&#8250;"
+    title = "Services"
+    url = "/services"
+    weight = 3
