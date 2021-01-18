@@ -6,6 +6,7 @@ $good-night: rgba(72, 84, 96, 1);
 $london-square: rgba(128, 142, 155, 1);
 $minty-green: rgba(11, 232, 129, 1);
 $spiro-disco-ball: rgba(15, 188, 249,1.0);
+$hint-of-elusive-pink: rgba(210, 218, 226,0.25);
 
 
 /*********************
@@ -201,6 +202,12 @@ p {
         &:hover {
           box-shadow: 0px 11px 20px -4px rgba(41, 137, 216, 0.53);
           transform: scale(1.04);
+        }
+        .fas {
+          transition: color 250ms ease-in-out 0.2s;
+        }
+        &:hover  .fas {
+          color: $spiro-disco-ball;
         }
         header {
           margin-bottom: 1em;
@@ -584,13 +591,14 @@ main {
       .footer-links {
         align-items: start;
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-columns: 2fr 1fr 1fr 2fr;
         grid-template-rows: 1fr;
-        justify-content: center;
+        justify-items: center;
         ul {
-          flex-direction: row;
+          flex-direction: column;
+          flex-wrap: wrap;
           grid-column-start: 3;
-          grid-column-end: 6;
+          grid-column-end: 4;
           grid-row-start: 1;
           grid-row-end: 2;
           list-style: none;
@@ -599,10 +607,12 @@ main {
           
           li {
             display: inline;
-            margin: 0;
+            margin: 0 auto;
+            max-width: 75px;
             padding: 0;
+            text-align: left;
             a {
-              font-size: 12px;
+              font-size: 14px;
             }
           }
         }
@@ -610,15 +620,18 @@ main {
           grid-column-start: 2;
           grid-column-end: 3;
           padding: 0;
+          padding-top: .5em;
           p {
             font-size: 14px;
             padding: 0;
+            text-align: left;
           }
         }
       }
       .row {
         .container {
           p {
+            font-size: 12px;
             text-align: center;
           }
         }

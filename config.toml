@@ -13,10 +13,10 @@ theme = "whetstone"
 
   [[menu.main]]
     identifier = "posts"
-    name = "Blog"
+    name = "News"
     pre = "&#8250;"
-    title = "Blog"
-    url = "/blog/"
+    title = "News & Updates"
+    url = "/updates/"
     weight = 5
   [[menu.main]]
     identifier = "about-us"

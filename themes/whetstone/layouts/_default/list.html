@@ -8,15 +8,36 @@
           {{ .Content }}
       
   </div>
-  <div class="row">
-    <ul>
-      {{ range .Pages }}
-      <li>
-        <a href="{{ .Permalink}}" title="{{ .Title }}">{{ .Title }}</a>
-      </li>
-      {{ end }}
-    </ul>
+ <div class="row">
+  <div class="container" style="flex-wrap: wrap;">
+    {{ range .Pages }}
+    <div class="col-50" style="flex-direction: column;">
+      <a href="{{ .Permalink }}" title=" {{ .Name }}">
+        <div class="card">
+          <header class="card-header">
+            <h3>{{ .Name }}</h3>
+          </header>
+          <div class="card-body">
+            <p>{{.Content | safeHTML | truncate 140 }}</p>
+          </div>
+        </div>
+      </a>
+      <footer class="card-footer">
+        <div class="col-33 w-100">
+          <a href="{{ .Permalink }}">
+            <button type="button" class="read-more">{{ "read more" | safeHTML }}</button>
+          </a>
+        </div>
+      </footer>
+    </div>
+    {{ end }}
   </div>
+  </div>
+  <!-- <div class="row">
+    <div class="col-33">
+      <a href="tel:+12316761314"><button class="read-more">Call Now</button></a>
+    </div>
+</div> -->
 </main>
 
 {{ end }}

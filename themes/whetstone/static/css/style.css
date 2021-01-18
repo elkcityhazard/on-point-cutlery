@@ -189,6 +189,12 @@ p {
   box-shadow: 0px 11px 20px -4px rgba(41, 137, 216, 0.53);
   transform: scale(1.04);
 }
+.wrapper .row .col-33 .card .fas {
+  transition: color 250ms ease-in-out 0.2s;
+}
+.wrapper .row .col-33 .card:hover .fas {
+  color: #0fbcf9;
+}
 .wrapper .row .col-33 .card header {
   margin-bottom: 1em;
 }
@@ -520,14 +526,15 @@ main .homepage-header {
   .wrapper .main-footer .footer-links {
     align-items: start;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 2fr 1fr 1fr 2fr;
     grid-template-rows: 1fr;
-    justify-content: center;
+    justify-items: center;
   }
   .wrapper .main-footer .footer-links ul {
-    flex-direction: row;
+    flex-direction: column;
+    flex-wrap: wrap;
     grid-column-start: 3;
-    grid-column-end: 6;
+    grid-column-end: 4;
     grid-row-start: 1;
     grid-row-end: 2;
     list-style: none;
@@ -536,22 +543,27 @@ main .homepage-header {
   }
   .wrapper .main-footer .footer-links ul li {
     display: inline;
-    margin: 0;
+    margin: 0 auto;
+    max-width: 75px;
     padding: 0;
+    text-align: left;
   }
   .wrapper .main-footer .footer-links ul li a {
-    font-size: 12px;
+    font-size: 14px;
   }
   .wrapper .main-footer .footer-links .address {
     grid-column-start: 2;
     grid-column-end: 3;
     padding: 0;
+    padding-top: 0.5em;
   }
   .wrapper .main-footer .footer-links .address p {
     font-size: 14px;
     padding: 0;
+    text-align: left;
   }
   .wrapper .main-footer .row .container p {
+    font-size: 12px;
     text-align: center;
   }
 }
