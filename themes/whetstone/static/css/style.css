@@ -542,7 +542,7 @@ main .homepage-header {
     list-style: none;
     justify-content: flex-start;
     margin: 0 auto;
-    max-height: 125px;
+    max-height: 100px;
   }
   .wrapper .main-footer .footer-links ul li {
     display: inline;
