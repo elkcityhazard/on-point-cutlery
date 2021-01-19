@@ -1,15 +1,35 @@
 ---
 title: Commercial Knife Swap Program
-description: "Description Here"
+description: "On Point Cutlery Knife Swap Program is cheaper than owning and maintaining your own set of knives and allows you to focus more on creating superior dishes."
+publishDate: 2021-01-18
 ---
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa massa ultricies mi quis hendrerit dolor. Id aliquet lectus proin nibh nisl. Sed ullamcorper morbi tincidunt ornare. Turpis egestas maecenas pharetra convallis posuere morbi. Porta non pulvinar neque laoreet suspendisse interdum consectetur. Vitae auctor eu augue ut lectus arcu bibendum at varius. Faucibus in ornare quam viverra orci sagittis eu volutpat. Accumsan tortor posuere ac ut consequat. Sed faucibus turpis in eu mi bibendum neque egestas congue. Lacus laoreet non curabitur gravida arcu ac tortor dignissim convallis. Vestibulum mattis ullamcorper velit sed ullamcorper morbi tincidunt ornare massa. Vel facilisis volutpat est velit egestas dui. Quis auctor elit sed vulputate mi.
+On Point Cutlery knife sharpening service and exchange program is designed for commercial kitchens, restaurants, and supermarkets. Running your business can be even easier with our straight forward knife exchange program. Sharp knives and sharp blades will be delivered to you on a regular schedule.
 
-### H3 Tags Are Cool
+### Traverse City Commercial Knife Exchange
 
-Eget dolor morbi non arcu risus quis. Nibh ipsum consequat nisl vel. Id semper risus in hendrerit gravida rutrum. Tristique nulla aliquet enim tortor at. Magna eget est lorem ipsum. Aenean et tortor at risus viverra. Odio ut enim blandit volutpat maecenas volutpat blandit aliquam etiam. Aliquam vestibulum morbi blandit cursus risus at ultrices. Massa tincidunt nunc pulvinar sapien et ligula ullamcorper malesuada proin. Est ultricies integer quis auctor. Ultrices eros in cursus turpis massa tincidunt dui ut ornare. Donec ultrices tincidunt arcu non sodales neque. Elementum nibh tellus molestie nunc non blandit massa enim. Luctus accumsan tortor posuere ac ut consequat semper viverra. Mus mauris vitae ultricies leo. Imperdiet nulla malesuada pellentesque elit eget gravida cum sociis natoque. Pharetra pharetra massa massa ultricies mi quis hendrerit dolor magna. Consectetur adipiscing elit ut aliquam purus sit amet luctus venenatis. Enim lobortis scelerisque fermentum dui faucibus. Malesuada bibendum arcu vitae elementum curabitur.
+- We will assist you in creating a cutlery service program that is customized for the needs of your kitcken
+- While one set of knifes is in use at your kitchen, another set is at our service center being sharpened and repaired. 
+- Knife exchange and knife services are set to a predetermined day - usually every two weeks.  
+- An On Point Cutlery Representative will gather your used knives and prepare them for sharpening
+- We replace any worn out knives with brand new ones when the time comes - no need to re-purchase expensive kitchen knives
 
-Et egestas quis ipsum suspendisse ultrices gravida dictum fusce. Hac habitasse platea dictumst quisque. A scelerisque purus semper eget duis at tellus at. Feugiat nisl pretium fusce id velit ut tortor. Viverra accumsan in nisl nisi scelerisque eu. Faucibus a pellentesque sit amet. Velit laoreet id donec ultrices tincidunt arcu non sodales. Quis vel eros donec ac odio tempor orci dapibus. Scelerisque eleifend donec pretium vulputate sapien. Amet cursus sit amet dictum sit. Odio euismod lacinia at quis risus sed vulputate. Leo urna molestie at elementum eu. Lectus proin nibh nisl condimentum id venenatis. Lobortis scelerisque fermentum dui faucibus in ornare quam.
 
-Vitae suscipit tellus mauris a diam maecenas sed. Sed risus pretium quam vulputate dignissim suspendisse in est ante. Tempus urna et pharetra pharetra massa massa ultricies. Lectus mauris ultrices eros in cursus turpis massa tincidunt. Sed viverra tellus in hac habitasse platea dictumst. Massa id neque aliquam vestibulum morbi. Ac turpis egestas sed tempus urna et. Arcu non odio euismod lacinia. Vitae auctor eu augue ut lectus arcu bibendum at. Ornare quam viverra orci sagittis eu. Facilisi cras fermentum odio eu feugiat. Mauris a diam maecenas sed enim ut.
+### Traverse City Commercial Knife Services
 
-Dignissim sodales ut eu sem integer vitae justo. Malesuada fames ac turpis egestas maecenas pharetra convallis. Nisl pretium fusce id velit ut tortor pretium viverra. Viverra nibh cras pulvinar mattis. Iaculis urna id volutpat lacus laoreet. Ultrices vitae auctor eu augue ut lectus arcu bibendum. Tortor at auctor urna nunc id cursus. Non tellus orci ac auctor augue mauris augue. Egestas pretium aenean pharetra magna ac placerat. Sollicitudin ac orci phasellus egestas tellus. Vel risus commodo viverra maecenas accumsan lacus vel facilisis volutpat. Sit amet purus gravida quis. Pulvinar etiam non quam lacus suspendisse faucibus interdum.
+We take pride in servicing your businesses knives!  Here are some great advantages to participating in our commercial knife exchange service:
+
+- Sharp knives equal safe knives
+  - A common cause of workplace lacerations is from using a dull knife.
+- Convenient
+  - Receive sharp knives on a predetermined schedule.  Stop wasting time sharpening your own knives.
+-  Easy To Manage
+  - Our managed knife subscription program does the work for you.  We have helped businesses in Northern Michigan efficiently streamline their operations and look forward to doing the same for you.  
+- Efficiency
+  - We know that efficiency is key to being successful. On Point Cutlery can help you do more in less time, help your kitchen handle rushes more efficiently, and turn more covers.
+- Economical
+  - On Point Cutlery Knife Swap Program is cheaper than owning and maintaining your own set of knives and allows you to focus more on creating superior dishes.
+
+
+### Professional Knife Services
+
+On Point Cutlery has been in business since 2013 offering professional commercial knife services.  Our restaurant knife service will keep your knifes sharp and your costs low.  We are a knife sharpening company based in Traverse City, Michigan and we offer a variety of knife rental services to fit your needs.  

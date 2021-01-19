@@ -7,7 +7,6 @@
     {{ if .IsHome}} {{ .Site.Title }} {{ else }}  {{ .Params.title }} - {{ .Site.Title}}  {{ end }}
     {{ end }}
 </title>
-
 <!-- Preconnects-->
 <link rel="preconnect" href="https://maps.googleapis.com" />
 <link rel="preconnect" href="https://maps.gstatic.com" />
@@ -17,3 +16,5 @@
 <link rel="stylesheet" href="{{ .Site.BaseURL }}css/normalize.css">
 <link rel="stylesheet" href="{{ .Site.BaseURL}}css/style.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+
+{{ if eq .Page.URL "/contact-us/" }} <link rel="stylesheet" href="{{.Site.BaseURL }}css/contact.css"> {{ end }}

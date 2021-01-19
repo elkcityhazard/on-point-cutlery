@@ -1,6 +1,6 @@
 <div class="row">
     <div class="container" style="flex-wrap: wrap;">
-      {{ range .Pages }}
+      {{ range .Section "posts" .Pages }}
       <div class="col-50" style="flex-direction: column;">
         <a href="{{ .Permalink }}" title=" {{ .Name }}">
           <div class="card">

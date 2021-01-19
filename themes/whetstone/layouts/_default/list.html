@@ -16,6 +16,7 @@
         <div class="card">
           <header class="card-header">
             <h3>{{ .Name }}</h3>
+            <span>{{ .PublishDate.Format "Monday, January 1st, 2006" }}</span>
           </header>
           <div class="card-body">
             <p>{{.Content | safeHTML | truncate 140 }}</p>
@@ -33,11 +34,7 @@
     {{ end }}
   </div>
   </div>
-  <!-- <div class="row">
-    <div class="col-33">
-      <a href="tel:+12316761314"><button class="read-more">Call Now</button></a>
-    </div>
-</div> -->
+  
 </main>
 
 {{ end }}

@@ -1,0 +1,41 @@
+{{ define "main"}}
+<main class="single-page">
+  <header>
+    <h1>{{ .Title }}</h1>
+  </header>
+  <div class="row">
+     
+          {{ .Content }}
+      
+  </div>
+  <div class="row">
+    <form id="form" action="https://api.formcake.com/api/form/83bffdb2-8ad0-433d-a457-3d60b60bd588/submission" method="POST" class="contact-form">
+        <fieldset>
+            <legend>Contact Details</legend>
+            <div class="form-control">
+                <label for="name">Name: </label>
+                <input type="text" name="name" id="userName">
+                <small class="error"></small>
+            </div>
+            <div class="form-control">
+                <label for="email">Email: </label>
+                <input type="email" name="email" id="userEmail">
+                <small class="error"></small>
+            </div>
+            <div class="form-control">
+                <label for="message">Message: </label>
+                <textarea name="message" id="userMessage" cols="30" rows="10"></textarea>
+                <small class="error"></small>
+            </div>
+            <div class="form-control">
+                <button type="submit">Submit</button>
+                <button type="reset">Reset</button>
+            </div>
+        </fieldset>
+    </form>
+  </div>
+</main>
+
+
+
+{{ end }}
