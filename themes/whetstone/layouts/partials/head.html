@@ -1,7 +1,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="{{if .IsHome}}{{ $.Site.Params.description }}{{else}}{{.Description}}{{end}}" />
-{{ if eq .Page.URL "/success/" }}
+{{ if eq .Page.Permalink "/success/" }}
 <meta name="robots" content="noindex, nofollow"><!-- All Search Engines -->
 <meta name="googlebot" content="noindex, nofollow">
 
@@ -23,5 +23,5 @@
 <link rel="stylesheet" href="{{ .Site.BaseURL}}css/style.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
 
-{{ if eq .Page.URL "/contact-us/" }} <link rel="stylesheet" href="{{.Site.BaseURL }}css/contact.css"> {{ end }}
-{{ if eq .Page.URL "/gallery/" }} <link rel="stylesheet" href="{{.Site.BaseURL }}css/gallery.css"> {{ end }}
+{{ if eq .Page.Permalink "/contact-us/" }} <link rel="stylesheet" href="{{.Site.BaseURL }}css/contact.css"> {{ end }}
+{{ if eq .Page.Permalink "/gallery/" }} <link rel="stylesheet" href="{{.Site.BaseURL }}css/gallery.css"> {{ end }}
