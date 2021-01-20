@@ -53,3 +53,10 @@ theme = "whetstone"
     title = "Services"
     url = "/services"
     weight = 3
+  [[menu.main]]
+    identifier = "Schedule"
+    name = "Book Now"
+    pre = "&#8250;"
+    title = "Schedule"
+    url = "/schedule"
+    weight = 3
