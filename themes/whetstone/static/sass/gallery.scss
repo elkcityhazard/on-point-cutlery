@@ -1,0 +1,50 @@
+.single-page {
+    .carousel-container {
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+        text-align: center;
+        .inner-container {
+            display: flex;
+            transition: transform all 250ms ease;
+            -webkit-transition: all 250ms ease;
+            .image-container {
+                align-items: center;
+                display: flex;
+                flex-direction: column;
+                flex-wrap: nowrap;
+                min-width: 100%;
+                justify-content: center;
+                img {
+                    height: auto;
+                    max-height: 66vh;
+                    max-width: 500px;
+                    object-fit: cover;                   
+                }
+                figcaption {
+
+                }
+            }
+        }
+        .btn-container {
+            #prev,
+            #next {
+                background: #fff;
+                border: none;
+                font-size: 2em;
+                font-weight: 800;
+                padding: 1em 1.5em;
+                margin: auto;
+                transition: all 250ms ease-in-out;
+                -webkit-transition: all 250ms ease-in-out;
+                &:hover {
+                    color: rgba(15, 188, 249,1.0);
+                    text-shadow: 2px 2px 10px rgba(0,0,0,0.15);
+                }
+            }
+        }
+    }
+    .lightbox {
+        display: none;
+    }
+}

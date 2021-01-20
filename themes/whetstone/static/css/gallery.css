@@ -1,0 +1,46 @@
+.single-page .carousel-container {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+.single-page .carousel-container .inner-container {
+  display: flex;
+  transition: transform all 250ms ease;
+  -webkit-transition: all 250ms ease;
+}
+.single-page .carousel-container .inner-container .image-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  min-width: 100%;
+  justify-content: center;
+}
+.single-page .carousel-container .inner-container .image-container img {
+  height: auto;
+  max-height: 66vh;
+  max-width: 500px;
+  object-fit: cover;
+}
+.single-page .carousel-container .btn-container #prev,
+.single-page .carousel-container .btn-container #next {
+  background: #fff;
+  border: none;
+  font-size: 2em;
+  font-weight: 800;
+  padding: 1em 1.5em;
+  margin: auto;
+  transition: all 250ms ease-in-out;
+  -webkit-transition: all 250ms ease-in-out;
+}
+.single-page .carousel-container .btn-container #prev:hover,
+.single-page .carousel-container .btn-container #next:hover {
+  color: #0fbcf9;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.15);
+}
+.single-page .lightbox {
+  display: none;
+}
+
+/*# sourceMappingURL=gallery.css.map */

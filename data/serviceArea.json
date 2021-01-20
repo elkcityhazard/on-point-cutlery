@@ -21,7 +21,7 @@
     },
     "5" : {
         "county" : "Otsego County",
-        "cities" : ["Gaylord", "Vanderbilt", "Livingston Township", "Bagley Township"]
+        "cities" : ["Gaylord", "Vanderbilt"]
     },
     "6" : {
         "county" : "Cheboygan County",
@@ -34,5 +34,9 @@
     "8" : {
         "county" : "Charlevoix County",
         "cities" : ["Boyne City", "Charlevoix", "East Jordan", "Boyne Falls", "Walloon Lake"]
-    } 
+    },
+    "9" : {
+        "county" : "Crawford County",
+        "cities" : ["Grayling"]
+    }
 }
