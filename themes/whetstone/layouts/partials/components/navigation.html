@@ -11,7 +11,7 @@
   {{ range .Site.Menus.main }}
     {{ if .HasChildren }}
         <li class=" {{ if $currentPage.HasMenuCurrent "main" . }} active {{ end }}">
-            <a href="{{ .Permalink }}" title="{{ .Name }}">
+            <a href="{{ .URL }}" title="{{ .Name }}">
                 {{ .Pre }}
                 <span>
                     {{ .Name }}
@@ -21,13 +21,13 @@
         <ul class="sub-menu">
             {{ range .Children }}
             <li class="{{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}">
-                <a href="{{ .Permalink }}">{{ .Name }}</a>
+                <a href="{{ .URL }}">{{ .Name }}</a>
             </li>
         {{ end }}
     </ul>
 {{ else }}
     <li>
-        <a href="{{ .Permalink }}">
+        <a href="{{ .URL }}">
             {{ .Pre }}
             <span>{{ .Name }}</span>
         </a>
