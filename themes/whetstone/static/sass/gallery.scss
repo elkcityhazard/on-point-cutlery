@@ -1,50 +1,106 @@
 .single-page {
-    .carousel-container {
-        width: 100%;
+  .carousel-container {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    .inner-container {
+      display: flex;
+      transition: transform all 250ms ease;
+      -webkit-transition: all 250ms ease;
+      .image-container {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        min-width: 100%;
         position: relative;
-        overflow: hidden;
-        text-align: center;
-        .inner-container {
-            display: flex;
-            transition: transform all 250ms ease;
-            -webkit-transition: all 250ms ease;
-            .image-container {
-                align-items: center;
-                display: flex;
-                flex-direction: column;
-                flex-wrap: nowrap;
-                min-width: 100%;
-                justify-content: center;
-                img {
-                    height: auto;
-                    max-height: 66vh;
-                    max-width: 500px;
-                    object-fit: cover;                   
-                }
-                figcaption {
-
-                }
-            }
+        justify-content: center;
+        img {
+          height: auto;
+          max-height: 50vh;
+          max-width: 500px;
+          object-fit: cover;
         }
-        .btn-container {
-            #prev,
-            #next {
-                background: #fff;
-                border: none;
-                font-size: 2em;
-                font-weight: 800;
-                padding: 1em 1.5em;
-                margin: auto;
-                transition: all 250ms ease-in-out;
-                -webkit-transition: all 250ms ease-in-out;
-                &:hover {
-                    color: rgba(15, 188, 249,1.0);
-                    text-shadow: 2px 2px 10px rgba(0,0,0,0.15);
-                }
-            }
+        figcaption {
+            margin-top: 1em;
+          text-align: center;
+          left: 0;
+          width: auto;
+          height: 100%;
         }
+      }
     }
-    .lightbox {
-        display: none;
+    .btn-container {
+      #prev,
+      #next {
+        background: #fff;
+        border: none;
+        font-size: 2em;
+        font-weight: 800;
+        padding: 1em 1.5em;
+        margin: auto;
+        transition: all 250ms ease-in-out;
+        -webkit-transition: all 250ms ease-in-out;
+        &:hover {
+          color: rgba(15, 188, 249, 1);
+          text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.15);
+        }
+      }
     }
+  }
+  // .lightbox {
+  //     background-color:rgba(0, 0, 0, .9);
+  //     display: block;
+  //     left: 0;
+  //     opacity: 1;
+  //     position: fixed;
+  //     text-align: center;
+  //     transition: 350ms ease-in-out;
+  //     top: 0;
+  //     width: 100%;
+  //     z-index: 9999999999999999999999999999999;
+  //     .inner-container {
+  //         align-items: center;
+  //         display: flex;
+  //         flex-wrap: nowrap;
+  //         justify-content: flex-start;
+  //         margin: 0 auto;
+  //         max-width: 100%;
+  //         opacity: 1;
+  //         text-align: center;
+  //         .image-container {
+  //             display: none;
+  //             margin: auto;
+  //             min-width: 100%;
+  //             height: 100%;
+  //             img.lightImg {
+  //                 margin: 0 auto;
+  //                 max-height: 100vh;
+  //                 max-width: 100%;
+  //                 object-fit: cover;
+  //                 position: relative;
+  //                 transition: 250ms ease-in-out;
+  //             }
+  //         }
+  //     }
+  //     .btn-container {
+  //         #lightPrev,
+  //         #lightNext {
+  //             background: rgba(0,0,0,0);
+  //             border: none;
+  //             color: lightPfff;
+  //             font-size: 2vmax;
+  //             position: absolute;
+  //         }
+  //         #lightPrev {
+  //             top: 50%;
+  //             left: 36.66%;
+  //         }
+  //         #lightNext {
+  //             top:50%;
+  //             right: 36.66%;
+  //         }
+  //     }
+  // }
 }

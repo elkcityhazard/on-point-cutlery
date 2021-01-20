@@ -19,12 +19,16 @@
         <div class="inner-container">
             {{ range .Site.Data.gallery }}
             <figure class="image-container">
-                <img src="{{.Site.BaseURL}}{{ .src }}" alt="{{ .alt }}">
+                <img class="lightImg" src="{{.Site.BaseURL}}{{ .src }}" alt="{{ .alt }}">
                 <figcaption>{{ .caption }}</figcaption>
             </figure>
             {{ end }}
         </div>
-    </section> -->
+        <div class="btn-container">
+            <button id="lightPrev">&#10094;</button>
+            <button id="lightNext">&#10095;</button>
+        </div>
+    </section>  -->
 </main>
 
 {{ end }}

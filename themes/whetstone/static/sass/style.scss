@@ -108,7 +108,7 @@ p {
     .container {
       display: block;
       margin: 0 auto;
-      width: 75%;
+      width: 100%;
       h2 {
         font-size: 5vmin;
       }
@@ -449,6 +449,7 @@ p {
         }
       }
       p {
+        margin: 0 auto;
         padding: 0;
         text-align: center;
       }
@@ -542,7 +543,7 @@ p {
 
 #nav-toggle {
   &:checked ~ nav {
-    height:300px;
+    height:100vh;
   }
 }
 
@@ -569,6 +570,12 @@ main {
     }
   }
   .wrapper {
+    .row {
+      .container {
+        padding: 0;
+        width: 100%;
+      }
+    }
     #content {
       .single-page {
         .row {
@@ -593,7 +600,7 @@ main {
       .footer-links {
         align-items: start;
         display: grid;
-        grid-template-columns: 2fr 1fr 1fr 1fr 2fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
         grid-template-rows: 1fr;
         justify-items: center;
         ul {
@@ -719,8 +726,9 @@ main {
       color: initial;
       display: flex;
       flex-direction: row;
+      flex-wrap: wrap;
       height: unset;
-      justify-content: flex-start;
+      justify-content: space-around;
       padding-left: 1em;
       padding-right: 1em;
       position: initial;

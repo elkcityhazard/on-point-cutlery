@@ -94,7 +94,7 @@ p {
 .wrapper .row .container {
   display: block;
   margin: 0 auto;
-  width: 75%;
+  width: 100%;
 }
 .wrapper .row .container h2 {
   font-size: 5vmin;
@@ -402,6 +402,7 @@ p {
   color: #0be881;
 }
 .wrapper .main-footer .footer-links p {
+  margin: 0 auto;
   padding: 0;
   text-align: center;
 }
@@ -489,7 +490,7 @@ p {
 }
 
 #nav-toggle:checked ~ nav {
-  height: 300px;
+  height: 100vh;
 }
 
 main .homepage-header {
@@ -511,6 +512,10 @@ main .homepage-header {
     text-align: center;
   }
 
+  .wrapper .row .container {
+    padding: 0;
+    width: 100%;
+  }
   .wrapper #content .single-page .row p {
     text-align: center;
   }
@@ -528,7 +533,7 @@ main .homepage-header {
   .wrapper .main-footer .footer-links {
     align-items: start;
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr 1fr 2fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr;
     justify-items: center;
   }
@@ -639,8 +644,9 @@ main .homepage-header {
     color: initial;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     height: unset;
-    justify-content: flex-start;
+    justify-content: space-around;
     padding-left: 1em;
     padding-right: 1em;
     position: initial;
