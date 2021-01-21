@@ -1,21 +1,25 @@
 {{ define "main" }}
 <main class="single-page">
-    <section class="carousel-container">
-        <div class="inner-container">
-            {{ range .Site.Data.gallery }}
-            <figure class="image-container">
-                <img src="{{.Site.BaseURL}}{{ .src }}" alt="{{ .alt }}">
-                <figcaption>{{ .caption }}</figcaption>
-            </figure>
-            {{ end }}
-        </div>
-        <div class="btn-container">
-            <button id="prev">&#10094;</button>
-            <button id="next">&#10095;</button>
-        </div>
-    </section>
+  <section class="carousel-container">
+    <div class="inner-container">
+      {{ range .Site.Data.gallery }}
+      <figure class="image-container">
+        <img
+          id="{{ add 1 1}}"
+          src="{{.Site.BaseURL}}{{ .src }}"
+          alt="{{ .alt }}"
+        />
+        <figcaption>{{ .caption }}</figcaption>
+      </figure>
+      {{ end }}
+    </div>
+  </section>
+  <div class="btn-container">
+    <button id="prev">&#10094;</button>
+    <button id="next">&#10095;</button>
+  </div>
 
-    <!-- <section class="lightbox">
+  <!-- <section class="lightbox">
         <div class="inner-container">
             {{ range .Site.Data.gallery }}
             <figure class="image-container">

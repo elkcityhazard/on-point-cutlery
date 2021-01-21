@@ -3,27 +3,37 @@ form {
   max-width: 100%;
   padding: 1em;
 }
+form fieldset {
+  margin: 0 auto;
+  max-width: 100%;
+}
+form fieldset legend {
+  max-width: 100%;
+  margin: 0 auto;
+}
 form fieldset .form-control {
-  display: block;
+  display: flex;
+  flex-direction: column;
   margin: 1em auto;
   padding: 1em;
   text-align: center;
-  width: 100%;
+  max-width: 100%;
 }
 form fieldset .form-control input,
 form fieldset .form-control label,
-form fieldset .form-control text-area {
-  display: block;
-  width: 100%;
+form fieldset .form-control textarea {
+  display: inline;
+  vertical-align: center;
+  max-width: 100%;
 }
 form fieldset .form-control button {
   background: #0fbcf9;
   border: none;
   color: #fff;
   display: inline-block;
-  margin: 0 auto;
+  margin: 0.5em auto;
   overflow: hidden;
-  padding: 1em 1.5em;
+  padding: 1em 0.25em;
   position: relative;
   transition: all 250ms ease-in-out 0ms;
   width: 40%;
@@ -61,7 +71,7 @@ form fieldset .form-control button:hover::before, form fieldset .form-control bu
   -webkit-transition: all 600ms ease-in-out;
 }
 
-@media screen and (min-width: 968px) {
+@media screen and (min-width: 499px) {
   .wrapper .row {
     display: block;
   }
@@ -73,10 +83,12 @@ form fieldset .form-control button:hover::before, form fieldset .form-control bu
     max-width: 500px;
   }
   .wrapper .row form fieldset .form-control {
+    align-items: center;
     justify-content: space-between;
     max-width: 500px;
     display: flex;
     flex-wrap: wrap;
+    flex-direction: row;
   }
   .wrapper .row form fieldset .form-control label {
     flex: 1;

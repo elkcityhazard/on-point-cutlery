@@ -5,15 +5,14 @@ $black-pearl: rgba(30, 39, 46, 1);
 $good-night: rgba(72, 84, 96, 1);
 $london-square: rgba(128, 142, 155, 1);
 $minty-green: rgba(11, 232, 129, 1);
-$spiro-disco-ball: rgba(15, 188, 249,1.0);
-$hint-of-elusive-pink: rgba(210, 218, 226,0.25);
-
+$spiro-disco-ball: rgba(15, 188, 249, 1);
+$hint-of-elusive-pink: rgba(210, 218, 226, 0.25);
 
 /*********************
 ******Animations******
 **********************/
 
-@keyframes shine{
+@keyframes shine {
   0% {
     background-position: 1% 0%;
   }
@@ -24,7 +23,6 @@ $hint-of-elusive-pink: rgba(210, 218, 226,0.25);
     background-position: 1% 0%;
   }
 }
-
 
 /*********************
 **Layouts**************
@@ -47,8 +45,13 @@ body {
   font-size: 18px;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  padding: 0 .25em;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  padding: 0 0.25em;
 }
 
 img {
@@ -63,6 +66,10 @@ p {
   padding: 1em;
 }
 
+.box-shadow {
+  box-shadow: 0 0 10px -2px rgba(0, 0, 0, 0.2);
+}
+
 .wrapper {
   display: block;
   margin: 0 auto;
@@ -72,7 +79,7 @@ p {
       margin: 0 auto;
       padding: 1em;
       width: 100%;
-      header{
+      header {
         h1 {
           font-size: 4vmax;
           text-align: center;
@@ -104,7 +111,7 @@ p {
     }
   }
   .row {
-    padding: 0 .25em;
+    padding: 0 0.25em;
     .container {
       display: block;
       margin: 0 auto;
@@ -126,13 +133,13 @@ p {
         margin: 1em auto;
       }
     }
-    h2{
+    h2 {
       margin: 1em auto;
       text-align: center;
     }
     .col-33 {
       margin: 0 auto;
-      padding: 0 .5em;
+      padding: 0 0.5em;
       width: 100%;
       a {
         color: $minty-green;
@@ -141,7 +148,11 @@ p {
         width: 100%;
         button.read-more {
           animation: shine 10s ease inifinite;
-          background: linear-gradient(0.75turn, $spiro-disco-ball, $spiro-disco-ball);
+          background: linear-gradient(
+            0.75turn,
+            $spiro-disco-ball,
+            $spiro-disco-ball
+          );
           background-repeat: no-repeat;
           background-size: 400% 400%;
           background-position: center;
@@ -155,12 +166,12 @@ p {
           transition: all 250ms ease-in-out;
           -webkit-transition: all 250ms ease-in-out;
           width: 250px;
-          
+
           &:before {
             content: '';
             display: block;
             position: absolute;
-            background: rgba(255,255,255,0.5);
+            background: rgba(255, 255, 255, 0.5);
             width: 60px;
             height: 100%;
             top: 0;
@@ -171,7 +182,7 @@ p {
             content: '';
             display: block;
             position: absolute;
-            background: rgba(255,255,255,0.2);
+            background: rgba(255, 255, 255, 0.2);
             width: 30px;
             height: 100%;
             top: 0;
@@ -185,7 +196,11 @@ p {
               transition: 0.7s;
               -webkit-transition: 0.7s;
             }
-            background-image: linear-gradient(to left, $spiro-disco-ball, $spiro-disco-ball);
+            background-image: linear-gradient(
+              to left,
+              $spiro-disco-ball,
+              $spiro-disco-ball
+            );
             box-shadow: 0px 11px 20px -4px rgba(41, 137, 216, 0.53);
             transform: scale(1.04);
           }
@@ -206,7 +221,7 @@ p {
         .fas {
           transition: color 250ms ease-in-out 0.2s;
         }
-        &:hover  .fas {
+        &:hover .fas {
           color: $spiro-disco-ball;
         }
         header {
@@ -254,12 +269,12 @@ p {
               cursor: pointer;
               border: none;
               display: block;
-              letter-spacing: .25vmin;
+              letter-spacing: 0.25vmin;
               margin: auto;
               max-width: 250px;
               min-height: 80px;
               padding: 1em;
-              text-shadow: 0 0 5px rgba(0,0,0,0.5);
+              text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
               text-transform: uppercase;
               transition: transform 250ms ease-in-out;
               -webkit-transition: transform 250ms ease-in-out;
@@ -272,7 +287,7 @@ p {
         }
       }
       h3 {
-        margin: 1em auto .25em;
+        margin: 1em auto 0.25em;
         text-align: center;
       }
       h3 + span {
@@ -289,7 +304,6 @@ p {
           display: block;
         }
       }
-      
     }
     p {
       color: $london-square;
@@ -297,7 +311,6 @@ p {
       margin: auto;
       max-width: 60ch;
     }
-
   }
 
   .slides {
@@ -326,7 +339,7 @@ p {
               figcaption {
                 span {
                   color: #333;
-                  font-size: .75em;
+                  font-size: 0.75em;
                   font-style: italic;
                   font-weight: 300;
                 }
@@ -366,14 +379,13 @@ p {
               font-weight: 200;
               font-style: initial;
               text-align: center;
-              padding: 0 .25em;
+              padding: 0 0.25em;
             }
 
             p {
               text-align: left;
               padding: 1em;
             }
-            
           }
         }
       }
@@ -400,7 +412,7 @@ p {
           }
           ul {
             list-style: none;
-            
+
             li {
               margin: auto;
               max-width: 350px;
@@ -419,7 +431,7 @@ p {
             &:hover,
             &:active {
               color: $spiro-disco-ball;
-            } 
+            }
           }
         }
       }
@@ -432,7 +444,7 @@ p {
         flex-direction: column;
         list-style: none;
         padding: 0;
-        width: 100%;      
+        width: 100%;
         li {
           margin: 0 2em;
           text-align: center;
@@ -468,7 +480,7 @@ p {
 #nav-toggle-label {
   align-items: center;
   background: #fff;
-  box-shadow: 0 0 10px 1px rgba(0,0,0, 0.1);
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.1);
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
@@ -525,7 +537,7 @@ p {
     display: block;
     list-style: none;
     li {
-      padding: .5em 2em;
+      padding: 0.5em 2em;
       a {
         display: block;
         color: $black-pearl;
@@ -543,13 +555,13 @@ p {
 
 #nav-toggle {
   &:checked ~ nav {
-    height:100vh;
+    height: 100vh;
   }
 }
 
 main {
   .homepage-header {
-   /*background-image: linear-gradient(to bottom, rgba(255,255,255,0.65), rgba(255,255,255,0.65)),
+    /*background-image: linear-gradient(to bottom, rgba(255,255,255,0.65), rgba(255,255,255,0.65)),
                        url('../images/grinding-wheel.jpg'); */
     background-size: cover;
     background-position: center;
@@ -588,7 +600,7 @@ main {
             flex-direction: column;
             justify-content: center;
             list-style: square inside;
-            li {              
+            li {
               max-width: 50vw;
               text-align: left;
             }
@@ -614,7 +626,7 @@ main {
           justify-content: flex-start;
           margin: 0 auto;
           max-height: 100px;
-          
+
           li {
             display: inline;
             margin: 0 auto;
@@ -630,7 +642,7 @@ main {
           grid-column-start: 2;
           grid-column-end: 3;
           padding: 0;
-          padding-top: .25em;
+          padding-top: 0.25em;
           p {
             font-size: 14px;
             padding: 0;
@@ -675,7 +687,7 @@ main {
         .homepage-header {
           .container {
             .row {
-              padding: 1em;
+              padding: 0;
               .col {
                 margin: 0 auto;
                 padding: 1em;
@@ -700,11 +712,11 @@ main {
         width: 33%;
       }
       .col-50 {
-            align-items: center;
-            display: flex;
-            justify-content: center;
-            margin: auto;
-            width: 45%;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        margin: auto;
+        width: 45%;
       }
       #nav-toggle-label {
         a {
@@ -720,9 +732,10 @@ main {
         width: 100%;
       }
     }
-    
+
     .main-nav {
       align-items: center;
+      background-color: rgba(255, 255, 255, 1);
       color: initial;
       display: flex;
       flex-direction: row;
@@ -740,6 +753,7 @@ main {
       }
       ul {
         align-items: center;
+
         display: flex;
         justify-content: flex-end;
         margin: auto;
@@ -856,7 +870,7 @@ main {
                 }
                 .subtitle {
                   margin-left: 0;
-                  padding:0;
+                  padding: 0;
                   text-align: left;
                 }
                 p {
@@ -922,16 +936,18 @@ main {
   main {
     .homepage-header {
       background-attachment: fixed;
-      background-image: linear-gradient(to bottom, rgba(255,255,255,0.25), rgba(255,255,255,0.25)), url('../images/cleaver.jpg');
+      background-image: url('../images/cleaver.jpg');
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
       height: calc(100vh - 45px);
+      opacity: 1;
       position: relative;
+      transition: opacity 250ms ease-in-out;
       width: 100%;
       .container {
         display: block;
-        margin: 1em auto;
+        margin: 0 auto 1em;
         min-width: 768px;
         width: 100%;
         .row {
@@ -955,21 +971,20 @@ main {
               text-align: center;
             }
             h1 + .subtitle {
-              color:#eee !important;
+              color: #eee !important;
               display: inline-block;
-              padding-left: .5em;
+              padding-left: 0.5em;
               font-weight: 600;
             }
             &:nth-child(odd) {
               display: none;
             }
             &:nth-child(2) {
-              background-color: rgba(0,0,0,0.75);
+              background-color: rgba(0, 0, 0, 0.75);
               left: 50%;
               position: absolute;
               top: 50%;
               transform: translate(-50%, -50%);
-
             }
           }
         }
@@ -977,8 +992,7 @@ main {
           color: #fff;
           font-style: italic;
           font-weight: 100;
-          padding-top: .75em;
-
+          padding-top: 0.75em;
         }
       }
     }

@@ -3,30 +3,35 @@ form {
     max-width: 100%;
     padding: 1em;
     fieldset {
+        margin: 0 auto;
+        max-width: 100%;
         legend {
-
+            max-width: 100%;
+            margin: 0 auto;
         }
-        .form-control {
-            display: block;
+        .form-control {            
+            display: flex;
+            flex-direction: column;
             margin: 1em auto;
             padding: 1em;
             text-align: center;
-            width: 100%;
+            max-width: 100%;
             input,
             label,
-            text-area {
-                display: block;
-                width: 100%;
+            textarea {
+                display: inline;
+                vertical-align: center;
+                max-width: 100%;
             }
             button {
                 background: #0fbcf9;
                 border: none;
                 color: #fff;
                 display: inline-block;
-                margin: 0 auto;
+                margin: .5em auto;
                 overflow: hidden;
-                padding: 1em 1.5em;
-                position: relative;
+                padding: 1em .25em;
+                position: relative;                
                 transition: all 250ms ease-in-out 0ms;
                 width: 40%;
                 white-space: nowrap;
@@ -67,7 +72,7 @@ form {
     }
 }
 
-@media screen and (min-width: 968px) {
+@media screen and (min-width: 499px) {
     .wrapper {
         .row {
             display: block;
@@ -77,10 +82,12 @@ form {
                     margin: auto;
                     max-width: 500px;
                     .form-control {
+                        align-items: center;
                         justify-content: space-between;
                         max-width: 500px;
                         display: flex;
                         flex-wrap: wrap;
+                        flex-direction: row;
                         label {
                             flex: 1;
                         }

@@ -1,11 +1,13 @@
 .single-page .carousel-container {
+  max-height: calc(100vh-65px);
   width: 100%;
-  position: relative;
   overflow: hidden;
   text-align: center;
 }
 .single-page .carousel-container .inner-container {
   display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
   transition: transform all 250ms ease;
   -webkit-transition: all 250ms ease;
 }
@@ -15,13 +17,12 @@
   flex-direction: column;
   flex-wrap: nowrap;
   min-width: 100%;
-  position: relative;
   justify-content: center;
 }
 .single-page .carousel-container .inner-container .image-container img {
   height: auto;
-  max-height: 50vh;
-  max-width: 500px;
+  max-height: 75vh;
+  max-width: 100%;
   object-fit: cover;
 }
 .single-page .carousel-container .inner-container .image-container figcaption {
@@ -31,9 +32,12 @@
   width: auto;
   height: 100%;
 }
-.single-page .carousel-container .btn-container #prev,
-.single-page .carousel-container .btn-container #next {
-  background: #fff;
+.single-page .btn-container {
+  text-align: center;
+}
+.single-page .btn-container #prev,
+.single-page .btn-container #next {
+  background: rgba(255, 255, 255, 0);
   border: none;
   font-size: 2em;
   font-weight: 800;
@@ -42,10 +46,17 @@
   transition: all 250ms ease-in-out;
   -webkit-transition: all 250ms ease-in-out;
 }
-.single-page .carousel-container .btn-container #prev:hover,
-.single-page .carousel-container .btn-container #next:hover {
+.single-page .btn-container #prev:hover,
+.single-page .btn-container #next:hover {
   color: #0fbcf9;
   text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.15);
+}
+
+@media screen and (min-width: 1366px) {
+  .carousel-container {
+    margin: 0 auto;
+    max-width: 968px;
+  }
 }
 
 /*# sourceMappingURL=gallery.css.map */
