@@ -1,0 +1,26 @@
+{{ define "main" }}
+
+<main class="single-page">
+    <header>
+      <h1>{{ .Title }}</h1>
+    </header>
+    <div class="row">
+       
+            {{ .Content }}
+        
+    </div>
+    <div class="row">
+        <div class="container">
+            <a href="https://www.picktime.com/5b073eac-2d5c-41fc-88f0-b7bf5b8dd6bc" class="ptbkbtn" target="_blank" style="float:none; margin: auto;"><img border="none" src="https://www.picktime.com/bookingPage/img/picktime-book-online.png" alt="Book an appointment with On Point Cutlery"/></a>
+        </div>
+      <ul>
+        {{ range .Pages }}
+        <li>
+          <a href="{{ .URL}}" title="{{ .Title }}">{{ .Title }}</a>
+        </li>
+        {{ end }}
+      </ul>
+    </div>
+  </main>
+
+{{ end}}

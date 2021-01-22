@@ -60,3 +60,10 @@ theme = "whetstone"
     title = "Schedule"
     url = "/schedule"
     weight = 3
+
+
+[frontmatter]
+date = ["date", "publishDate", "lastmod"]
+lastmod = [":git", "lastmod", "date", "publishDate"]
+publishDate = ["publishDate", "date"]
+expiryDate = ["expiryDate"]

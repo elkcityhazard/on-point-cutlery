@@ -8,27 +8,3 @@ On Point Cutlery was established in 2013 by Kevin Sloan.  Located in beautiful T
 
 
 
-
-Client List:
-
-Little Caesars 
-Tropical Smoothies
-Buffalo Wild Wings 
-Peegeeo's
-Jet's Pizza
-Robbies
-Papa Johns
-Hopscotch Brick Oven Tap Room (On Call )
-Michael's in Indian River (On Call)
-
-
-
-
-
-
-
-calendify
-
-
-
-

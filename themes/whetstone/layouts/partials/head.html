@@ -23,5 +23,5 @@
 <link rel="stylesheet" href="{{ .Site.BaseURL}}css/style.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
 
-{{ if eq .Permalink "/contact-us/" }} <link rel="stylesheet" href="{{.Site.BaseURL }}css/contact.css"> {{ end }}
-{{ if eq .Permalink "/gallery/" }} <link rel="stylesheet" href="{{.Site.BaseURL }}css/gallery.css"> {{ end }}
+{{ if eq .URL "/contact-us/" }} <link rel="stylesheet" href="{{.Site.BaseURL }}css/contact.css"> {{ end }}
+{{ if eq .URL "/gallery/" }} <link rel="stylesheet" href="{{.Site.BaseURL }}css/gallery.css"> {{ end }}

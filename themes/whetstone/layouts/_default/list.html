@@ -16,7 +16,7 @@
         <div class="card">
           <header class="card-header">
             <h3>{{ .Name }}</h3>
-            <span>{{ .PublishDate.Format "Monday, January 1st, 2006" }}</span>
+            <span>updated: {{ dateFormat "Monday, Jan 2, 2006" .Date }}</span>
           </header>
           <div class="card-body">
             <p>{{.Content | safeHTML | truncate 140 }}</p>

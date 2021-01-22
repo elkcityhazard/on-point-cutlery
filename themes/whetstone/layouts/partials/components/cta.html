@@ -7,7 +7,7 @@
   <div class="container">
     {{ range .Site.Data.cards }}
     <div class="col-33">
-      <a href="{{ .Permalink }}" title=" {{ .title }}">
+      <a href="{{ .Site.BaseURL }} {{ .url }}" title=" {{ .title }}">
         <div class="card">
           <header class="card-header">
             <h3>{{ .title }}</h3>
