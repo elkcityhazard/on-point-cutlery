@@ -72,6 +72,7 @@ p {
 }
 .wrapper #content main.single-page header h1 {
   font-size: 4vmax;
+  padding: 0;
   text-align: center;
 }
 .wrapper #content main.single-page ol {
@@ -83,6 +84,7 @@ p {
 }
 .wrapper #content main.single-page ul {
   list-style: none;
+  margin: 0 auto;
   padding: 1em;
   text-align: center;
   width: 100%;
@@ -104,6 +106,63 @@ p {
   font-weight: 500;
   line-height: 1.5;
   text-align: left;
+}
+.wrapper #content main.single-page .row button.read-more {
+  animation: shine 10s ease inifinite;
+  background: linear-gradient(0.75turn, #0fbcf9, #0fbcf9);
+  background-repeat: no-repeat;
+  background-size: 400% 400%;
+  background-position: center;
+  color: #fff;
+  border: none;
+  display: block;
+  margin: 0 auto 1em;
+  overflow: hidden;
+  padding: 1em 1.5em;
+  position: relative;
+  transition: all 250ms ease-in-out;
+  -webkit-transition: all 250ms ease-in-out;
+  width: 250px;
+}
+.wrapper #content main.single-page .row button.read-more:before {
+  content: "";
+  display: block;
+  position: absolute;
+  background: rgba(255, 255, 255, 0.5);
+  width: 60px;
+  height: 100%;
+  top: 0;
+  filter: blur(30px);
+  transform: translateX(-100px) skewX(-15deg);
+}
+.wrapper #content main.single-page .row button.read-more:after {
+  content: "";
+  display: block;
+  position: absolute;
+  background: rgba(255, 255, 255, 0.2);
+  width: 30px;
+  height: 100%;
+  top: 0;
+  filter: blur(5px);
+  transform: translateX(-100px) skew(-15deg);
+}
+.wrapper #content main.single-page .row button.read-more:hover {
+  background-image: linear-gradient(to left, #0fbcf9, #0fbcf9);
+  box-shadow: 0px 11px 20px -4px rgba(41, 137, 216, 0.53);
+  transform: scale(1.04);
+}
+.wrapper #content main.single-page .row button.read-more:hover::before, .wrapper #content main.single-page .row button.read-more:hover::after {
+  transform: translateX(300px) skewX(-15deg);
+  transition: 0.7s;
+  -webkit-transition: 0.7s;
+}
+.wrapper #content main.single-page .row button.read-more a {
+  color: #fff;
+  display: block;
+  min-height: 100%;
+  padding: 0.25em 0;
+  text-decoration: none;
+  min-width: 100%;
 }
 .wrapper .row {
   padding: 0 0.25em;
@@ -572,7 +631,7 @@ main .homepage-header {
     max-width: 60ch;
   }
   .wrapper #content .single-page .row ul li {
-    max-width: 50vw;
+    max-width: 60ch;
     text-align: left;
   }
   .wrapper .main-footer .footer-links {

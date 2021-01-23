@@ -17,7 +17,7 @@
     "title": "Call For Free Quote",
     "imgSrc": "/images/icons/telephone.jpg",
     "text": "Still have questions?  Call us today for a free, no obligation quote. Remember, we come to you just give us a call and we will happily schedule a time that is convenient for you!",
-    "url": "tel:+12316761314",
+    "url": "/contact-us",
     "class": "fas fa-phone fa-3x"
   }
 }
