@@ -19,25 +19,6 @@ if (window.innerWidth >= 1920) {
   parallax('#parallax', 3);
 }
 
-// if (window.innerWidth >= 1920) {
-//     let imgIndex = 0;
-//     const images = ['/images/grinding-wheel.webp', '/images/cleaver.jpg'];
- 
-  
-  
-//     function changeBackground(el) {
-//       document.querySelector(el).style.backgroundSize = '0 0';
-//     if (imgIndex >= images.length - 1) {
-//       imgIndex = 0;
-//       document.querySelector(el).style.backgroundImage = `url(${images[imgIndex]})`;
-//       document.querySelector(el).style.backgroundSize = '1920px 1080px';
-//     } else {
-//         imgIndex++;
-//         document.querySelector(el).style.backgroundImage = `url(${images[imgIndex]})`;
-//         document.querySelector(el).style.backgroundSize = '1920px 1080px';
-//     }
-//   }
-// setInterval(() => {
-//     changeBackground('.homepage-header');
-// }, 1000);
-// }
+ if (window.innerWidth >= 1920) {
+
+ }

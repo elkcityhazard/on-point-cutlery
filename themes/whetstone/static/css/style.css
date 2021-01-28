@@ -556,7 +556,7 @@ p {
   height: 0;
   margin: 0 auto;
   position: fixed;
-  overflow: hidden;
+  overflow: auto;
   top: calc(66px);
   transition: height 250ms ease-in-out 0.3s;
   width: 100%;

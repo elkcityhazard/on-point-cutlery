@@ -17,21 +17,21 @@ theme = "whetstone"
     pre = "&#8250;"
     title = "News & Updates"
     url = "/updates/"
-    weight = 5
+    weight = 7
   [[menu.main]]
     identifier = "about-us"
     name = "About Us"
     pre = "&#8250;"
     title = "About Us"
     url = "/about-us/"
-    weight = 2
+    weight = 8
   [[menu.main]]
     identifier = "contact-us"
     name = "Contact Us"
     pre = "&#8250;"
     title = "Contact Us"
     url = "/contact-us/"
-    weight = 5
+    weight = 6
   [[menu.main]]
     identifier = "Home"
     name = "Home"
@@ -45,20 +45,27 @@ theme = "whetstone"
     pre = "&#8250;"
     title = "Gallery"
     url = "/gallery"
-    weight = 4
+    weight = 5
   [[menu.main]]
     identifier = "Services"
     name = "Services"
     pre = "&#8250;"
     title = "Services"
     url = "/services"
-    weight = 3
+    weight = 2
   [[menu.main]]
-    identifier = "Schedule"
+    identifier = "schedule"
     name = "Book Now"
     pre = "&#8250;"
     title = "Schedule"
     url = "/schedule"
+    weight = 4
+  [[menu.main]]
+    identifier = "pricing"
+    name = "Pricing"
+    pre = "&#8250;"
+    title = "Pricing"
+    url = "/pricing"
     weight = 3
 
 
