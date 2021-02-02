@@ -20,6 +20,9 @@
     {{ if .IsHome}} {{ .Site.Title }} {{ else }}  {{ .Params.title }} - {{ .Site.Title}}  {{ end }}
     {{ end }}
 </title>
+
+<!-- canonical -->
+<link rel="canonical" href="{{ .Permalink }}" />
 <!-- Preconnects-->
 <link rel="preconnect" href="https://maps.googleapis.com" />
 <link rel="preconnect" href="https://maps.gstatic.com" />
