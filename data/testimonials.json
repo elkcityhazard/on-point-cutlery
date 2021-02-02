@@ -1,18 +1,18 @@
 {
     "0" : {
-        "name" : "Jane Doe",
+        "name" : "Ivan Carol",
         "imgSrc" : "images/testimonials/portrait-1.jpg",
-        "text" : "I would never use another service!"
+        "text" : "Kevin responded to my message right away.  He was very communicative and respectful when he came to the house.  Also, he made our knives really sharp!  Thanks, Kevin"
     },
     "1" : {
-        "name" : "John Doe",
+        "name" : "Mandy Herbert",
         "imgSrc" : "images/testimonials/portrait-1.jpg",
-        "text" : "It is so conveniet and has made me rich!"
+        "text" : "Before we called Kevin we were sharpening our own knives at the restaurant.  I am so glad we started his convenient knife swap program.  We no longer dread the time wasted by sharpening our knives.  Thanks, Kevin, for making our operation smoother."
     },
     "2" : {
-        "name" : "Sally Smith",
+        "name" : "Kathie Carry",
         "imgSrc" : "images/testimonials/portrait-1.jpg",
-        "text" : "I can now stop wasting time sharpening my own knives.  Very affordable, too!  Thank you On Point Cutlery for helping our business run more efficiently"
+        "text" : "I need a really sharp chisel because I do fine woodwork.  On Point Cutlery takes care of my chisels so I don't have to. It is great to be able to call him up and have him come by the shop.  No need to send my tools away anymore."
     }
 
 }
