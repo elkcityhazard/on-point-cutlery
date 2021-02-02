@@ -1,42 +1,52 @@
 {
     "0" : {
         "county" : "Grand Traverse County",
-        "cities" : ["Traverse City", "Fife Lake", "Kingsley", "Interlochen", "Grawn"]
+        "cities" : ["Traverse City, MI", "Fife Lake, MI", "Kingsley, MI", "Interlochen, MI", "Grawn, MI"],
+        "state" : "MI"
     },
     "1" : {
         "county" : "Leelanau County",
-        "cities" : ["Empire", "Northport", "Suttons Bay", "Cedar", "Glen Arbor"]
+        "cities" : ["Empire, MI", "Northport, MI", "Suttons Bay, MI", "Cedar, MI", "Glen Arbor, MI"],
+        "state" : "MI"
     },
     "2" : {
         "county" : "Benzie County",
-        "cities" : ["Frankfort", "Benzonia", "Beulah", "Lake Ann", "Honor"]
+        "cities" : ["Frankfort, MI", "Benzonia, MI", "Beulah, MI", "Lake Ann, MI", "Honor, MI"],
+        "state" : "MI"
     },
     "3" : {
         "county" : "Kalkaska County",
-        "cities" : ["Kalkaska", "Rapid City", "Bear Lake"]
+        "cities" : ["Kalkaska, MI", "Rapid City, MI", "Bear Lake, MI"],
+        "state" : "MI"
     },
     "4" : {
         "county" : "Antrim County",
-        "cities" : ["Bellaire", "Central Lake", "Elk Rapids", "Ellsworth", "Mancelona"]
+        "cities" : ["Bellaire, MI", "Central Lake, MI", "Elk Rapids, MI", "Ellsworth, MI", "Mancelona, MI"],
+        "state" : "MI"
     },
     "5" : {
         "county" : "Otsego County",
-        "cities" : ["Gaylord", "Vanderbilt"]
+        "cities" : ["Gaylord, MI", "Vanderbilt, MI"],
+        "state" : "MI"
     },
     "6" : {
         "county" : "Cheboygan County",
-        "cities" : ["Cheboygan", "Mackinaw City", "Wolverine", "Indian River"]
+        "cities" : ["Cheboygan, MI", "Mackinaw City, MI", "Wolverine, MI", "Indian River, MI"],
+        "state" : "MI"
     }, 
     "7" : {
         "county" : "Emmet County",
-        "cities" : ["Harbor Springs", "Petoskey", "Alanson", "Mackinaw City", "Pellston"]
+        "cities" : ["Harbor Springs, MI", "Petoskey, MI", "Alanson, MI", "Mackinaw City, MI", "Pellston, MI"],
+        "state" : "MI"
     },
     "8" : {
         "county" : "Charlevoix County",
-        "cities" : ["Boyne City", "Charlevoix", "East Jordan", "Boyne Falls", "Walloon Lake"]
+        "cities" : ["Boyne City, MI", "Charlevoix, MI", "East Jordan, MI", "Boyne Falls, MI", "Walloon Lake, MI"],
+        "state" : "MI"
     },
     "9" : {
         "county" : "Crawford County",
-        "cities" : ["Grayling"]
+        "cities" : ["Grayling, MI"],
+        "state" : "MI"
     }
 }
