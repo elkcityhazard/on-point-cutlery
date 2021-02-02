@@ -1,6 +1,6 @@
 ---
 title: Garden Tools Sharpening
-description: "Cutting or pruning with dull blades often results in damaged branches.  The rips, tears, and lacerations that this cause can make your garden susceptible to disease."
+description: "We can restore and sharpen the edge of most gardening tools.  Ask us today about our wide variety of tool sharpening in Northern Michigan."
 date: 2021-01-22
 ---
 

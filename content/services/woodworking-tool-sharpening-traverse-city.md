@@ -1,6 +1,6 @@
 ---
 title: Woodworking Tools
-description: "Sharp woodworking tools is a necessity and not a luxury. We sharpen all types of woodworking tools so that you don't have to. If you are not comfortable with restoring your chisel's edge then leave it to us!"
+description: "Sharp woodworking tools is a necessity and not a luxury. We sharpen all types of woodworking tools so that you don't have to. If you are not comfortable with restoring your chisel's edge then leave it to us! We do tool sharpening in Traverse City, Michigan."
 date: 2021-01-22
 ---
 Sharpening is a skill achieved through repetition and practice. Sharp woodworking tools is a necessity and not a luxury. We sharpen all types of woodworking tools so that you don't have to. If you are not comfortable with restoring your chisel's edge then leave it to us! We are happy to restore your tired woodworking tools. Get back to your joinery, carving, and carpentry jobs today. Contact us to discuss which woodworking tools you need sharpened. We will make a detailed assessment and create a custom plan to fit your needs.

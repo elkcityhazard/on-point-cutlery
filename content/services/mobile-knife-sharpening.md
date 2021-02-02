@@ -1,6 +1,6 @@
 ---
 title: Mobile Knife Sharpening
-description: "Our highly skilled sharpening technicians come to you and sharpen on premise.  No need to packaged your knives or tools. We handle your equipment for you."
+description: "Our highly skilled sharpening technicians come to you and sharpen on premise.  No need to packaged your knives or tools. No need to waste time dropping off and waiting for your tools and knives to be sharpened."
 date: 2021-01-22
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: Commercial Knife Swap Program
-description: "On Point Cutlery Knife Swap Program is cheaper than owning and maintaining your own set of knives and allows you to focus more on creating superior dishes."
+description: "On Point Cutlery Knife Swap Program is cheaper than owning and maintaining your own set of knives and allows you to focus more on creating a superior experience for your patrons.  Call for details."
 publishDate: 2021-01-18
 ---
 On Point Cutlery knife sharpening service and exchange program is designed for commercial kitchens, restaurants, and supermarkets. Running your business can be even easier with our straight forward knife exchange program. Sharp knives and sharp blades will be delivered to you on a regular schedule.
