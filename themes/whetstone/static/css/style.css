@@ -24,6 +24,7 @@ body {
   font-family: "Dejavu Sans", Helvetica, sans-serif, monospace;
   font-size: 18px;
   transition: all 450ms ease-in-out 350ms;
+  scroll-behavior: smooth;
 }
 
 body.hide-me {
@@ -53,6 +54,36 @@ p {
 
 .box-shadow {
   box-shadow: 0 0 10px -2px rgba(0, 0, 0, 0.2);
+}
+
+#toTop {
+  opacity: 0;
+  position: fixed;
+  bottom: 1em;
+  right: 1em;
+  transform: translateY(-2em);
+  transition: all 350ms ease-in-out;
+  -webkit-transition: all 350ms ease-in-out;
+}
+#toTop span {
+  font-size: 3vmax;
+}
+#toTop span a {
+  text-decoration: none;
+  color: #485460;
+  font-size: 4vmax;
+  transition: transform 250ms ease-in-out;
+  -webkit-transition: transform 250ms ease-in-out;
+}
+#toTop span a:hover {
+  transform: scale(1.1);
+}
+
+.rotate {
+  opacity: 1 !important;
+  transform: translateX(-90deg) !important;
+  transition: all 350ms ease-in-out;
+  -webkit-transition: all 350ms ease-in-out;
 }
 
 .wrapper {

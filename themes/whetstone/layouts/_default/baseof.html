@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     {{- partial "head.html" . -}}
-    <body class="hide-me">
+    <body id="top" class="hide-me">
         <div class="wrapper">
             {{- partial "header.html" . -}}
         <div id="content">
@@ -10,5 +10,8 @@
         {{- partial "footer.html" . -}}
         </div>
         {{- partial "components/scripts.html" . -}}
+        <div id="toTop">
+            <span><a href="#top">&#187;</a> </span>
+        </div>
     </body>
 </html>
