@@ -23,6 +23,7 @@ if (window.innerWidth >= 1920) {
   };
 
   parallax('#parallax', 3);
+  parallax('#banner', 3)
 }
 
  if (window.innerWidth >= 1920) {

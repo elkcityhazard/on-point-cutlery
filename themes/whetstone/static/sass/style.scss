@@ -218,6 +218,7 @@ p {
         color: $minty-green;
         display: block;
         text-decoration: none;
+        text-align: center;
         width: 100%;
         button.read-more {
           animation: shine 10s ease inifinite;
@@ -226,9 +227,7 @@ p {
             $spiro-disco-ball,
             $spiro-disco-ball
           );
-          background-repeat: no-repeat;
-          background-size: 400% 400%;
-          background-position: center;
+          
           color: #fff;
           border: none;
           display: block;

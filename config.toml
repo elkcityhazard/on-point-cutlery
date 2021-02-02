@@ -90,7 +90,7 @@ theme = "whetstone"
     weight = 4
   [[menu.footer]]
     identifier = "home"
-    name = "home"
+    name = "Home"
     pre = "&#8250;"
     title = "Home"
     url = "/"

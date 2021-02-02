@@ -196,14 +196,12 @@ p {
   color: #0be881;
   display: block;
   text-decoration: none;
+  text-align: center;
   width: 100%;
 }
 .wrapper .row .col-33 a button.read-more {
   animation: shine 10s ease inifinite;
   background: linear-gradient(0.75turn, #0fbcf9, #0fbcf9);
-  background-repeat: no-repeat;
-  background-size: 400% 400%;
-  background-position: center;
   color: #fff;
   border: none;
   display: block;
