@@ -23,7 +23,7 @@ body {
   background: #fff;
   font-family: "Dejavu Sans", Helvetica, sans-serif, monospace;
   font-size: 18px;
-  transition: all 250ms ease-in-out 0.3s;
+  transition: all 450ms ease-in-out 350ms;
 }
 
 body.hide-me {
@@ -158,13 +158,6 @@ p {
   padding: 0.25em 0;
   text-decoration: none;
   min-width: 100%;
-}
-.wrapper #content .single-page .price-table {
-  display: block;
-  margin: 0 auto;
-  max-width: 800px;
-  overflow-x: auto;
-  width: auto;
 }
 .wrapper .row {
   padding: 0 0.25em;
@@ -639,7 +632,7 @@ main .homepage-header {
   .wrapper .main-footer .footer-links {
     align-items: start;
     display: grid;
-    grid-template-columns: 1fr 1fr 2fr 2fr 0.5fr;
+    grid-template-columns: 2fr 1fr 1fr 1fr 2fr;
     grid-template-rows: 1fr;
     justify-items: center;
   }
@@ -658,11 +651,12 @@ main .homepage-header {
   .wrapper .main-footer .footer-links ul li {
     display: inline;
     margin: 0 auto;
-    max-width: 175px;
+    width: auto;
     padding: 0;
     text-align: left;
   }
   .wrapper .main-footer .footer-links ul li a {
+    display: block;
     font-size: 14px;
   }
   .wrapper .main-footer .footer-links .address {
@@ -948,6 +942,9 @@ main .homepage-header {
   }
   .wrapper #content {
     padding-top: 0;
+  }
+  .wrapper #content main {
+    min-width: 100%;
   }
 
   main .homepage-header {

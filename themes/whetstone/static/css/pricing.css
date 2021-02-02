@@ -1,0 +1,54 @@
+.price-table {
+  display: block;
+  font-size: 3vmax;
+  margin: 0 auto;
+  width: 100%;
+}
+.price-table thead,
+.price-table tbody,
+.price-table tr,
+.price-table th,
+.price-table td {
+  display: block;
+  text-align: center;
+}
+.price-table tr {
+  border-bottom: 1px solid #bbb;
+  padding: 1em 0;
+}
+.price-table tr:nth-child(even) {
+  background: #ddd;
+}
+
+@media screen and (min-width: 499px) {
+  .price-table {
+    border-collapse: collapse;
+    display: block;
+    font-size: 18px;
+    margin: 0 auto;
+    max-width: 768px;
+    overflow-x: auto;
+    width: 100%;
+  }
+  .price-table thead,
+.price-table tbody {
+    display: table-row-group;
+  }
+  .price-table tr {
+    display: table-row;
+    margin: 0.25em auto;
+  }
+  .price-table th,
+.price-table td {
+    display: table-cell;
+    padding: 0.5em 0;
+    text-align: left;
+  }
+}
+@media screen and (min-width: 968px) {
+  .price-table {
+    max-width: 968px;
+  }
+}
+
+/*# sourceMappingURL=pricing.css.map */

@@ -1,27 +1,30 @@
 {{ define "main" }}
 <main class="single-page">
-
-    <table class="price-table">
-        <thead>
-            
-                <h2 style="text-align: center;">Sharpening Prices</h2>
-            
-        </thead>
+    <h2 style="text-align: center;">Sharpening Prices</h2>
+    <table class="price-table">                
         <tbody>
             <tr>
                 {{ range .Site.Data.pricing }}
-    <th>{{ .title }}</th>
-    </tr>
-        {{ range .items }}
-        <tr><td><strong>{{ .type}}</strong></td><td style="text-align: center;">{{ .size}}</td><td style="text-align: center;">{{ .cost}}</td> {{ if .notes }}<td>{{ .notes }}</td> {{ else }} {{ end }}
-        </tr>
-        
-        {{ end }}
-    
-    {{ end }}
+                <th style="text-align: center;">{{ .title }}</th>
+            </tr>
+            {{ range .items }}
+            <tr>
+                <td><strong>{{ .type}}</strong></td>
+                <td style="text-align: center;">{{ .size}}</td>
+                <td style="text-align: center;">{{ .cost}}</td> {{ if .notes }}<td style="text-align: center;">{{ .notes }}</td> {{ else }} {{ end }}
+            </tr>
+
+            {{ end }}
+
+            {{ end }}
         </tbody>
-        
+
     </table>
+    <div class="row">
+        <div class="container">
+            <p><small>*Prices are subject to change without notice and may not be accurately represented on this page.  call for details.  </small></p>
+        </div>
+    </div>
 
 </main>
 {{ end}}

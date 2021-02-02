@@ -34,7 +34,7 @@ body {
   background: #fff;
   font-family: 'Dejavu Sans', Helvetica, sans-serif, monospace;
   font-size: 18px;
-  transition: all 250ms ease-in-out 0.3s;
+  transition: all 450ms ease-in-out 350ms;
 }
 
 body.hide-me {
@@ -180,13 +180,6 @@ p {
             min-width: 100%;
           }
         }
-      }
-      .price-table {
-        display: block;
-        margin: 0 auto;
-        max-width: 800px;
-        overflow-x: auto;
-        width: auto;
       }
     }
   }
@@ -726,7 +719,7 @@ main {
       .footer-links {
         align-items: start;
         display: grid;
-        grid-template-columns: 1fr 1fr 2fr 2fr .5fr;
+        grid-template-columns: 2fr 1fr 1fr 1fr 2fr;
         grid-template-rows: 1fr;
         justify-items: center;
         ul {
@@ -744,10 +737,11 @@ main {
           li {
             display: inline;
             margin: 0 auto;
-            max-width: 175px;
+            width: auto;
             padding: 0;
             text-align: left;
             a {
+              display: block;
               font-size: 14px;
             }
           }
@@ -1078,6 +1072,9 @@ main {
     }
     #content {
       padding-top: 0;
+      main {
+        min-width: 100%;
+      }
     }
   }
   main {

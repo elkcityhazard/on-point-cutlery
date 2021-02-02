@@ -1,14 +1,13 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="{{if .IsHome}}{{ $.Site.Params.description }}{{else}}{{.Description}}{{end}}" />
-{{ if eq .Page.Permalink "/success/" }}
+{{ if .Params.noindex }}
 <meta name="robots" content="noindex, nofollow"><!-- All Search Engines -->
 <meta name="googlebot" content="noindex, nofollow">
-
 {{ else }}
 <meta name="robots" content="index, follow"><!-- All Search Engines -->
 <meta name="googlebot" content="index, follow">
-  {{ end }}
+{{ end }}
 <title> {{ block "title" . }}
     {{ if .IsHome}} {{ .Site.Title }} {{ else }}  {{ .Params.title }} - {{ .Site.Title}}  {{ end }}
     {{ end }}
@@ -23,5 +22,6 @@
 <link rel="stylesheet" href="{{ .Site.BaseURL}}css/style.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
 
-{{ if eq .URL "/contact-us/" }} <link rel="stylesheet" href="{{.Site.BaseURL }}css/contact.css"> {{ end }}
-{{ if eq .URL "/gallery/" }} <link rel="stylesheet" href="{{.Site.BaseURL }}css/gallery.css"> {{ end }}
+{{ if eq .RelPermalink "/contact-us/" }} <link rel="stylesheet" href="{{.Site.BaseURL }}css/contact.css"> {{ end }}
+{{ if eq .RelPermalink "/gallery/" }} <link rel="stylesheet" href="{{.Site.BaseURL }}css/gallery.css"> {{ end }}
+{{ if eq .RelPermalink "/pricing/" }} <link rel="stylesheet" href="{{.Site.BaseURL }}css/pricing.css"> {{ end }}
