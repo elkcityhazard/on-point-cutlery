@@ -1,0 +1,27 @@
+{{ define "main" }}
+<main class="single-page">
+
+    <table class="price-table">
+        <thead>
+            
+                <h2 style="text-align: center;">Sharpening Prices</h2>
+            
+        </thead>
+        <tbody>
+            <tr>
+                {{ range .Site.Data.pricing }}
+    <th>{{ .title }}</th>
+    </tr>
+        {{ range .items }}
+        <tr><td><strong>{{ .type}}</strong></td><td style="text-align: center;">{{ .size}}</td><td style="text-align: center;">{{ .cost}}</td> {{ if .notes }}<td>{{ .notes }}</td> {{ else }} {{ end }}
+        </tr>
+        
+        {{ end }}
+    
+    {{ end }}
+        </tbody>
+        
+    </table>
+
+</main>
+{{ end}}

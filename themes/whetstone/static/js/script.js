@@ -1,3 +1,9 @@
+//  preloader
+
+window.addEventListener('load', () => {
+  document.body.classList.remove('hide-me');
+})
+
 //Parallax effect in mainfooter
 
 // if document.body.scrollTop > 0 || document.documentElement.scrollTop > 0

@@ -4,17 +4,6 @@ Swedish Palette FlatUI.com
 /*********************
 ******Animations******
 **********************/
-@keyframes shine {
-  0% {
-    background-position: 1% 0%;
-  }
-  50% {
-    background-position: 99% 110%;
-  }
-  100% {
-    background-position: 1% 0%;
-  }
-}
 /*********************
 **Layouts**************
 **********************/
@@ -31,8 +20,14 @@ body {
 
 html,
 body {
+  background: #fff;
   font-family: "Dejavu Sans", Helvetica, sans-serif, monospace;
   font-size: 18px;
+  transition: all 250ms ease-in-out 0.3s;
+}
+
+body.hide-me {
+  opacity: 0;
 }
 
 h1,
@@ -65,49 +60,49 @@ p {
   margin: 0 auto;
   overflow: hidden;
 }
-.wrapper #content main.single-page {
+.wrapper #content .single-page {
   margin: 0 auto;
   padding: 1em;
   width: 100%;
 }
-.wrapper #content main.single-page header h1 {
+.wrapper #content .single-page header h1 {
   font-size: 4vmax;
   padding: 0;
   text-align: center;
 }
-.wrapper #content main.single-page ol {
+.wrapper #content .single-page ol {
   margin: 0 auto 1em;
   padding-left: 1em;
 }
-.wrapper #content main.single-page ol li {
+.wrapper #content .single-page ol li {
   padding-left: 0.25em;
 }
-.wrapper #content main.single-page ul {
+.wrapper #content .single-page ul {
   list-style: none;
   margin: 0 auto;
   padding: 1em;
   text-align: center;
   width: 100%;
 }
-.wrapper #content main.single-page ul li {
+.wrapper #content .single-page ul li {
   padding-left: 1.5em;
   text-align: left;
   width: 100%;
 }
-.wrapper #content main.single-page ul li a {
+.wrapper #content .single-page ul li a {
   text-decoration: none;
 }
-.wrapper #content main.single-page .row {
+.wrapper #content .single-page .row {
   flex-direction: column;
 }
-.wrapper #content main.single-page .row p {
+.wrapper #content .single-page .row p {
   color: #485460;
   font-size: 18px;
   font-weight: 500;
   line-height: 1.5;
   text-align: left;
 }
-.wrapper #content main.single-page .row button.read-more {
+.wrapper #content .single-page .row button.read-more {
   animation: shine 10s ease inifinite;
   background: linear-gradient(0.75turn, #0fbcf9, #0fbcf9);
   background-repeat: no-repeat;
@@ -124,7 +119,7 @@ p {
   -webkit-transition: all 250ms ease-in-out;
   width: 250px;
 }
-.wrapper #content main.single-page .row button.read-more:before {
+.wrapper #content .single-page .row button.read-more:before {
   content: "";
   display: block;
   position: absolute;
@@ -135,7 +130,7 @@ p {
   filter: blur(30px);
   transform: translateX(-100px) skewX(-15deg);
 }
-.wrapper #content main.single-page .row button.read-more:after {
+.wrapper #content .single-page .row button.read-more:after {
   content: "";
   display: block;
   position: absolute;
@@ -146,23 +141,30 @@ p {
   filter: blur(5px);
   transform: translateX(-100px) skew(-15deg);
 }
-.wrapper #content main.single-page .row button.read-more:hover {
+.wrapper #content .single-page .row button.read-more:hover {
   background-image: linear-gradient(to left, #0fbcf9, #0fbcf9);
   box-shadow: 0px 11px 20px -4px rgba(41, 137, 216, 0.53);
   transform: scale(1.04);
 }
-.wrapper #content main.single-page .row button.read-more:hover::before, .wrapper #content main.single-page .row button.read-more:hover::after {
+.wrapper #content .single-page .row button.read-more:hover::before, .wrapper #content .single-page .row button.read-more:hover::after {
   transform: translateX(300px) skewX(-15deg);
   transition: 0.7s;
   -webkit-transition: 0.7s;
 }
-.wrapper #content main.single-page .row button.read-more a {
+.wrapper #content .single-page .row button.read-more a {
   color: #fff;
   display: block;
   min-height: 100%;
   padding: 0.25em 0;
   text-decoration: none;
   min-width: 100%;
+}
+.wrapper #content .single-page .price-table {
+  display: block;
+  margin: 0 auto;
+  max-width: 800px;
+  overflow-x: auto;
+  width: auto;
 }
 .wrapper .row {
   padding: 0 0.25em;
@@ -697,11 +699,15 @@ main .homepage-header {
   .wrapper {
     display: block;
     margin: 0 auto;
-    max-width: 968px;
+    max-width: 100%;
     min-height: 100vh;
   }
   .wrapper #content {
     padding-top: 0;
+  }
+  .wrapper #content main {
+    margin: 0 auto;
+    max-width: 968px;
   }
   .wrapper #content main .homepage-header .container .row {
     padding: 0;
