@@ -1,19 +1,19 @@
 <div class="row box-shadow">
-    <label id="nav-toggle-label" for="nav-toggle" role="navigation" aria-label="primary" tabindex="0">
+    <label id="nav-toggle-label" for="nav-toggle" aria-label="primary" tabindex="0">
         <a href="{{ .Site.BaseURL }}" title="{{ .Site.Title }}">{{.Site.Title}}</a>
       <span class="hamburger"></span>
     </label>
     <input type="checkbox" name="nav-toggle" id="nav-toggle" />
-    <nav class="main-nav">   
-        <a class="logo" href="{{ .Site.BaseURL }}" title="{{ .Site.Title }}"><img src="{{ .Site.BaseURL}}images/logo.png" alt="logo" height="100px" width="auto"></a>
+    <nav class="main-nav" itemscope='itemscope' itemtype='http://schema.org/SiteNavigationElement' role='navigation'>   
+        <a class="logo" href="{{ .Site.BaseURL }}" itemprop="url" title="{{ .Site.Title }}"><img src="{{ .Site.BaseURL}}images/logo.png" alt="logo" height="100px" width="auto"></a>
 <ul>
   {{ $currentPage := . }}
   {{ range .Site.Menus.main }}
     {{ if .HasChildren }}
         <li class=" {{ if $currentPage.HasMenuCurrent "main" . }} active {{ end }}">
-            <a href="{{ .URL }}" title="{{ .Name }}">
+            <a href="{{ .URL }}" itemprop="url" title="{{ .Name }}">
                 {{ .Pre }}
-                <span>
+                <span itemprop="name">
                     {{ .Name }}
                 </span>
             </a>
@@ -21,7 +21,7 @@
         <ul class="sub-menu">
             {{ range .Children }}
             <li class="{{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}">
-                <a href="{{ .URL }}">{{ .Name }}</a>
+                <a href="{{ .URL }}" itemprop="url"><span itemprop="name">{{ .Name }}</span></a>
             </li>
         {{ end }}
     </ul>
