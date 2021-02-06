@@ -35,8 +35,9 @@ if (window.innerWidth >= 1920) {
 }
 
 // return to top
-const returnTop = document.querySelector('#toTop'); 
 window.onscroll = function() {
+  const returnTop = document.getElementById('toTop'); 
+
   if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
     returnTop.style.opacity = 1;
     returnTop.style.transform = "rotate(-90deg)";
@@ -45,6 +46,33 @@ window.onscroll = function() {
     returnTop.style.transform = "rotate(90deg)";
   }
 }
+
+// navigation opacity
+
+function observe(entries) {
+  const config = {
+    rootMargin: '50px 20px 75px 30px',
+    threshold: [0, 0.25, 0.75, 1]
+  };
+  let observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.intersectionRatio > 0) {
+        entry.target.classList.add('fadeIn');
+      } else {
+        observer.unobserve(entry);
+        entry.target.classList.remove('fadeIn');
+
+      }
+    });
+  }, config);
+  
+  entries.forEach(entry => {
+    observer.observe(entry);
+  });
+}
+
+const cards = document.querySelectorAll('.card');
+observe(cards);
 
 
 // back to top
