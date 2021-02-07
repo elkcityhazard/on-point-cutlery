@@ -49,7 +49,8 @@ window.onscroll = function() {
 
 // navigation opacity
 
-function observe(entries) {
+const cards = document.querySelectorAll('.card');
+
   const config = {
     rootMargin: '50px 20px 75px 30px',
     threshold: [0, 0.25, 0.75, 1]
@@ -58,21 +59,18 @@ function observe(entries) {
     entries.forEach(entry => {
       if (entry.intersectionRatio > 0) {
         entry.target.classList.add('fadeIn');
+        observer.unobserve(entry.target);
       } else {
-        observer.unobserve(entry);
         entry.target.classList.remove('fadeIn');
 
       }
     });
   }, config);
   
-  entries.forEach(entry => {
+  cards.forEach(entry => {
     observer.observe(entry);
   });
-}
 
-const cards = document.querySelectorAll('.card');
-observe(cards);
 
 
 // back to top

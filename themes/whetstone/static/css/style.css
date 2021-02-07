@@ -66,7 +66,7 @@ p {
   -webkit-transition: all 350ms ease-in-out;
 }
 #toTop span {
-  font-size: 3vmax;
+  font-size: 4vmax;
 }
 #toTop span a {
   text-decoration: none;
@@ -1056,6 +1056,10 @@ main .homepage-header {
     font-style: italic;
     font-weight: 400;
     padding-top: 0.75em;
+  }
+
+  #toTop span {
+    font-size: 3vmax;
   }
 }
 .fadeIn {
