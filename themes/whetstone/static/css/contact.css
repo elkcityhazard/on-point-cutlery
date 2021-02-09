@@ -70,6 +70,15 @@ form fieldset .form-control button:hover::before, form fieldset .form-control bu
   transition: all 600ms ease-in-out;
   -webkit-transition: all 600ms ease-in-out;
 }
+form fieldset .form-control #usernameLabel,
+form fieldset .form-control #username {
+  position: absolute;
+  left: -1000%;
+  max-height: 0;
+  max-width: 0;
+  opacity: 0;
+  z-index: -1;
+}
 
 @media screen and (min-width: 499px) {
   .wrapper .row {
