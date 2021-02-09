@@ -318,16 +318,11 @@ p {
         margin: 1em auto;
         opacity: 0;
         transform: scale(1) translateX(-100%);
-        transition: all 250ms ease-in-out 250ms;
-        -webkit-transition: all 250ms ease-in-out 250ms;
+        transition: all 250ms ease-in-out 150ms;
+        -webkit-transition: all 250ms ease-in-out 150ms;
         &:hover {
           box-shadow: 0px 11px 20px -4px rgba(41, 137, 216, 0.53);
           transform: scale(1.04);
-        }
-        &:nth-child(2n) {
-          transform: transformX(0);
-          transform: translateY(-100%);
-          transition: all 250ms ease-in-out 250ms;
         }
         .fas {
           transition: color 250ms ease-in-out 0.2s;
@@ -359,6 +354,11 @@ p {
         justify-content: center;
         margin: 0 auto;
         width: 100%;
+        &:nth-child(2) {
+          transform: transformX(0);
+          transform: translateY(-100%);
+          transition: all 250ms ease-in-out 250ms;
+        }
         .card-body {
           text-align: center;
           img + p {
@@ -451,7 +451,7 @@ p {
   }
 
   .slides {
-    height: 250px;
+    height: 350px;
     margin: 0 auto;
     overflow: hidden;
     width: 100%;
@@ -865,6 +865,9 @@ main {
         justify-content: center;
         margin: auto;
         width: 45%;
+      }
+      .portrait {
+        margin-right: -3em;
       }
       #nav-toggle-label {
         a {

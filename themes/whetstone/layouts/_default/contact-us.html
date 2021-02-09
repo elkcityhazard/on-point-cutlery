@@ -14,17 +14,22 @@
             <legend>Contact Details</legend>
             <div class="form-control">
                 <label for="name">Name: </label>
-                <input type="text" name="name" id="userName">
+                <input type="text" name="name" id="userName" required>
                 <small class="error"></small>
             </div>
             <div class="form-control">
                 <label for="email">Email: </label>
-                <input type="email" name="email" id="userEmail">
+                <input type="email" name="email" id="userEmail" required>
                 <small class="error"></small>
             </div>
             <div class="form-control">
                 <label for="message">Message: </label>
-                <textarea name="message" id="userMessage" cols="20" rows="10"></textarea>
+                <textarea name="message" id="userMessage" cols="20" rows="10" required></textarea>
+                <small class="error"></small>
+            </div>
+            <div class="form-control" style="opacity: 0; overflow:hidden; height: 0; width: 0; margin: 0 auto; padding: 0;">
+              <label for="username">Username: </label>
+                <input type="text" name="username" id="username">
                 <small class="error"></small>
             </div>
             <div class="form-control">
@@ -35,7 +40,6 @@
     </form>
   </div>
 </main>
-
 
 
 {{ end }}
