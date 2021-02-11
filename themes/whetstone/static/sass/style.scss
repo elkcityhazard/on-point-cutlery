@@ -40,6 +40,7 @@ body {
 
 body.hide-me {
   opacity: 0;
+  transition: opacity 250ms ease-out 250ms;
 }
 
 h1,
@@ -67,6 +68,7 @@ p {
   box-shadow: 0 0 10px -2px rgba(0, 0, 0, 0.2);
 }
 
+
 #toTop {
   opacity: 0;
   position: fixed;
@@ -76,7 +78,7 @@ p {
   transition: all 350ms ease-in-out;
   -webkit-transition: all 350ms ease-in-out;
   span {
-    font-size: 3vmax;
+    font-size: 4vmax;
     a {
       text-decoration: none;
       color: $good-night;
@@ -314,8 +316,10 @@ p {
         flex-direction: column;
         justify-content: center;
         margin: 1em auto;
-        transform: scale(1);
-        transition: 250ms ease-in-out 0s;
+        opacity: 0;
+        transform: scale(1) translateX(-100%);
+        transition: all 250ms ease-in-out 150ms;
+        -webkit-transition: all 250ms ease-in-out 150ms;
         &:hover {
           box-shadow: 0px 11px 20px -4px rgba(41, 137, 216, 0.53);
           transform: scale(1.04);
@@ -350,6 +354,11 @@ p {
         justify-content: center;
         margin: 0 auto;
         width: 100%;
+        &:nth-child(2) {
+          transform: transformX(0);
+          transform: translateY(-100%);
+          transition: all 250ms ease-in-out 250ms;
+        }
         .card-body {
           text-align: center;
           img + p {
@@ -442,7 +451,7 @@ p {
   }
 
   .slides {
-    height: 250px;
+    height: 350px;
     margin: 0 auto;
     overflow: hidden;
     width: 100%;
@@ -857,6 +866,9 @@ main {
         margin: auto;
         width: 45%;
       }
+      .portrait {
+        margin-right: -3em;
+      }
       #nav-toggle-label {
         a {
           font-size: 24px;
@@ -1076,6 +1088,18 @@ main {
 }
 
 @media screen and (min-width: 1920px) {
+  #top {
+    position: relative;
+  }
+  .box-shadow {
+    left: 0;
+    padding: 0 !important;
+    position: fixed;
+    top: 0;
+    transition: background-color 250ms ease-in-out;
+    width: 100%;
+    z-index: 5;
+  }
   .wrapper {
     max-width: 1920px;
     .row {
@@ -1170,4 +1194,17 @@ main {
       }
     }
   }
+  #toTop {
+    span {
+      font-size: 3vmax;
+    }
+  }
+}
+
+
+
+.fadeIn {
+  opacity: 1 !important;
+  transform: translateX(0) !important;
+  
 }
