@@ -11,13 +11,13 @@ theme = "whetstone"
 
 [menu]
 
-  [[menu.main]]
-    identifier = "posts"
-    name = "News"
-    pre = "&#8250;"
-    title = "News & Updates"
-    url = "/updates/"
-    weight = 7
+#  [[menu.main]]
+#    identifier = "posts"
+#    name = "News"
+#    pre = "&#8250;"
+#    title = "News & Updates"
+#    url = "/updates/"
+#    weight = 7
   [[menu.main]]
     identifier = "about-us"
     name = "About Us"
@@ -53,13 +53,13 @@ theme = "whetstone"
     title = "Services"
     url = "/services"
     weight = 2
-  [[menu.main]]
-    identifier = "schedule"
-    name = "Book Now"
-    pre = "&#8250;"
-    title = "Schedule"
-    url = "/schedule"
-    weight = 4
+#  [[menu.main]]
+#    identifier = "schedule"
+#    name = "Book Now"
+#    pre = "&#8250;"
+#    title = "Schedule"
+#    url = "/schedule"
+#    weight = 4
   [[menu.main]]
     identifier = "pricing"
     name = "Pricing"

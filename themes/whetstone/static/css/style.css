@@ -29,7 +29,20 @@ body {
 
 body.hide-me {
   opacity: 0;
-  transition: opacity 250ms ease-out 250ms;
+  transform-origin: bottom center;
+  transition: all 500ms ease-out 500ms;
+}
+
+#card-1 {
+  transform: translateX(-100%);
+}
+
+#card-2 {
+  transform: translateY(50%);
+}
+
+#card-3 {
+  transform: translateX(100%);
 }
 
 h1,
@@ -285,12 +298,12 @@ p {
   margin: 1em auto;
   opacity: 0;
   transform: scale(1) translateX(-100%);
-  transition: all 250ms ease-in-out 150ms;
-  -webkit-transition: all 250ms ease-in-out 150ms;
+  transition: all 350ms ease-in-out;
+  -webkit-transition: all 350ms ease-in-out;
 }
 .wrapper .row .col-33 .card:hover {
   box-shadow: 0px 11px 20px -4px rgba(41, 137, 216, 0.53);
-  transform: scale(1.04);
+  transform: scale(1.05);
 }
 .wrapper .row .col-33 .card .fas {
   transition: color 250ms ease-in-out 0.2s;
@@ -309,6 +322,10 @@ p {
 }
 .wrapper .row .col-33 .card .card-body p {
   color: #808e9b;
+}
+.wrapper .row .col-33 .card.trigger {
+  transform: translateX(0) !important;
+  opacity: 1 !important;
 }
 .wrapper .row .col-50 {
   margin: 0 auto;
@@ -829,6 +846,7 @@ main .homepage-header {
     display: initial;
     color: #1e272e;
     font-weight: 800;
+    margin: auto;
     text-align: left;
   }
   .wrapper .main-nav ul {

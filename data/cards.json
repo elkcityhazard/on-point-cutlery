@@ -4,20 +4,23 @@
     "imgSrc": "/images/icons/truck.jpg",
     "text": "Our fully equipped, self-sustaining on-site mobile sharpening truck comes right to you and makes sharpening your knives even more convenient.",
     "url": "/contact-us",
-    "class": "fas fa-truck fa-3x"
+    "class": "fas fa-truck fa-3x",
+    "ID" : "1"
   },
   "1": {
     "title": "Schedule Online",
     "imgSrc": "/images/icons/calendar.jpg",
     "text": "Want to get started?  Schedule an appointment online and get started today.  We will call to confirm your details and to fully assess your needs",
     "url": "/schedule",
-    "class": "fas fa-calendar fa-3x"
+    "class": "fas fa-calendar fa-3x",
+    "ID" : "2"
   },
   "2": {
     "title": "Call For Free Quote",
     "imgSrc": "/images/icons/telephone.jpg",
     "text": "Still have questions?  Call us today for a free, no obligation quote. Remember, we come to you just give us a call and we will happily schedule a time that is convenient for you!",
     "url": "/contact-us",
-    "class": "fas fa-phone fa-3x"
+    "class": "fas fa-phone fa-3x",
+    "ID" : "3"
   }
 }
