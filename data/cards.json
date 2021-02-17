@@ -11,7 +11,7 @@
     "title": "Schedule Online",
     "imgSrc": "/images/icons/calendar.jpg",
     "text": "Want to get started?  Schedule an appointment online and get started today.  We will call to confirm your details and to fully assess your needs",
-    "url": "/schedule",
+    "url": "#",
     "class": "fas fa-calendar fa-3x",
     "ID" : "2"
   },

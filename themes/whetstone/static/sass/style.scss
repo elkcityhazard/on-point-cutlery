@@ -363,7 +363,7 @@ p {
       margin: 0 auto;
       width: 100%;
       .card {
-        align-items: center;
+        align-items: stretch;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -375,6 +375,7 @@ p {
           transition: all 250ms ease-in-out 250ms;
         }
         .card-body {
+          min-height: 500px;
           text-align: center;
           img + p {
             color: $black-pearl;
@@ -772,14 +773,15 @@ main {
       .footer-links {
         align-items: start;
         display: grid;
-        grid-template-columns: 2fr 1fr 1fr 1fr 2fr;
+        grid-template-columns: 2fr 1fr 1fr 2fr;
         grid-template-rows: 1fr;
+        grid-gap: 25px;
         justify-items: center;
         ul {
           flex-direction: column;
-          flex-wrap: wrap;
+          flex-wrap: nowrap;
           grid-column-start: 3;
-          grid-column-end: 5;
+          grid-column-end: 4;
           grid-row-start: 1;
           grid-row-end: 2;
           list-style: none;
@@ -788,14 +790,15 @@ main {
           max-height: 100px;
 
           li {
-            display: inline;
+            display: block;
             margin: 0 auto;
-            width: auto;
+            width: 100%;
             padding: 0;
             text-align: left;
             a {
               display: block;
-              font-size: 14px;
+              font-size: 12px;
+              padding: .25em 0;
             }
           }
         }

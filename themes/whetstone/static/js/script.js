@@ -58,14 +58,13 @@ function checkBoxes() {
   let bottomTrigger = window.innerHeight * (4 / 5);
 
   const boxes = document.querySelectorAll(".card");
-
   boxes.forEach((box) => {
     const boxTop = box.getBoundingClientRect().top;
     if (boxTop < bottomTrigger) {
       box.classList.add("trigger");
     } else {
-      box.removeEventListener("scroll");
-      box.classList.remove("trigger");
+      // box.removeEventListener("scroll");
+      // box.classList.remove("trigger");
     }
   });
 }

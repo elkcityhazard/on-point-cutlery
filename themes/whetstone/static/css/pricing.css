@@ -10,6 +10,7 @@
 .price-table th,
 .price-table td {
   display: block;
+  padding-left: 0.25em;
   text-align: center;
 }
 .price-table tr {
@@ -41,7 +42,7 @@
   .price-table th,
 .price-table td {
     display: table-cell;
-    padding: 0.5em 0;
+    padding: 0.5em 0.25em;
     text-align: left;
   }
 }
