@@ -345,7 +345,6 @@ p {
   transition: all 250ms ease-in-out 250ms;
 }
 .wrapper .row .col-50 .card .card-body {
-  min-height: 500px;
   text-align: center;
 }
 .wrapper .row .col-50 .card .card-body img + p {
