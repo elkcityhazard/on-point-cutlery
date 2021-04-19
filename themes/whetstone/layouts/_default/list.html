@@ -19,7 +19,7 @@
             <span>updated: {{ dateFormat "Monday, Jan 2, 2006" .Date }}</span>
           </header>
           <div class="card-body">
-            <p>{{.Content | safeHTML | truncate 140 }}</p>
+            <p>{{.Content | safeHTML | truncate 250 }}</p>
           </div>
         </div>
       </a>

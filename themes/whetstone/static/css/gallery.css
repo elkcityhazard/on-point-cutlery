@@ -60,34 +60,4 @@
   right: 2em;
 }
 
-@media screen and (min-width: 968px) {
-  .single-page .carousel-container {
-    margin: 0 auto;
-    max-width: 968px;
-  }
-  .single-page .carousel-container .inner-container .image-container {
-    position: relative;
-  }
-  .single-page .btn-container {
-    left: 50%;
-    position: absolute;
-    padding: 0;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-  }
-  .single-page .btn-container #prev,
-.single-page .btn-container #next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-  .single-page .btn-container #prev {
-    left: 2em;
-  }
-  .single-page .btn-container #next {
-    right: 2em;
-  }
-}
-
 /*# sourceMappingURL=gallery.css.map */
