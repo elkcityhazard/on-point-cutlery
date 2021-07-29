@@ -3,50 +3,141 @@
   <header>
     <h1>{{ .Title }}</h1>
   </header>
-  <div class="row">
-     
-          {{ .Content }}
-      
-  </div>
-  <div class="row">
-    <div class="container">
       <section class="contact-card">
         <h2>Our Contact Info</h2>
+        <div class="row">
+          <div class="col">
+            <div class="row">
+              <h3>We Are Ready To Help You</h3>
+            <p>We are available on weekdays from <time>9:00am</time> to <time>5:00pm</time> eastern time.</p>
+            </div>
+            <div class="row">
+              <h4>Contact Information</h4>
+              <address>
+                {{ .Content }}
+              </address>
+            </div>
+          </div>
+          <div class="col">
+            <div class="row">
+              <h3>Contact Us</h3>
+            <p>Use the form below to contact us and we will respond as soon as possible.</p>
+            </div>
+            <form id="contactForm" action="" method="POST" class="contact-form">
+              <fieldset>
+                <legend>Contact Details</legend>
+                <div class="form-control">
+                  <label for="name">Name: </label>
+                  <input type="text" name="name" id="userName" required />
+                  <small class="error"></small>
+                </div>
+                <div class="form-control">
+                  <label for="email">Email: </label>
+                  <input type="email" name="email" id="userEmail" required />
+                  <small class="error"></small>
+                </div>
+                <div class="form-control">
+                  <label for="message">Message: </label>
+                  <textarea
+                    name="message"
+                    id="userMessage"
+                    cols="20"
+                    rows="10"
+                    required
+                  ></textarea>
+                  <small class="error"></small>
+                </div>
+                <div class="form-control">
+                  <label id="usernameLabel" for="username">Username: </label>
+                  <input type="text" autocomplete="off" name="username" id="username" />
+                </div>
+                <div class="form-control">
+                  <label for="number"
+                    ><span id="numberOne"></span> +
+                    <span id="numberTwo"></span> = </label
+                  ><input type="number" name="number" id="number" />
+                </div>
+                <div class="form-control">
+                  <button type="submit">Submit</button>
+                  <button type="reset">Reset</button>
+                </div>
+              </fieldset>
+            </form>
+          </div>
+          
+        </div>
       </section>
-      
-    </div>
-  </div>
-    <div class="row">
-    <form id="form" action="https://api.formcake.com/api/form/83bffdb2-8ad0-433d-a457-3d60b60bd588/submission" method="POST" class="contact-form">
-        <fieldset>
-            <legend>Contact Details</legend>
-            <div class="form-control">
-                <label for="name">Name: </label>
-                <input type="text" name="name" id="userName" required>
-                <small class="error"></small>
-            </div>
-            <div class="form-control">
-                <label for="email">Email: </label>
-                <input type="email" name="email" id="userEmail" required>
-                <small class="error"></small>
-            </div>
-            <div class="form-control">
-                <label for="message">Message: </label>
-                <textarea name="message" id="userMessage" cols="20" rows="10" required></textarea>
-                <small class="error"></small>
-            </div>
-            <div class="form-control">
-              <label id="usernameLabel" for="username">Username: </label>
-              <input type="text" autocomplete="off" name="username" id="username">
-            </div>
-            <div class="form-control">
-                <button type="submit">Submit</button>
-                <button type="reset">Reset</button>
-            </div>
-        </fieldset>
-    </form>
-  </div>
 </main>
 
+<script>
+  const form = document.getElementById("contactForm");
+  let random1, random2, sum;
+  const numberOne = document.getElementById("numberOne");
+  const numberTwo = document.getElementById("numberTwo");
+
+  function init() {
+    random1 = Math.floor(Math.random() * 10 + 1);
+    random2 = Math.floor(Math.random() * 10 + 1);
+    sum = random1 + random2;
+    numberOne.textContent = random1;
+    numberTwo.textContent = random2;
+  }
+
+  const validateNumber = (value) => {
+    value = Number(value);
+    if (value !== sum) {
+      init();
+      return false;
+    } else {
+      return true;
+    }
+  }
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const checkNumber = validateNumber(form.number.value);
+    if (!checkNumber) {
+     throw new Error('validation error')
+    }
+    const data = {
+      name: form.name.value,
+      email: form.email.value,
+      message: form.message.value,
+    };
+
+    
+
+    if (!data) {
+      return;
+    }  else {
+      for (let x in data) {
+        if (data[x] == "") {
+          return console.log("failed");
+        }
+      }
+      const request = fetch(
+        "https://api.formcake.com/api/form/83bffdb2-8ad0-433d-a457-3d60b60bd588/submission",
+        {
+          method: "post",
+          mode: "cors",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(data),
+        }
+      );
+
+      request
+        .then((response) => response.json())
+        .then((data) => {
+          localStorage.setItem("form", data.data);
+          console.log(data.data);
+          location.assign("/success");
+        });
+    }
+  });
+
+  init();
+</script>
 
 {{ end }}

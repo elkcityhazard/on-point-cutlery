@@ -1,3 +1,54 @@
+section.contact-card {
+    h2 {
+        text-align: center;
+    }
+    .row {
+        align-items: flex-start;
+        display: flex;
+        .col {
+            flex: 1 1 50%;
+            .row {
+                address {
+                    flex: 1 1 100%;
+                    ul {
+                        align-self: flex-start;
+                        list-style: none !important;
+                        margin: 0 0 !important;
+                        padding: 0 !important;
+                        width: 100% !important;
+                        li {
+                            margin: 0 !important;
+                            padding: 0 !important;
+                            a {
+                                color: #333;
+                                text-decoration: underline;
+                                transition: color 250ms ease;
+                                -webkit-transition: color 250ms ease;
+                                -moz-transition: color 250ms ease;
+                                &:hover {
+                                    color: #0fbcf9;
+                                }
+                            }
+                        }
+                    }
+                }
+                h3,
+                h4,
+                p {
+                    margin: {
+                        top: 0;
+                        right: auto;
+                        left: 0;
+                        bottom: 0;
+                    }
+                    padding: 0;
+                    text-align: left !important; 
+                }
+            }
+        }
+    }
+}
+
 form {
     margin: 0 auto;
     max-width: 100%;
@@ -112,6 +163,18 @@ form {
                         }
                     }
             }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 968px) {
+    section.contact-card {
+        .row {
+            display: flex;
+            flex-direction: row !important;
+            .col {
+                flex: 1 1 50%;
             }
         }
     }
