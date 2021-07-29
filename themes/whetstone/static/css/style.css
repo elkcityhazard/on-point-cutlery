@@ -28,10 +28,17 @@ body {
   scroll-behavior: smooth;
 }
 
-body.hide-me {
-  opacity: 0;
-  transform-origin: bottom center;
-  transition: all 500ms ease-out 500ms;
+.preloader {
+  background: #000;
+  height: 100vh;
+  left: 0;
+  position: fixed;
+  top: 0;
+  transition: all 250ms linear 250ms;
+  -webkit-transition: all 250ms linear 250ms;
+  -moz-transition: all 250ms linear 250ms;
+  width: 100vw;
+  z-index: 999999999999;
 }
 
 #card-1 {
@@ -610,7 +617,7 @@ p {
   top: calc(66px);
   transition: height 250ms ease-in-out 0.3s;
   width: 100%;
-  z-index: 99999999999;
+  z-index: 999;
 }
 .main-nav a.logo {
   display: none;

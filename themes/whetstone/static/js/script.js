@@ -1,7 +1,10 @@
 //  preloader
 
-window.addEventListener("load", () => {
-  document.body.classList.remove("hide-me");
+window.addEventListener("load",  async () => {
+  document.querySelector('.preloader').style.opacity = "0";
+  setTimeout(() => {
+    document.querySelector('.preloader').remove();
+  }, 2000)
 });
 
 //Parallax effect in main header
