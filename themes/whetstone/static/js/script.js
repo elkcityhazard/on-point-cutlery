@@ -1,10 +1,23 @@
 //  preloader
 
 window.addEventListener("load",  async () => {
-  document.querySelector('.preloader').style.opacity = "0";
+  const preloader = document.querySelector('.preloader');
+
+  const removePreloader = new Promise((resolve, reject) => {
+    preloader.style.opacity = 0;
+    if (preloader.style.opacity == 0) {
+      return resolve(preloader);
+    } else {
+      return reject('error');
+    }
+  });
+
+
+removePreloader.then((loader) => {
   setTimeout(() => {
-    document.querySelector('.preloader').remove();
-  }, 2000)
+    loader.remove();
+  }, 1500)
+})
 });
 
 //Parallax effect in main header
