@@ -24,8 +24,10 @@ body {
   background: #fff;
   font-family: "Dejavu Sans", Helvetica, sans-serif, monospace;
   font-size: 18px;
+  height: 100%;
   transition: all 450ms ease-in-out 350ms;
   scroll-behavior: smooth;
+  width: 100%;
 }
 
 .preloader {
@@ -41,18 +43,6 @@ body {
   z-index: 999999999999;
 }
 
-#card-1 {
-  transform: translateX(-100%);
-}
-
-#card-2 {
-  transform: translateY(50%);
-}
-
-#card-3 {
-  transform: translateX(100%);
-}
-
 h1,
 h2,
 h3,
@@ -60,6 +50,18 @@ h4,
 h5,
 h6 {
   padding: 0 0.25em;
+}
+
+footer.card-footer {
+  display: block;
+  text-align: center;
+  width: 100%;
+}
+
+h1 + span.subtitle {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
 }
 
 img {
@@ -213,7 +215,7 @@ p {
   min-width: 100%;
 }
 .wrapper .row {
-  padding: 0 0.25em;
+  padding: 0;
 }
 .wrapper .row .container {
   display: block;
@@ -340,7 +342,7 @@ p {
   width: 100%;
 }
 .wrapper .row .col-50 .card {
-  align-items: stretch;
+  align-items: flex-start;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -353,6 +355,7 @@ p {
   transition: all 250ms ease-in-out 250ms;
 }
 .wrapper .row .col-50 .card .card-body {
+  margin: 0.25em auto;
   text-align: center;
 }
 .wrapper .row .col-50 .card .card-body img + p {
@@ -477,22 +480,6 @@ p {
 }
 .wrapper #content {
   padding-top: 66px;
-}
-.wrapper #content main .homepage-header .row .col h1 {
-  padding: 0;
-  text-align: center;
-}
-.wrapper #content main .homepage-header .row .col h1 + span {
-  color: #808e9b;
-  display: inline-block;
-  font-weight: 200;
-  font-style: initial;
-  text-align: center;
-  padding: 0 0.25em;
-}
-.wrapper #content main .homepage-header .row .col p {
-  text-align: left;
-  padding: 1em;
 }
 .wrapper .main-footer .row {
   padding: 1em;
@@ -648,14 +635,6 @@ p {
   height: 100vh;
 }
 
-main .homepage-header {
-  /*background-image: linear-gradient(to bottom, rgba(255,255,255,0.65), rgba(255,255,255,0.65)),
-                     url('../images/grinding-wheel.jpg'); */
-  background-size: cover;
-  background-position: center;
-  min-width: 100vmin;
-}
-
 .main-header {
   background-size: cover;
   background-position: center;
@@ -663,13 +642,23 @@ main .homepage-header {
 }
 
 @media screen and (min-width: 768px) {
-  main .homepage-header {
+  section.container .col h1 {
     text-align: center;
   }
 
+  .wrapper {
+    min-height: 100%;
+  }
   .wrapper .row .container {
     padding: 0;
     width: 100%;
+  }
+  .wrapper #content {
+    height: 100%;
+  }
+  .wrapper #content .homepage-header {
+    background: url("/images/on-point-cutlery-header.jpeg") no-repeat center top/contain;
+    min-height: 50vh;
   }
   .wrapper #content .single-page h1, .wrapper #content .single-page h2, .wrapper #content .single-page h3, .wrapper #content .single-page h4, .wrapper #content .single-page h5, .wrapper #content .single-page h6 {
     padding-top: 1em;
@@ -763,20 +752,16 @@ main .homepage-header {
   .wrapper #content {
     padding-top: 0;
   }
+  .wrapper #content .homepage-header {
+    background-size: cover;
+    min-height: 100vh;
+  }
   .wrapper #content main {
     margin: 0 auto;
     max-width: 968px;
   }
-  .wrapper #content main .homepage-header .container .row {
-    padding: 0;
-  }
-  .wrapper #content main .homepage-header .container .row .col {
-    margin: 0 auto;
-    padding: 1em;
-    width: 50%;
-  }
   .wrapper .row {
-    align-items: center;
+    align-items: flex-start;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -790,10 +775,10 @@ main .homepage-header {
     width: 33%;
   }
   .wrapper .row .col-50 {
-    align-items: center;
+    align-items: flex-start;
     display: flex;
     justify-content: center;
-    margin: auto;
+    margin: 0 auto;
     width: 45%;
   }
   .wrapper .row .portrait {
@@ -813,8 +798,13 @@ main .homepage-header {
   .wrapper .clients {
     flex-direction: column;
   }
+  .wrapper .clients header {
+    margin: 0 auto;
+  }
   .wrapper .clients header h2 {
+    display: block;
     font-size: 2.5vmax;
+    text-align: center;
   }
   .wrapper .clients .container {
     text-decoration: center;
@@ -959,25 +949,6 @@ main .homepage-header {
   .wrapper #content {
     margin: 0 auto;
   }
-  .wrapper #content main .homepage-header .container .row .col {
-    margin: 0 auto;
-    width: 45%;
-  }
-  .wrapper #content main .homepage-header .container .row .col figure {
-    margin-top: 0;
-  }
-  .wrapper #content main .homepage-header .container .row .col .subtitle {
-    margin-left: 0;
-    padding: 0;
-    text-align: left;
-  }
-  .wrapper #content main .homepage-header .container .row .col p {
-    padding: 1.5em;
-    text-align: left;
-  }
-  .wrapper #content main .homepage-header .container .row .col:nth-child(2n) {
-    padding-top: 3em;
-  }
   .wrapper .row .container {
     display: flex;
     flex-direction: row;
@@ -1027,67 +998,6 @@ main .homepage-header {
   }
   .wrapper #content main {
     min-width: 100%;
-  }
-
-  main .homepage-header {
-    background-attachment: fixed;
-    background-image: url("../images/grinding-wheel.webp");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: calc(100vh - 45px);
-    opacity: 1;
-    position: relative;
-    transition: background-position 0ms ease;
-    width: 100%;
-  }
-  main .homepage-header .container {
-    display: block;
-    margin: 0 auto 1em;
-    min-width: 768px;
-    width: 100%;
-  }
-  main .homepage-header .container .row {
-    display: flex;
-  }
-  main .homepage-header .container .row .col {
-    margin: 0 auto;
-    padding: 1em;
-    width: 50%;
-  }
-  main .homepage-header .container .row .col figure img {
-    display: block;
-    padding-top: 1em;
-    object-fit: cover;
-  }
-  main .homepage-header .container .row .col h1 {
-    color: #000;
-    display: block;
-    font-weight: 700;
-    margin-top: 0;
-    text-align: center;
-  }
-  main .homepage-header .container .row .col h1 + .subtitle {
-    color: #333 !important;
-    display: inline-block;
-    padding-left: 0.5em;
-    font-weight: 600;
-  }
-  main .homepage-header .container .row .col:nth-child(odd) {
-    display: none;
-  }
-  main .homepage-header .container .row .col:nth-child(2) {
-    background-color: rgba(255, 255, 255, 0.66);
-    left: 50%;
-    position: absolute;
-    top: 50%;
-    transform: translate(-50%, -50%);
-  }
-  main .homepage-header .container p {
-    color: #000;
-    font-style: italic;
-    font-weight: 400;
-    padding-top: 0.75em;
   }
 
   #toTop span {

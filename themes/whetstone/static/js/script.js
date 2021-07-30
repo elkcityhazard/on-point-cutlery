@@ -1,3 +1,5 @@
+
+
 //  preloader
 
 window.addEventListener("load",  async () => {
@@ -22,7 +24,7 @@ removePreloader.then((loader) => {
 
 //Parallax effect in main header
 
-if (window.innerWidth >= 1920) {
+if (window.innerWidth >= 1900) {
   const parallax = (id, rate) => {
     let el = document.querySelector(id);
     if (el === null) {
@@ -87,4 +89,16 @@ function checkBoxes() {
 
 window.addEventListener("scroll", checkBoxes);
 
-// back to top
+// card sizes
+
+(function() {
+  let globalScrollHeight = 0;
+const cards = document.querySelectorAll('.card-body')
+cards.forEach((card) => {
+  if (card.scrollHeight > globalScrollHeight) {
+    globalScrollHeight = card.scrollHeight;
+  }
+})
+cards.forEach((card) => card.style.minHeight = globalScrollHeight + 'px');
+console.log(cards);
+})()
