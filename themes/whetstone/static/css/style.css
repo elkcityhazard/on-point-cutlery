@@ -661,11 +661,13 @@ p {
     min-height: 50vh;
   }
   .wrapper #content .single-page h1, .wrapper #content .single-page h2, .wrapper #content .single-page h3, .wrapper #content .single-page h4, .wrapper #content .single-page h5, .wrapper #content .single-page h6 {
+    margin: 1em auto;
+    text-align: center;
     padding-top: 1em;
   }
   .wrapper #content .single-page .row p {
     font-style: initial;
-    text-align: center;
+    text-align: left;
   }
   .wrapper #content .single-page .row ul {
     align-items: center;
@@ -954,8 +956,16 @@ p {
     flex-direction: row;
   }
   .wrapper .main-nav ul li a {
+    padding: 0.5em 1em;
+    outline: 1px solid #0be881;
     font-size: 1.25vmax;
     font-weight: 500;
+    transition: all 250ms linear;
+    -webkit-transition: all 250ms linear;
+    -moz-transition: all 250ms linear;
+  }
+  .wrapper .main-nav ul li a::after {
+    bottom: 0%;
   }
 }
 @media screen and (min-width: 1920px) {

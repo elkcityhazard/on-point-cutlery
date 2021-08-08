@@ -732,12 +732,14 @@ p {
       }
       .single-page {
         h1,h2,h3,h4,h5,h6 {
+          margin: 1em auto;
+          text-align: center;
           padding-top: 1em;
         }
         .row {
           p {
             font-style: initial;
-            text-align: center;
+            text-align: left;
           }
           ul {
             align-items: center;
@@ -1051,14 +1053,22 @@ p {
       ul {
         li {
           a {
+            padding: .5em 1em;
+            outline: 1px solid #0be881;
             font-size: 1.25vmax;
             font-weight: 500;
+            transition: all 250ms linear;
+            -webkit-transition: all 250ms linear;
+            -moz-transition: all 250ms linear;
+            &::after {
+              bottom: 0%;
+            }
+            }
           }
         }
       }
     }
   }
-}
 
 @media screen and (min-width: 1920px) {
   #top {
