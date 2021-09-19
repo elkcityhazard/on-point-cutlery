@@ -94,7 +94,7 @@
 
 @media screen and (min-width: 1200px) {
   .modal-overlay {
-    overflow-y: hidden;
+    overflow: hidden;
   }
   .modal-overlay .inner-modal-container .container .row h3 {
     text-align: left;
