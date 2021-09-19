@@ -102,3 +102,22 @@ cards.forEach((card) => {
 cards.forEach((card) => card.style.minHeight = globalScrollHeight + 'px');
 console.log(cards);
 })()
+
+
+// Modal Video
+function modalControls(btn, modalID, delay) {
+  btn = document.getElementById(btn)
+  modalID = document.getElementById(modalID)
+  btn.onclick = () => {
+  modalID.style.opacity = 0;
+  setTimeout(() => {
+    modalID.style.display = "none";
+  }, `${delay}`);
+}
+}
+
+window.onload = function() {
+  const modal = document.querySelector('.container');
+  modal.classList.toggle('active');
+modalControls('toggle-modal', 'modalReel', 500)
+}

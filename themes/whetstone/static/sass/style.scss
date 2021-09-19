@@ -1,5 +1,6 @@
 /* Whetstone Theme Styles - Andrew McCall */
 
+@import './modal';
 /*
 Swedish Palette FlatUI.com
 */
@@ -1053,8 +1054,7 @@ p {
       ul {
         li {
           a {
-            padding: .5em 1em;
-            outline: 1px solid #0be881;
+            padding: .5em 1em .25em;
             font-size: 1.25vmax;
             font-weight: 500;
             transition: all 250ms linear;
