@@ -26,7 +26,7 @@
   background: rgba(0, 0, 0, 0.9);
   height: 100%;
   left: 0;
-  padding-top: 2em;
+  overflow-y: scroll;
   position: fixed;
   top: 0;
   width: 100%;
@@ -50,10 +50,13 @@
   color: #fff;
   cursor: pointer;
   font-size: 3rem;
+  margin: 0;
+  padding: 10px;
   opacity: 0;
   position: absolute;
-  right: 1rem;
-  top: 1rem;
+  right: 0;
+  top: 0;
+  z-index: 1000000000000000000000000000000000;
 }
 .modal-overlay .inner-modal-container #toggle-modal:hover {
   color: #333;
@@ -68,14 +71,19 @@
   -webkit-transition-duration: 1250ms;
   -moz-transition-duration: 1250ms;
 }
+.modal-overlay .inner-modal-container .container .row {
+  min-height: 100px;
+}
 .modal-overlay .inner-modal-container .container .row h3 {
   color: #fff;
-  font-size: 2em;
+  font-size: 1.5em;
   margin-bottom: 1rem;
   text-align: center;
 }
 .modal-overlay .inner-modal-container .container .row .reel {
   animation: construct 1250ms ease 2000ms forwards;
+  height: auto;
+  min-width: 280px;
   max-height: 100%;
   max-width: 100%;
   filter: opacity(0);
