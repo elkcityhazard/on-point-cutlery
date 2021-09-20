@@ -121,3 +121,22 @@ window.onload = function() {
   modal.classList.toggle('active');
 modalControls('toggle-modal', 'modalReel', 500)
 }
+
+
+
+function expandNav(id, toggleID) {
+  const toggle = document.getElementById(id);
+  const toBeToggled = document.getElementById(toggleID)
+
+  toBeToggled.classList.toggle('active');
+
+  toBeToggled.classList.contains('active') ? toBeToggled.style.height = `${toBeToggled.scrollHeight + 10}px` : toBeToggled.style.height = 0 + 'px';
+
+}
+
+document.getElementById('nav-toggle-label').addEventListener('click', () => {
+
+  expandNav('nav-toggle-label', 'navList')
+})
+
+

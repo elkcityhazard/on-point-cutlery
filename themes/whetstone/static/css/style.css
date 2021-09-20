@@ -162,6 +162,7 @@ footer.card-footer {
 h1 + span.subtitle {
   display: block;
   margin: 0 auto;
+  padding: 1em;
   text-align: center;
 }
 
@@ -325,6 +326,7 @@ p {
 }
 .wrapper .row .container h2 {
   font-size: 5vmin;
+  padding: 1rem;
 }
 .wrapper .row .card-header {
   margin: 1em auto;
@@ -433,6 +435,7 @@ p {
 }
 .wrapper .row .col-33 .card .card-body p {
   color: #808e9b;
+  text-align: left;
 }
 .wrapper .row .col-33 .card.trigger {
   transform: translateX(0) !important;
@@ -463,6 +466,9 @@ p {
   color: #1e272e;
   font-weight: 400;
   padding: 1em;
+}
+.wrapper .row .col-50 .card .card-body p {
+  max-width: 40ch;
 }
 .wrapper .row .col-50 .card .card-body + .card-footer {
   display: block;
@@ -513,9 +519,10 @@ p {
 }
 .wrapper .row p {
   color: #808e9b;
-  font-style: italic;
+  font-size: 0.75em;
   margin: auto;
   max-width: 60ch;
+  padding: 1rem;
 }
 .wrapper .clients {
   align-items: center;
@@ -557,7 +564,8 @@ p {
   text-align: center;
 }
 .wrapper .slides .inner-slides .slide .row .col-50 span.testimonial {
-  max-width: 60ch;
+  display: inline-block;
+  padding: 1rem;
   text-align: left;
 }
 .wrapper .slides .inner-slides .slide .row .col-50 figure figcaption span {
@@ -660,6 +668,7 @@ p {
   align-items: center;
   background: #fff;
   box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
@@ -669,12 +678,13 @@ p {
 }
 #nav-toggle-label a {
   color: #808e9b;
-  padding: 0.25vmin 0.5vmin;
+  padding: 0.5rem;
   text-decoration: none;
 }
 #nav-toggle-label .hamburger {
   background-color: #485460;
   border-radius: 10px;
+  cursor: pointer;
   height: 3px;
   margin: 1.75em 2em;
   position: relative;
@@ -715,6 +725,8 @@ p {
   background: rgba(255, 255, 255, 0.85);
   display: block;
   list-style: none;
+  position: relative;
+  z-index: 100000000;
 }
 .main-nav ul li {
   padding: 0.5em 2em;
@@ -730,10 +742,6 @@ p {
 }
 .main-nav ul li a:hover {
   color: #0be881;
-}
-
-#nav-toggle:checked ~ nav {
-  height: 100vh;
 }
 
 .main-header {
@@ -869,6 +877,9 @@ p {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+  }
+  .wrapper .row p {
+    font-size: 1em;
   }
   .wrapper .row .container {
     display: flex;

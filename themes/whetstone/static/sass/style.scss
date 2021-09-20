@@ -75,6 +75,7 @@ footer.card-footer {
 h1 + span.subtitle {
   display: block;
   margin: 0 auto;
+  padding: 1em;
   text-align: center;
 }
 
@@ -249,6 +250,7 @@ p {
       width: 100%;
       h2 {
         font-size: 5vmin;
+        padding: 1rem;
       }
     }
     .card-header {
@@ -366,6 +368,7 @@ p {
           justify-content: center;
           p {
             color: $london-square;
+            text-align: left;
           }
         }
       }
@@ -396,6 +399,9 @@ p {
             color: $black-pearl;
             font-weight: 400;
             padding: 1em;
+          }
+          p {
+            max-width: 40ch;
           }
         }
         .card-body + .card-footer {
@@ -449,9 +455,10 @@ p {
     }
     p {
       color: $london-square;
-      font-style: italic;
+      font-size: .75em;
       margin: auto;
       max-width: 60ch;
+      padding: 1rem;
     }
   }
   .clients {
@@ -500,7 +507,8 @@ p {
         .row {
           .col-50 {
             span.testimonial {
-              max-width: 60ch;
+              display: inline-block;
+              padding: 1rem;
               text-align: left;
             }
             figure {
@@ -625,6 +633,7 @@ p {
   align-items: center;
   background: #fff;
   box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
@@ -633,12 +642,13 @@ p {
   z-index: 999999999;
   a {
     color: $london-square;
-    padding: 0.25vmin 0.5vmin;
+    padding: .5rem;
     text-decoration: none;
   }
   .hamburger {
     background-color: $good-night;
     border-radius: 10px;
+    cursor: pointer;
     height: 3px;
     margin: 1.75em 2em;
     position: relative;
@@ -680,6 +690,8 @@ p {
     background: rgba(255, 255, 255, 0.85);
     display: block;
     list-style: none;
+    position: relative;
+    z-index: 100000000;
     li {
       padding: 0.5em 2em;
       a {
@@ -697,14 +709,6 @@ p {
     }
   }
 }
-
-#nav-toggle {
-  &:checked ~ nav {
-    height: 100vh;
-  }
-}
-
-
 
 .main-header {
   background-size: cover;
@@ -826,6 +830,7 @@ p {
 }
 
 @media screen and (min-width: 968px) {
+
   #nav-toggle-label {
     display: none;
   }
@@ -851,6 +856,9 @@ p {
       flex-direction: row;
       flex-wrap: wrap;
       justify-content: center;
+      p {
+        font-size: 1em;
+      }
       .container {
         display: flex;
         flex-direction: row;
