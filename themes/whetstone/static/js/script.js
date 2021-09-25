@@ -110,6 +110,8 @@ function modalControls(btn, modalID, delay) {
   modalID = document.getElementById(modalID)
   btn.onclick = () => {
   modalID.style.opacity = 0;
+  document.querySelector('.reel').pause();
+  document.documentElement.style.overflowY = "initial";
   setTimeout(() => {
     modalID.style.display = "none";
   }, `${delay}`);
@@ -119,6 +121,7 @@ function modalControls(btn, modalID, delay) {
 window.onload = function() {
   const modal = document.querySelector('.container');
   modal.classList.toggle('active');
+  document.documentElement.style.overflowY = "hidden";
 modalControls('toggle-modal', 'modalReel', 500)
 }
 
@@ -138,5 +141,7 @@ document.getElementById('nav-toggle-label').addEventListener('click', () => {
 
   expandNav('nav-toggle-label', 'navList')
 })
+
+
 
 
