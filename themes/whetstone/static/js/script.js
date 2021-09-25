@@ -121,7 +121,9 @@ function modalControls(btn, modalID, delay) {
 window.onload = function() {
   const modal = document.querySelector('.container');
   modal.classList.toggle('active');
-  document.documentElement.style.overflowY = "hidden";
+  if (document.getElementById('modalReel')) {
+    document.documentElement.style.overflowY = "hidden";
+  }
 modalControls('toggle-modal', 'modalReel', 500)
 }
 

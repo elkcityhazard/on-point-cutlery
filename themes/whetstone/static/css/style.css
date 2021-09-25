@@ -442,7 +442,10 @@ p {
   opacity: 1 !important;
 }
 .wrapper .row .col-50 {
-  margin: 0 auto;
+  background: #eee;
+  margin: 1rem auto;
+  padding: 0.5rem;
+  box-shadow: 2px 2px 20px -10px rgba(0, 0, 0, 0.25);
   width: 100%;
 }
 .wrapper .row .col-50 .card {
@@ -776,6 +779,7 @@ p {
   }
   .wrapper #content .single-page .row p {
     font-style: initial;
+    margin: auto;
     text-align: left;
   }
   .wrapper #content .single-page .row ul {
@@ -869,7 +873,7 @@ p {
   }
   .wrapper #content main {
     margin: 0 auto;
-    max-width: 968px;
+    max-width: 1366px;
   }
   .wrapper .row {
     align-items: flex-start;
@@ -884,16 +888,23 @@ p {
   .wrapper .row .container {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
   }
   .wrapper .row .col-33 {
+    margin: auto;
     width: 33%;
   }
   .wrapper .row .col-50 {
-    align-items: flex-start;
+    align-items: center;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
     display: flex;
-    justify-content: center;
-    margin: 0 auto;
-    width: 45%;
+    flex-wrap: wrap;
+    justify-content: start;
+    margin: 1rem;
+    flex: 0 1;
+    width: 100%;
   }
   .wrapper .row .portrait {
     margin-right: -3em;
@@ -1105,8 +1116,15 @@ p {
   .wrapper .row .container {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
     margin: 0 auto;
     max-width: 1366px;
+    text-align: center;
+  }
+  .wrapper .row .container .col-50 {
+    flex: 1 1;
+    margin: 1rem;
   }
   .wrapper .row .main-nav {
     padding: 0;

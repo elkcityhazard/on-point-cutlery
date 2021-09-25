@@ -378,7 +378,10 @@ p {
       }
     }
     .col-50 {
-      margin: 0 auto;
+      background: #eee;
+      margin: 1rem auto;
+      padding: .5rem;
+      box-shadow: 2px 2px 20px -10px rgba(0, 0, 0, 0.25);
       width: 100%;
       .card {
         align-items: flex-start;
@@ -744,6 +747,7 @@ p {
         .row {
           p {
             font-style: initial;
+            margin: auto;
             text-align: left;
           }
           ul {
@@ -847,7 +851,7 @@ p {
       }
       main {
         margin: 0 auto;
-        max-width: 968px;
+        max-width: 1366px;
       }
     }
     .row {
@@ -862,16 +866,23 @@ p {
       .container {
         display: flex;
         flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
       }
       .col-33 {
+        margin: auto;
         width: 33%;
       }
       .col-50 {
-        align-items: flex-start;
+        align-items: center;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        border-radius: 15px;
         display: flex;
-        justify-content: center;
-        margin: 0 auto;
-        width: 45%;
+        flex-wrap: wrap;
+        justify-content: start;
+        margin: 1rem;
+        flex: 0 1;
+        width: 100%;
       }
       .portrait {
         margin-right: -3em;
@@ -1100,8 +1111,15 @@ p {
       .container {
         display: flex;
         flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
         margin: 0 auto;
         max-width: 1366px;
+        text-align: center;
+        .col-50 {
+          flex: 1 1;
+          margin: 1rem;
+        }
       }
       .main-nav {
         padding: 0;
