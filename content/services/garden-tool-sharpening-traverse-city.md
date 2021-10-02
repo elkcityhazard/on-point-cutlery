@@ -2,6 +2,8 @@
 title: Garden Tools Sharpening
 description: "We can restore and sharpen the edge of most gardening tools.  Ask us today about our wide variety of tool sharpening in Northern Michigan."
 date: 2021-01-22
+tags:
+   - services
 ---
 
 Is your hand tiller putting a damper on your gardening hobby? Maybe your weeding sickle is not removing weeds as efficiently anymore? 

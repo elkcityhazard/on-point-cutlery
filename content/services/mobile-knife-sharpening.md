@@ -2,6 +2,8 @@
 title: Mobile Knife Sharpening
 description: "Our highly skilled sharpening technicians come to you and sharpen on premise.  No need to packaged your knives or tools. No need to waste time dropping off and waiting for your tools and knives to be sharpened."
 date: 2021-01-22
+tags:
+   - services
 ---
 
 Our highly skilled sharpening technicials will come to your home or business and sharpen on premise.  We offer non-contractual services for your home or commercial kitchen.  Our mobile sharpening workstation is fully equipped to sharpen most common commercial and residential tools.  Have an uncommon tool? Just ask! The principles of blade sharpening hold true across many tools and we are glad to assess your needs and help you get a sharper edge.  

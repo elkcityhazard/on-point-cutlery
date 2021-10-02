@@ -1,13 +1,22 @@
 baseURL = "https://onpointcutlery.com/"
 languageCode = "en-us"
 title = "On Point Cutlery - Traverse City Knife Sharpening & Mobile Knife Sharpening"
-theme = "whetstone"
+theme = "lomar2021"
 
 
 [params]
     author = "Andrew M McCall"
     description =  "On Point Cutlery offers expert knife sharpening and tool sharpening services in Traverse City, Michigan.  We come to your business or home and sharpen your knives and tools so they are like new."
 
+[[params.plugins.css]]
+  link = "https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap"
+[[params.plugins.css]]
+  link = ""
+
+[markup]
+  [markup.goldmark]
+     [markup.goldmark.renderer]
+      unsafe = true
 
 [menu]
 

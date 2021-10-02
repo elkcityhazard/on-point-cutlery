@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    {{- partial "head.html" . -}}
+    <body>
+        {{- partial "navigation.html" . -}}
+        {{- if .Site.GetPage "section" "services" -}}
+        {{- partial "list-header.html" . -}}
+        {{ else }}
+        {{- partial "header.html" . -}}
+
+        {{ end }}
+        <div id="content">
+        {{- block "main" . }}{{- end }}
+        </div>
+        {{- partial "footer.html" . -}}
+    </body>
+</html>

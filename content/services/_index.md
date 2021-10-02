@@ -1,5 +1,6 @@
 ---
 title: Knife Sharpening Services
+subtitle: "Traverse City Sharpening Services"
 description: "We offer knife sharpening, tool sharpening, blade sharpening, edge sharpening in Traverse City, Michigan and surrounding area."
 date: 2021-01-22
 ---

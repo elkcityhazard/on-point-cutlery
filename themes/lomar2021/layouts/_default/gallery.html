@@ -1,0 +1,101 @@
+{{ define "main" }}
+<style>
+    .image-wrapper {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 1rem 10px;
+    }
+
+    img.gallery {
+        max-width: 350px;
+        max-height: 350px;
+        object-fit: cover;
+        transition: transform 250ms ease;
+        -webkit-transition: transform 250ms ease;
+        -moz-transition: transform 250ms ease;
+        -ms-transition: transform 250ms ease;
+    }
+
+    img.gallery:hover {
+        transform: scale(1.2);
+    }
+
+   /* overlay at start */
+.mfp-fade.mfp-bg {
+  opacity: 0;
+
+  -webkit-transition: all 0.15s ease-out;
+  -moz-transition: all 0.15s ease-out;
+  transition: all 0.15s ease-out;
+}
+/* overlay animate in */
+.mfp-fade.mfp-bg.mfp-ready {
+  opacity: 0.8;
+  -webkit-transition: all 0.15s ease-out;
+  -moz-transition: all 0.15s ease-out;
+  transition: all 0.15s ease-out;
+}
+/* overlay animate out */
+.mfp-fade.mfp-bg.mfp-removing {
+  opacity: 0;
+  -webkit-transition: all 0.15s ease-out;
+  -moz-transition: all 0.15s ease-out;
+  transition: all 0.15s ease-out;
+}
+
+/* content at start */
+.mfp-fade.mfp-wrap .mfp-content {
+  opacity: 0;
+  -webkit-transition: all 0.15s ease-out;
+  -moz-transition: all 0.15s ease-out;
+  transition: all 0.15s ease-out;
+
+  -webkit-transition: all 0.15s ease-out;
+  -moz-transition: all 0.15s ease-out;
+  transition: all 0.15s ease-out;
+}
+/* content animate it */
+.mfp-fade.mfp-wrap.mfp-ready .mfp-content {
+  opacity: 1;
+  -webkit-transition: all 0.15s ease-out;
+  -moz-transition: all 0.15s ease-out;
+  transition: all 0.15s ease-out;
+}
+/* content animate out */
+.mfp-fade.mfp-wrap.mfp-removing .mfp-content {
+  opacity: 0;
+  -webkit-transition: all 0.15s ease-out;
+  -moz-transition: all 0.15s ease-out;
+  transition: all 0.15s ease-out;
+}
+</style>
+<section class="gallery">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 p-3 mx-auto">
+                <!-- Slider main container -->
+                <div class="w-100 overflow-hidden mx-auto">
+                    <!-- Additional required wrapper -->
+                    <div class="image-wrapper">
+                        {{ range .Site.Data.gallery}}
+                        <!-- Slides -->
+                        <figure class="swiper-slide" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="150">
+                            <div class="overflow-hidden">
+                                <a href="{{ .src | absURL }}" title="{{ .alt }}">
+                                    <img class="img-fluid gallery" id="{{ add 1 1}}" src="{{ .src | absURL }}"
+                                        alt="{{ .alt }}" height="500" width="500" />
+                                </a>
+                            </div>
+                            <figcaption>{{ .caption }}</figcaption>
+                        </figure>
+                        {{ end }}
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</section>
+
+{{ end }}

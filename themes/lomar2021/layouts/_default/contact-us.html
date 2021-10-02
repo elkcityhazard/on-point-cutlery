@@ -1,0 +1,84 @@
+{{ define "main" }}
+<section class="contact-us pt-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-lg-5 mx-auto" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+                <div class="row">
+                    <div class="col-12">
+                        <h2 class="contact-us">{{ .Title }}</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <h3>We Are Here For You</h3>
+                    </div>
+                </div>
+                <div class="row border-bottom pb-3">
+                    <div class="col-12">
+                        <span>Our business hours are: Monday - Friday: 9am - 6pm | Sat: 9am - noon | Sun: closed</span>
+                    </div>
+                </div>
+                <div class="row border-bottom pb-3">
+                    <div class="col-12"><h3>Contact Us</h3></div>
+                    <div class="col-1 p-2">
+                        <span class="fa-stack d-flex align-items-center justify-content-center">
+                            <a href="tel:+1231676114" title="Traverse City Knife Sharpening">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fas fa-phone fa-stack-1x"></i>
+                            </a>
+                        </span>
+                    </div>
+                    <div class="col-11 p-2">
+                        <div class="col-12"><strong>Phone: </strong></div>
+                        <div class="col-12"><span><a href="tel:+1231676114" title="Call Now">231 676 1314</a></span></div>
+                    </div>
+                </div>
+                <div class="row border-bottom pb-3">
+                    <div class="col-1 p-2">
+                        <span class="fa-stack d-flex align-items-center justify-content-center">
+                            <a href="#contact" title="contact us">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fas fa-envelope fa-stack-1x"></i>
+                            </a>
+                        </span>
+                    </div>
+                    <div class="col-11 p-2">
+                        <div class="col-12"><strong>Email: </strong></div>
+                        <div class="col-12"><span><a href="#contact" title="contact form">info@onpointcutlery.com</a></span></div>
+                    </div>
+                </div>
+                <div class="row pb-3">
+                    <div class="col-12"><h3>Address</h3></div>
+                    <div class="col-1 p-2">
+                        <span class="fa-stack d-flex align-items-center justify-content-center">
+                            <a href="tel:+1231676114" title="Traverse City Knife Sharpening">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fas fa-map-marker fa-stack-1x"></i>
+                            </a>
+                        </span>
+                    </div>
+                    <div class="col-11 p-2">
+                        <div class="col-12"><strong>Address: </strong></div>
+                        <div class="col-12">
+                            <address>
+                                <ul>
+                                    <li>On Point Cutlery</li>
+                                    <li>PO BOX 291</li>
+                                    <li>Traverse City, Michigan 49685</li>
+                                </ul>
+                            </address>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-lg-5 mx-auto">
+                <figure>
+                    <img src="{{.Site.BaseURL}}images/stone-and-cleaver-500x500.webp" alt="stone and cleaver" class="img-fluid" height="500" width="500" data-aos="fade-in" data-aos-duration="1250" data-aos-delay="100">
+                </figure>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+{{ end }}
