@@ -1642,8 +1642,8 @@ a:hover.back-to-top {
 	
 	/* Header */
 	.header {
-		background: linear-gradient(0.5turn, rgba(255,255,255, 0.85), rgba(255,255,255,0.85), rgba(255,255,255,0.85)), url('../images/cleaver-1366-768.webp') center -10rem no-repeat;
-		background-size: cover;
+		background: linear-gradient(0.5turn, rgba(255,255,255, 0.85), rgba(255,255,255,0.85), rgba(255,255,255,0.85)), url('../images/cleaver-1366-768.webp') center center no-repeat;
+		background-size: contain;
 		padding-top: 19rem;
 	}
 
@@ -1801,6 +1801,6 @@ a:hover.back-to-top {
 @media screen and (min-width: 1920px) {
 	.header {
 		background: linear-gradient(0.5turn, rgba(255,255,255, 0.85), rgba(255,255,255,0.85)), url('../images/cleaver-1920-1080.webp') center center no-repeat;
-		background-size: cover;
+		background-size: contain;
 	}
 }
