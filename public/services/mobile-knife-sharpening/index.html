@@ -24,24 +24,17 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="preconnect" href="https://unpkg.com/">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
-    
-
         
         
         
         
         
         
-
-        
-
-            <link rel="stylesheet" href="https://onpointcutlery.com/css/main.css">
+    <link rel="stylesheet" href="https://onpointcutlery.com/css/main.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    
-    <link rel="preload"  href="https://onpointcutlery.com/css/fontawesome-all.css">
-    <link rel="preload" href="https://onpointcutlery.com/webfonts/fa-brands-400.woff2">
 	
-	<script defer src="https://www.google.com/recaptcha/api.js"></script>
+	
+    
 
 </head><body>    
     <nav class="navbar navbar-expand-lg fixed-top navbar-light">
@@ -375,16 +368,16 @@
                             <input type="email" class="form-control-input" id="cemail" required>
                             <label class="label-control" for="cemail">Email</label>
                         </div>
+                        <div class="form-group d-none">
+                            <input type="text" class="form-control-input" id="userpassword" name="userpassword">
+                            <label class="label-control" for="userpassword">Name</label>
+                        </div>
                         <div class="form-group">
                             <textarea class="form-control-textarea" id="cmessage" required></textarea>
                             <label class="label-control" for="cmessage">Project details</label>
                         </div>
                         <div class="form-group">
-                            <button type="submit" class="form-control-submit-button g-recaptcha"                            
-                            data-sitekey="6Lf6IyUaAAAAAPTTe__sC4052VzvGcwFlBHeajA0"
-                            data-callback='onSubmit'
-                            data-action='submit'
-                            >Submit</button>
+                            <button type="submit" class="form-control-submit-button">Submit</button>
                         </div>
                     </form>
                     
@@ -467,30 +460,21 @@
     <script src="https://onpointcutlery.com/js/jquery.magnific-popup.js"></script> 
     <script src="https://onpointcutlery.com/js/swiper.min.js"></script> 
     <script src="https://onpointcutlery.com/js/scripts.js"></script> 
-    <script defer src="https://unpkg.com/aos@next/dist/aos.js" id="AOScript"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js" id="AOScript"></script>
     <script>
-        document.getElementById('AOScript').addEventListener('load', () => {
             AOS.init();            
-        })
     $(document).ready(function() {
   $('.image-fluid.gallery').magnificPopup({type:'image'});
 });
 $('.image-wrapper').magnificPopup({
   delegate: 'a', 
   type: 'image',
-  removeDelay: 300,
-  mainClass: 'mfp-fade'
+  mainClass: 'mfp-fade',
   
 });
 
 
-
-
-function onSubmit(token) {
-        document.getElementById("my-form-id").submit();
-    }
-
-     
+    
     </script>
 </body>
 </html>

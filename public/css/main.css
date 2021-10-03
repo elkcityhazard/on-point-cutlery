@@ -15739,6 +15739,21 @@ h2.service {
 	text-transform: uppercase;
 }
 
+.contact-us ul {
+	color: #555555;
+}
+
+.contact-us h2,
+.contact-us h3 {
+	font-size: 1.25rem;
+}
+
+.contact-us .fa-phone,
+.contact-us .fa-envelope,
+.contact-us .fa-map-marker {
+	color: #cbcbd1;
+}
+
 h3 {
 	color: #333333;
 	font-weight: 700;
@@ -15811,7 +15826,7 @@ h6 {
 #mainContent h4,
 #mainContent h5,
 #mainContent h6 {
-	text-align: center;
+	text-align: left;
 }
 
 #mainContent > ul,
