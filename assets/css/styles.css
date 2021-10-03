@@ -660,7 +660,7 @@ input[type='checkbox'] {
 	position: relative;
 	padding-top: 7.75rem;
 	padding-bottom: 4rem;
-	background: linear-gradient(0.5turn, rgba(255,255,255, 0.5), rgba(255,255,255,1)), url('../images/on-point-hero-background.svg') center center no-repeat;
+	background: linear-gradient(0.5turn, rgba(255,255,255, 0.85) rgba(255,255,255,0.85)), url('../images/cleaver-350-622.webp') center center no-repeat;
 	background-size: cover;
 }
 
@@ -681,7 +681,15 @@ input[type='checkbox'] {
 }
 
 .header .expertise {
+	background: #fff;
+	border: .0125rem solid #e6e6e6;
+	box-shadow: 2px 2px 20px -10px rgba(0, 0, 0, 0.33);
 	margin-bottom: 3.5rem;
+	padding: 0.6275rem;
+	perspective: 50;
+	min-height: 33vh;
+	transform-style: preserve-3d;
+	-webkit-transform-style: preserve-3d;
 }
 
 .header .expertise .icon {
@@ -1304,8 +1312,23 @@ a:hover.back-to-top {
 /*************************/
 /*     Media Queries     */
 /*************************/	
+
+/* Min-width 350 */ 
+
+@media screen and (min-width: 350px) {
+	.header {
+		background: linear-gradient(0.5turn, rgba(255,255,255, 0.85), rgba(255,255,255,0.85)), url('../images/cleaver-350-622.webp') center center no-repeat;
+		background-size: cover;
+	}
+}
+
 /* Min-width 768px */
 @media (min-width: 768px) {
+
+	.header {
+		background: linear-gradient(0.5turn, rgba(255,255,255, 0.85), rgba(255,255,255,0.85)), url('../images/cleaver-768-1365.webp') center center no-repeat;
+		background-size: cover;
+	}
 
 	/* Services */
 	.basic-2 .services-decoration {
@@ -1325,7 +1348,11 @@ a:hover.back-to-top {
 
 /* Min-width 992px */
 @media (min-width: 992px) {
-	
+	.header {
+		background: linear-gradient(0.5turn, rgba(255,255,255, 0.85), rgba(255,255,255,0.85)), url('../images/cleaver-968-1721.webp') center center no-repeat;
+		background-size: cover;
+	}
+
 	/* General Styles */
 	.h2-heading {
 		width: 35.25rem;
@@ -1611,11 +1638,12 @@ a:hover.back-to-top {
 		font-size: 3.75rem;
 		line-height: 4.375rem;
 	}
-	/* end of general styles */
-
-
+	/* end of general styles */	
+	
 	/* Header */
 	.header {
+		background: linear-gradient(0.5turn, rgba(255,255,255, 0.85), rgba(255,255,255,0.85), rgba(255,255,255,0.85)), url('../images/cleaver-1366-768.webp') center -10rem no-repeat;
+		background-size: cover;
 		padding-top: 19rem;
 	}
 
@@ -1624,6 +1652,13 @@ a:hover.back-to-top {
 	}
 
 	.header .expertise {
+		background: #fff;
+		box-shadow: 2px 2px 20px -10px rgba(0, 0, 0, 0.25);
+		min-height: 50vh;
+		padding: 0.675rem;
+		perspective: 50;
+		transform-style: preserve-3d;
+		-webkit-transform-style: preserve-3d;
 		width: 320px;
 	}
 	
@@ -1760,3 +1795,12 @@ a:hover.back-to-top {
 	/* end of extra pages */
 }
 /* end of min-width 1200px */
+
+/* Min-width 1920px */
+
+@media screen and (min-width: 1920px) {
+	.header {
+		background: linear-gradient(0.5turn, rgba(255,255,255, 0.85), rgba(255,255,255,0.85)), url('../images/cleaver-1920-1080.webp') center center no-repeat;
+		background-size: cover;
+	}
+}
