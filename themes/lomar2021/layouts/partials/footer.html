@@ -230,7 +230,9 @@ $('.image-wrapper').magnificPopup({
 // Form reCaptcha 
 
 function onSubmit(token) {
-        document.getElementById("my-form-id").submit();
+        document.getElementById('recap').addEventListener('load', () => {
+            document.getElementById("contactForm").submit();
+        })
     }
      
     </script>
