@@ -226,6 +226,20 @@ $('.image-wrapper').magnificPopup({
   // other options
 });
 
+function activeClass() {
+const navLinks = document.querySelectorAll('a.nav-link');
+const pathname = document.location.pathname.split('/').join('');
 
+
+navLinks.forEach((link, index) => {
+    if (link.pathname.split('/').join('') == pathname) {
+        link.style.color = "#20a1d7"
+    } else {
+        return;
+    }
+})
+}
+
+activeClass();
     
     </script>

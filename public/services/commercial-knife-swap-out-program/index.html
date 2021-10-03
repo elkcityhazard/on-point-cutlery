@@ -51,51 +51,46 @@
             </button>
 
             <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
-                <ul class="navbar-nav ml-auto">
+                <nav class="navbar-nav ml-auto">
                     
                     
                     
                     <li class="nav-item">
-                        <a href="/" class="nav-link page-scroll">Home</a>
+                        <a href="https://onpointcutlery.com/" class="nav-link page-scroll">Home</a>
                     </li>
-                    
                     
                     
                     
                     <li class="nav-item">
-                        <a href="/services" class="nav-link page-scroll">Services</a>
+                        <a href="https://onpointcutlery.com/services" class="nav-link page-scroll">Services</a>
                     </li>
-                    
                     
                     
                     
                     <li class="nav-item">
-                        <a href="/pricing" class="nav-link page-scroll">Pricing</a>
+                        <a href="https://onpointcutlery.com/pricing" class="nav-link page-scroll">Pricing</a>
                     </li>
-                    
                     
                     
                     
                     <li class="nav-item">
-                        <a href="/gallery" class="nav-link page-scroll">Gallery</a>
+                        <a href="https://onpointcutlery.com/gallery" class="nav-link page-scroll">Gallery</a>
                     </li>
-                    
                     
                     
                     
                     <li class="nav-item">
-                        <a href="/contact-us/" class="nav-link page-scroll">Contact Us</a>
+                        <a href="https://onpointcutlery.com/contact-us" class="nav-link page-scroll">Contact Us</a>
                     </li>
-                    
                     
                     
                     
                     <li class="nav-item">
-                        <a href="/about-us/" class="nav-link page-scroll">About Us</a>
+                        <a href="https://onpointcutlery.com/about-us" class="nav-link page-scroll">About Us</a>
                     </li>
                     
                     
-                </ul>
+                </nav>
                 <span class="nav-item social-icons">
                     <span class="fa-stack">
                         <a href="#" data-aos="fadeIn">
@@ -490,7 +485,21 @@ $('.image-wrapper').magnificPopup({
   
 });
 
+function activeClass() {
+const navLinks = document.querySelectorAll('a.nav-link');
+const pathname = document.location.pathname.split('/').join('');
 
+
+navLinks.forEach((link, index) => {
+    if (link.pathname.split('/').join('') == pathname) {
+        link.style.color = "#20a1d7"
+    } else {
+        return;
+    }
+})
+}
+
+activeClass();
     
     </script>
 </body>

@@ -25,21 +25,21 @@ theme = "lomar2021"
 #    name = "News"
 #    pre = "&#8250;"
 #    title = "News & Updates"
-#    url = "/updates/"
+#    url = "/updates"
 #    weight = 7
   [[menu.main]]
     identifier = "about-us"
     name = "About Us"
     pre = "&#8250;"
     title = "About Us"
-    url = "/about-us/"
+    url = "/about-us"
     weight = 8
   [[menu.main]]
     identifier = "contact-us"
     name = "Contact Us"
     pre = "&#8250;"
     title = "Contact Us"
-    url = "/contact-us/"
+    url = "/contact-us"
     weight = 6
   [[menu.main]]
     identifier = "Home"
