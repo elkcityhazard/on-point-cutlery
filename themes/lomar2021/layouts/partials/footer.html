@@ -227,12 +227,9 @@ $('.image-wrapper').magnificPopup({
 });
 
 
-// Form reCaptcha 
-document.getElementById('recap').addEventListener('load', () => {
-    function onSubmit(token) {
-    document.getElementById("contactForm").submit();
-    }
-})
+function onSubmit(token) {
+    document.getElementById("my-form-id").submit();
+}
 
     
     </script>
