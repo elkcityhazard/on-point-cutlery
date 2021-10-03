@@ -2,7 +2,7 @@
 <style>
     .image-wrapper {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
         gap: 1rem 10px;
     }
 
@@ -74,12 +74,12 @@
         <div class="row">
             <div class="col-12 p-3 mx-auto">
                 <!-- Slider main container -->
-                <div class="w-100 overflow-hidden mx-auto">
+                <div class="w-100 text-center overflow-hidden mx-auto">
                     <!-- Additional required wrapper -->
-                    <div class="image-wrapper">
+                    <div class="image-wrapper mx-auto">
                         {{ range .Site.Data.gallery}}
                         <!-- Slides -->
-                        <figure class="swiper-slide" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="150">
+                        <figure class="swiper-slide mx-auto" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="150">
                             <div class="overflow-hidden">
                                 <a href="{{ .src | absURL }}" title="{{ .alt }}">
                                     <img class="img-fluid gallery" id="{{ add 1 1}}" src="{{ .src | absURL }}"
