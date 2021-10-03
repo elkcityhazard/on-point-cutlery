@@ -228,11 +228,11 @@ $('.image-wrapper').magnificPopup({
 
 
 // Form reCaptcha 
-
-function onSubmit(token) {
-        document.getElementById('recap').addEventListener('load', () => {
-            document.getElementById("contactForm").submit();
-        })
+document.getElementById('recap').addEventListener('load', () => {
+    function onSubmit(token) {
+    document.getElementById("contactForm").submit();
     }
-     
+})
+
+    
     </script>
