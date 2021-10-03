@@ -6,14 +6,14 @@
             <!-- <a class="navbar-brand logo-text page-scroll" href="index.html">Lomar</a> -->
 
             <!-- Image Logo -->
-            <a class="navbar-brand logo-image" href="index.html"><img src="{{.Site.BaseURL}}images/logo.png" height="100" width="100" alt="alternative"></a> 
+            <a class="navbar-brand logo-image" href="{{ .Site.BaseURL }}"><img src="{{.Site.BaseURL}}images/logo.png" height="100" width="100" alt="alternative"></a> 
 
             <button class="navbar-toggler p-0 border-0" type="button" data-toggle="offcanvas" aria-label="navbar-toggler">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
             <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
-                <nav class="navbar-nav ml-auto">
+                <ul class="navbar-nav ml-auto">
                     {{ $currentPage := . }}
                     {{ range .Site.Menus.main}}
                     {{ if .HasChildren }}
@@ -44,7 +44,10 @@
                     </li>
                     {{ end }}
                     {{ end }}
-                </nav>
+                    <li class="nav-item">
+                        <a href="tel:+12316761314" class="nav-link page-scroll border border-primary">231 676 1314</a>
+                    </li>
+                </ul>
                 <span class="nav-item social-icons">
                     <span class="fa-stack">
                         <a href="#" data-aos="fadeIn">
