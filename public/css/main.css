@@ -15786,12 +15786,16 @@ h6 {
 }
 
 .h1-large {
+	color: #fff;
+	text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
 	font-size: 2.875rem;
 	line-height: 3.5rem;
 	letter-spacing: -0.7px;
 }
 
 .h1-large + h2 {
+	color: #fff;
+	text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
 	margin-bottom: 14rem;
 }
 
@@ -16979,7 +16983,7 @@ a:hover.back-to-top {
 
 @media screen and (min-width: 350px) {
 	.header {
-		background: linear-gradient(0.5turn, rgba(255,255,255, 0.85), rgba(255,255,255,0.85)), url('../images/cleaver-350-622.webp') center center no-repeat;
+		background: url('../images/cleaver-350-622.webp') center center no-repeat;
 		background-size: cover;
 	}
 }
@@ -16988,7 +16992,7 @@ a:hover.back-to-top {
 @media (min-width: 768px) {
 
 	.header {
-		background: linear-gradient(0.5turn, rgba(255,255,255, 0.85), rgba(255,255,255,0.85)), url('../images/cleaver-768-1365.webp') center center no-repeat;
+		background: url('../images/cleaver-768-1365.webp') center center no-repeat;
 		background-size: cover;
 	}
 
@@ -17011,7 +17015,7 @@ a:hover.back-to-top {
 /* Min-width 992px */
 @media (min-width: 992px) {
 	.header {
-		background: linear-gradient(0.5turn, rgba(255,255,255, 0.85), rgba(255,255,255,0.85)), url('../images/cleaver-968-1721.webp') center center no-repeat;
+		background: url('../images/cleaver-968-1721.webp') center center no-repeat;
 		background-size: cover;
 	}
 
@@ -17304,7 +17308,7 @@ a:hover.back-to-top {
 	
 	/* Header */
 	.header {
-		background: linear-gradient(0.5turn, rgba(255,255,255, 0.85), rgba(255,255,255,0.85), rgba(255,255,255,0.85)), url('../images/cleaver-1366-768.webp') center center no-repeat;
+		background: url('../images/cleaver-1366-768.webp') center center no-repeat;
 		background-size: contain;
 		padding-top: 19rem;
 	}
@@ -17462,7 +17466,7 @@ a:hover.back-to-top {
 
 @media screen and (min-width: 1920px) {
 	.header {
-		background: linear-gradient(0.5turn, rgba(255,255,255, 0.85), rgba(255,255,255,0.85)), url('../images/cleaver-1920-1080.webp') center center no-repeat;
+		background: url('../images/cleaver-1920-1080.webp') center center no-repeat;
 		background-size: contain;
 	}
 }
