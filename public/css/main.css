@@ -17318,9 +17318,10 @@ a:hover.back-to-top {
 	}
 
 	.header .expertise {
+		align-self: stretch;
 		background: #fff;
 		box-shadow: 2px 2px 20px -10px rgba(0, 0, 0, 0.25);
-		min-height: 50vh;
+		min-height: 300px;
 		padding: 0.675rem;
 		perspective: 50;
 		transform-style: preserve-3d;
