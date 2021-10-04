@@ -15797,6 +15797,7 @@ h6 {
 	color: #fff;
 	text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
 	margin-bottom: 14rem;
+	text-align: center;
 }
 
 .p-large {
@@ -16332,6 +16333,7 @@ input[type='checkbox'] {
 
 .header .h1-large {
 	margin-bottom: 5.5rem;
+	padding-top: 1rem;
 	text-align: center;
 }
 
@@ -16983,7 +16985,7 @@ a:hover.back-to-top {
 
 @media screen and (min-width: 350px) {
 	.header {
-		background: url('../images/cleaver-350-622.webp') center center no-repeat;
+		background: url('../images/cleaver-499-887.webp') center center no-repeat;
 		background-size: cover;
 	}
 }
@@ -16994,6 +16996,13 @@ a:hover.back-to-top {
 	.header {
 		background: url('../images/cleaver-768-1365.webp') center center no-repeat;
 		background-size: cover;
+	}
+
+	.h1-large + h2 {
+		color: #fff;
+		text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+		margin-bottom: 14rem;
+		text-align: left;
 	}
 
 	/* Services */
@@ -17309,7 +17318,7 @@ a:hover.back-to-top {
 	/* Header */
 	.header {
 		background: url('../images/cleaver-1366-768.webp') center center no-repeat;
-		background-size: contain;
+		background-size: cover;
 		padding-top: 19rem;
 	}
 
@@ -17468,6 +17477,6 @@ a:hover.back-to-top {
 @media screen and (min-width: 1920px) {
 	.header {
 		background: url('../images/cleaver-1920-1080.webp') center center no-repeat;
-		background-size: contain;
+		background-size: cover;
 	}
 }
