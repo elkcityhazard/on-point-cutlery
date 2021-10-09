@@ -131,7 +131,7 @@
 	
 
     /* Back To Top Button */
-    // create the back to top button
+    // create the back to top button back to top
     $('body').prepend('<a href="#" class="back-to-top page-scroll">Back to Top</a>');
     var amountScrolled = 700;
     $(window).scroll(function() {
