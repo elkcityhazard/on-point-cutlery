@@ -1,0 +1,40 @@
+{{ define "main" }}
+
+{{ range .Site.Data.pricing }}
+<div class="container my-5" data-aos="fade-up" data-aos-duration="1250" data-aos-delay="250">
+    <div class="row my-5">
+        <div class="col-12">
+            <h2 class="text-center mb-2">{{ .title }}</h2>
+            <div class="mx-auto border-bottom w-25"></div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <table class="table-dark w-100 ">
+                <thead>
+                  <tr class="w-100">
+                    <th scope="col"><span class="p-3">Type</span></th>
+                    <th scope="col">Size</th>
+                    <th scope="col">Cost</th>
+                    <th scope="col">Notes</th>
+                  </tr>
+                </thead>
+                <tbody>
+                    {{ range .items }}
+                  <tr class="w-100 border-bottom border-light">
+                    <!-- <th scope="row">{{ .type }}</th> -->
+                    <td class="w-25"><span class="p-3">{{ .type }}</span></td>
+                    <td class="w-25">{{ .size }}</td>
+                    <td class="w-25">{{ .cost }}</td>
+                    <td class="w-25">{{ .notes }}</td>
+                  </tr>
+                  {{ end }}
+                </tbody>
+              </table>
+        </div>
+    </div>
+</div>
+{{ end}}
+
+
+{{ end }}

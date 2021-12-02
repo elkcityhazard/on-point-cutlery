@@ -1,12 +1,30 @@
+
+
 //  preloader
 
-window.addEventListener("load", () => {
-  document.body.classList.remove("hide-me");
+window.addEventListener("load",  async () => {
+  const preloader = document.querySelector('.preloader');
+
+  const removePreloader = new Promise((resolve, reject) => {
+    preloader.style.opacity = 0;
+    if (preloader.style.opacity == 0) {
+      return resolve(preloader);
+    } else {
+      return reject('error');
+    }
+  });
+
+
+removePreloader.then((loader) => {
+  setTimeout(() => {
+    loader.remove();
+  }, 1500)
+})
 });
 
 //Parallax effect in main header
 
-if (window.innerWidth >= 1920) {
+if (window.innerWidth >= 1900) {
   const parallax = (id, rate) => {
     let el = document.querySelector(id);
     if (el === null) {
@@ -71,4 +89,61 @@ function checkBoxes() {
 
 window.addEventListener("scroll", checkBoxes);
 
-// back to top
+// card sizes
+
+(function() {
+  let globalScrollHeight = 0;
+const cards = document.querySelectorAll('.card-body')
+cards.forEach((card) => {
+  if (card.scrollHeight > globalScrollHeight) {
+    globalScrollHeight = card.scrollHeight;
+  }
+})
+cards.forEach((card) => card.style.minHeight = globalScrollHeight + 'px');
+console.log(cards);
+})()
+
+
+// Modal Video
+function modalControls(btn, modalID, delay) {
+  btn = document.getElementById(btn)
+  modalID = document.getElementById(modalID)
+  btn.onclick = () => {
+  modalID.style.opacity = 0;
+  document.querySelector('.reel').pause();
+  document.documentElement.style.overflowY = "initial";
+  setTimeout(() => {
+    modalID.style.display = "none";
+  }, `${delay}`);
+}
+}
+
+window.onload = function() {
+  const modal = document.querySelector('.container');
+  modal.classList.toggle('active');
+  if (document.getElementById('modalReel')) {
+    document.documentElement.style.overflowY = "hidden";
+  }
+modalControls('toggle-modal', 'modalReel', 500)
+}
+
+
+
+function expandNav(id, toggleID) {
+  const toggle = document.getElementById(id);
+  const toBeToggled = document.getElementById(toggleID)
+
+  toBeToggled.classList.toggle('active');
+
+  toBeToggled.classList.contains('active') ? toBeToggled.style.height = `${toBeToggled.scrollHeight + 10}px` : toBeToggled.style.height = 0 + 'px';
+
+}
+
+document.getElementById('nav-toggle-label').addEventListener('click', () => {
+
+  expandNav('nav-toggle-label', 'navList')
+})
+
+
+
+

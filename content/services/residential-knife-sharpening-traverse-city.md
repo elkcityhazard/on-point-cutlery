@@ -2,6 +2,8 @@
 title: Residential Knife Sharpening
 description: "We come to your home and sharpen a variety of cutlery and home tools. We sharpen your tools in our mobile workstation to keep your home clean and safe."
 date: 2020-01-22
+tags:
+   - services
 ---
 Being a home cook, private chef, or aspiring Chopped contestant, you understand the value of sharp knives.  Maybe you have an old trowel that you just love or a shovel that isn't performing.  We look forward to coming to your home and sharpening your tools on premise.  No need to gather all of your tools and transport them to a shop.  Let us come and conveniently sharpen your knives.  
 

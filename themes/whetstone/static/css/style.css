@@ -1,4 +1,105 @@
 /* Whetstone Theme Styles - Andrew McCall */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 100%;
+  }
+}
+@keyframes construct {
+  0% {
+    transform: translate3D(0, -25%, 0);
+  }
+  100% {
+    transform: translate3D(0, 0%, 0);
+    filter: opacity(1);
+  }
+}
+.modal-overlay {
+  transition: all 250ms ease;
+  -webkit-transition: all 250ms ease;
+  -moz-transition: all 250ms ease;
+  transition-duration: 500ms;
+  -webkit-transition-duration: 500ms;
+  -moz-transition-duration: 500ms;
+  background: rgba(0, 0, 0, 0.9);
+  height: 100%;
+  left: 0;
+  overflow-y: scroll;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 99999999999999990000000000000000;
+}
+.modal-overlay .inner-modal-container {
+  display: grid;
+  height: 100%;
+  place-items: center;
+  padding: 0 0.5rem;
+  position: relative;
+  width: 100%;
+}
+.modal-overlay .inner-modal-container #toggle-modal {
+  transition: all 250ms ease;
+  -webkit-transition: all 250ms ease;
+  -moz-transition: all 250ms ease;
+  animation: fadeIn 1000ms ease 250ms forwards;
+  border: none;
+  background: transparent;
+  color: #fff;
+  cursor: pointer;
+  font-size: 3rem;
+  margin: 0;
+  padding: 10px;
+  opacity: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 1000000000000000000000000000000000;
+}
+.modal-overlay .inner-modal-container #toggle-modal:hover {
+  color: #333;
+  transform: rotateZ(360deg);
+}
+.modal-overlay .inner-modal-container .container {
+  transition: all 250ms ease;
+  -webkit-transition: all 250ms ease;
+  -moz-transition: all 250ms ease;
+  transform: translate3D(0, -150%, 0);
+  transition-duration: 1250ms;
+  -webkit-transition-duration: 1250ms;
+  -moz-transition-duration: 1250ms;
+}
+.modal-overlay .inner-modal-container .container .row {
+  min-height: 100px;
+}
+.modal-overlay .inner-modal-container .container .row h3 {
+  color: #fff;
+  font-size: 1.5em;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+.modal-overlay .inner-modal-container .container .row .reel {
+  animation: construct 1250ms ease 2000ms forwards;
+  height: auto;
+  min-width: 280px;
+  max-height: 100%;
+  max-width: 100%;
+  filter: opacity(0);
+}
+.modal-overlay .inner-modal-container .container.active {
+  transform: translate3D(0, 0, 0);
+}
+
+@media screen and (min-width: 1200px) {
+  .modal-overlay {
+    overflow: hidden;
+  }
+  .modal-overlay .inner-modal-container .container .row h3 {
+    text-align: left;
+  }
+}
 /*
 Swedish Palette FlatUI.com
 */
@@ -24,26 +125,23 @@ body {
   background: #fff;
   font-family: "Dejavu Sans", Helvetica, sans-serif, monospace;
   font-size: 18px;
+  height: 100%;
   transition: all 450ms ease-in-out 350ms;
   scroll-behavior: smooth;
+  width: 100%;
 }
 
-body.hide-me {
-  opacity: 0;
-  transform-origin: bottom center;
-  transition: all 500ms ease-out 500ms;
-}
-
-#card-1 {
-  transform: translateX(-100%);
-}
-
-#card-2 {
-  transform: translateY(50%);
-}
-
-#card-3 {
-  transform: translateX(100%);
+.preloader {
+  background: #000;
+  height: 100vh;
+  left: 0;
+  position: fixed;
+  top: 0;
+  transition: all 250ms linear 250ms;
+  -webkit-transition: all 250ms linear 250ms;
+  -moz-transition: all 250ms linear 250ms;
+  width: 100vw;
+  z-index: 999999999999;
 }
 
 h1,
@@ -53,6 +151,19 @@ h4,
 h5,
 h6 {
   padding: 0 0.25em;
+}
+
+footer.card-footer {
+  display: block;
+  text-align: center;
+  width: 100%;
+}
+
+h1 + span.subtitle {
+  display: block;
+  margin: 0 auto;
+  padding: 1em;
+  text-align: center;
 }
 
 img {
@@ -206,7 +317,7 @@ p {
   min-width: 100%;
 }
 .wrapper .row {
-  padding: 0 0.25em;
+  padding: 0;
 }
 .wrapper .row .container {
   display: block;
@@ -215,6 +326,7 @@ p {
 }
 .wrapper .row .container h2 {
   font-size: 5vmin;
+  padding: 1rem;
 }
 .wrapper .row .card-header {
   margin: 1em auto;
@@ -323,17 +435,21 @@ p {
 }
 .wrapper .row .col-33 .card .card-body p {
   color: #808e9b;
+  text-align: left;
 }
 .wrapper .row .col-33 .card.trigger {
   transform: translateX(0) !important;
   opacity: 1 !important;
 }
 .wrapper .row .col-50 {
-  margin: 0 auto;
+  background: #eee;
+  margin: 1rem auto;
+  padding: 0.5rem;
+  box-shadow: 2px 2px 20px -10px rgba(0, 0, 0, 0.25);
   width: 100%;
 }
 .wrapper .row .col-50 .card {
-  align-items: stretch;
+  align-items: flex-start;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -346,12 +462,16 @@ p {
   transition: all 250ms ease-in-out 250ms;
 }
 .wrapper .row .col-50 .card .card-body {
+  margin: 0.25em auto;
   text-align: center;
 }
 .wrapper .row .col-50 .card .card-body img + p {
   color: #1e272e;
   font-weight: 400;
   padding: 1em;
+}
+.wrapper .row .col-50 .card .card-body p {
+  max-width: 40ch;
 }
 .wrapper .row .col-50 .card .card-body + .card-footer {
   display: block;
@@ -402,9 +522,10 @@ p {
 }
 .wrapper .row p {
   color: #808e9b;
-  font-style: italic;
+  font-size: 0.75em;
   margin: auto;
   max-width: 60ch;
+  padding: 1rem;
 }
 .wrapper .clients {
   align-items: center;
@@ -446,7 +567,8 @@ p {
   text-align: center;
 }
 .wrapper .slides .inner-slides .slide .row .col-50 span.testimonial {
-  max-width: 60ch;
+  display: inline-block;
+  padding: 1rem;
   text-align: left;
 }
 .wrapper .slides .inner-slides .slide .row .col-50 figure figcaption span {
@@ -470,22 +592,6 @@ p {
 }
 .wrapper #content {
   padding-top: 66px;
-}
-.wrapper #content main .homepage-header .row .col h1 {
-  padding: 0;
-  text-align: center;
-}
-.wrapper #content main .homepage-header .row .col h1 + span {
-  color: #808e9b;
-  display: inline-block;
-  font-weight: 200;
-  font-style: initial;
-  text-align: center;
-  padding: 0 0.25em;
-}
-.wrapper #content main .homepage-header .row .col p {
-  text-align: left;
-  padding: 1em;
 }
 .wrapper .main-footer .row {
   padding: 1em;
@@ -565,6 +671,7 @@ p {
   align-items: center;
   background: #fff;
   box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
@@ -574,12 +681,13 @@ p {
 }
 #nav-toggle-label a {
   color: #808e9b;
-  padding: 0.25vmin 0.5vmin;
+  padding: 0.5rem;
   text-decoration: none;
 }
 #nav-toggle-label .hamburger {
   background-color: #485460;
   border-radius: 10px;
+  cursor: pointer;
   height: 3px;
   margin: 1.75em 2em;
   position: relative;
@@ -610,7 +718,7 @@ p {
   top: calc(66px);
   transition: height 250ms ease-in-out 0.3s;
   width: 100%;
-  z-index: 99999999999;
+  z-index: 999;
 }
 .main-nav a.logo {
   display: none;
@@ -620,6 +728,8 @@ p {
   background: rgba(255, 255, 255, 0.85);
   display: block;
   list-style: none;
+  position: relative;
+  z-index: 100000000;
 }
 .main-nav ul li {
   padding: 0.5em 2em;
@@ -637,18 +747,6 @@ p {
   color: #0be881;
 }
 
-#nav-toggle:checked ~ nav {
-  height: 100vh;
-}
-
-main .homepage-header {
-  /*background-image: linear-gradient(to bottom, rgba(255,255,255,0.65), rgba(255,255,255,0.65)),
-                     url('../images/grinding-wheel.jpg'); */
-  background-size: cover;
-  background-position: center;
-  min-width: 100vmin;
-}
-
 .main-header {
   background-size: cover;
   background-position: center;
@@ -656,20 +754,33 @@ main .homepage-header {
 }
 
 @media screen and (min-width: 768px) {
-  main .homepage-header {
+  section.container .col h1 {
     text-align: center;
   }
 
+  .wrapper {
+    min-height: 100%;
+  }
   .wrapper .row .container {
     padding: 0;
     width: 100%;
   }
+  .wrapper #content {
+    height: 100%;
+  }
+  .wrapper #content .homepage-header {
+    background: url("/images/on-point-cutlery-header.jpeg") no-repeat center top/contain;
+    min-height: 50vh;
+  }
   .wrapper #content .single-page h1, .wrapper #content .single-page h2, .wrapper #content .single-page h3, .wrapper #content .single-page h4, .wrapper #content .single-page h5, .wrapper #content .single-page h6 {
+    margin: 1em auto;
+    text-align: center;
     padding-top: 1em;
   }
   .wrapper #content .single-page .row p {
     font-style: initial;
-    text-align: center;
+    margin: auto;
+    text-align: left;
   }
   .wrapper #content .single-page .row ul {
     align-items: center;
@@ -756,38 +867,44 @@ main .homepage-header {
   .wrapper #content {
     padding-top: 0;
   }
+  .wrapper #content .homepage-header {
+    background-size: cover;
+    min-height: 100vh;
+  }
   .wrapper #content main {
     margin: 0 auto;
-    max-width: 968px;
-  }
-  .wrapper #content main .homepage-header .container .row {
-    padding: 0;
-  }
-  .wrapper #content main .homepage-header .container .row .col {
-    margin: 0 auto;
-    padding: 1em;
-    width: 50%;
+    max-width: 1366px;
   }
   .wrapper .row {
-    align-items: center;
+    align-items: flex-start;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
   }
+  .wrapper .row p {
+    font-size: 1em;
+  }
   .wrapper .row .container {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
   }
   .wrapper .row .col-33 {
+    margin: auto;
     width: 33%;
   }
   .wrapper .row .col-50 {
     align-items: center;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
     display: flex;
-    justify-content: center;
-    margin: auto;
-    width: 45%;
+    flex-wrap: wrap;
+    justify-content: start;
+    margin: 1rem;
+    flex: 0 1;
+    width: 100%;
   }
   .wrapper .row .portrait {
     margin-right: -3em;
@@ -806,8 +923,13 @@ main .homepage-header {
   .wrapper .clients {
     flex-direction: column;
   }
+  .wrapper .clients header {
+    margin: 0 auto;
+  }
   .wrapper .clients header h2 {
+    display: block;
     font-size: 2.5vmax;
+    text-align: center;
   }
   .wrapper .clients .container {
     text-decoration: center;
@@ -952,32 +1074,20 @@ main .homepage-header {
   .wrapper #content {
     margin: 0 auto;
   }
-  .wrapper #content main .homepage-header .container .row .col {
-    margin: 0 auto;
-    width: 45%;
-  }
-  .wrapper #content main .homepage-header .container .row .col figure {
-    margin-top: 0;
-  }
-  .wrapper #content main .homepage-header .container .row .col .subtitle {
-    margin-left: 0;
-    padding: 0;
-    text-align: left;
-  }
-  .wrapper #content main .homepage-header .container .row .col p {
-    padding: 1.5em;
-    text-align: left;
-  }
-  .wrapper #content main .homepage-header .container .row .col:nth-child(2n) {
-    padding-top: 3em;
-  }
   .wrapper .row .container {
     display: flex;
     flex-direction: row;
   }
   .wrapper .main-nav ul li a {
+    padding: 0.5em 1em 0.25em;
     font-size: 1.25vmax;
     font-weight: 500;
+    transition: all 250ms linear;
+    -webkit-transition: all 250ms linear;
+    -moz-transition: all 250ms linear;
+  }
+  .wrapper .main-nav ul li a::after {
+    bottom: 0%;
   }
 }
 @media screen and (min-width: 1920px) {
@@ -1006,8 +1116,15 @@ main .homepage-header {
   .wrapper .row .container {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
     margin: 0 auto;
     max-width: 1366px;
+    text-align: center;
+  }
+  .wrapper .row .container .col-50 {
+    flex: 1 1;
+    margin: 1rem;
   }
   .wrapper .row .main-nav {
     padding: 0;
@@ -1020,67 +1137,6 @@ main .homepage-header {
   }
   .wrapper #content main {
     min-width: 100%;
-  }
-
-  main .homepage-header {
-    background-attachment: fixed;
-    background-image: url("../images/grinding-wheel.webp");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: calc(100vh - 45px);
-    opacity: 1;
-    position: relative;
-    transition: background-position 0ms ease;
-    width: 100%;
-  }
-  main .homepage-header .container {
-    display: block;
-    margin: 0 auto 1em;
-    min-width: 768px;
-    width: 100%;
-  }
-  main .homepage-header .container .row {
-    display: flex;
-  }
-  main .homepage-header .container .row .col {
-    margin: 0 auto;
-    padding: 1em;
-    width: 50%;
-  }
-  main .homepage-header .container .row .col figure img {
-    display: block;
-    padding-top: 1em;
-    object-fit: cover;
-  }
-  main .homepage-header .container .row .col h1 {
-    color: #000;
-    display: block;
-    font-weight: 700;
-    margin-top: 0;
-    text-align: center;
-  }
-  main .homepage-header .container .row .col h1 + .subtitle {
-    color: #333 !important;
-    display: inline-block;
-    padding-left: 0.5em;
-    font-weight: 600;
-  }
-  main .homepage-header .container .row .col:nth-child(odd) {
-    display: none;
-  }
-  main .homepage-header .container .row .col:nth-child(2) {
-    background-color: rgba(255, 255, 255, 0.66);
-    left: 50%;
-    position: absolute;
-    top: 50%;
-    transform: translate(-50%, -50%);
-  }
-  main .homepage-header .container p {
-    color: #000;
-    font-style: italic;
-    font-weight: 400;
-    padding-top: 0.75em;
   }
 
   #toTop span {

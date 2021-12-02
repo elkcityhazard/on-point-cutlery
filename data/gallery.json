@@ -38,5 +38,35 @@
         "src" : "/images/gallery/two-knives.jpg",
         "alt" : "two knives",
         "caption" : "Getting ready to return these to their owner"
+    },
+    "8" : {
+        "src" : "/images/gallery/10-03-2021/IMG_0694.webp",
+        "alt" : "a recent job",
+        "caption" : "We Specialize In Restaurant Knives"
+    },
+    "9" : {
+        "src" : "/images/gallery/10-03-2021/IMG_0695.webp",
+        "alt" : "a recent job",
+        "caption" : "Mobile Knife Truck Solutions"
+    },
+    "10" : {
+        "src" : "/images/gallery/10-03-2021/IMG_0696.webp",
+        "alt" : "a recent job",
+        "caption" : "Knife Swap Program"
+    },
+    "11" : {
+        "src" : "/images/gallery/10-03-2021/IMG_0697.webp",
+        "alt" : "a recent job",
+        "caption" : "We Proudly Serve Traverse City, Michigan"
+    },
+    "12" : {
+        "src" : "/images/gallery/10-03-2021/IMG_0698.webp",
+        "alt" : "a recent job",
+        "caption" : "We Specialize In Restaurant Knives"
+    },
+    "13" : {
+        "src" : "/images/gallery/10-03-2021/IMG_0699.webp",
+        "alt" : "a recent job",
+        "caption" : "We Specialize In Restaurant Knives"
     }
 }

@@ -1,34 +1,24 @@
 
 {{ define "main" }}
+{{ partial "components/modal.html"  }}
+<header id="parallax" class="homepage-header">
+</header>
 <main role="main">
-  <header id="parallax" class="homepage-header">
-    <section class="container">
-      <div class="row">
-        <div class="col">
-          <figure>
-            <img srcset="
-            {{ .Site.BaseURL}}images/cleaver-300w.jpg 768w,
-            {{ .Site.BaseURL}}images/cleaver-600w.jpg 1366w,
-            " 
-            alt=" {{ .Title }}"
-            
-            src="images/cleaver.jpg"
-            height="auto"
-            width="100%" />
-          </figure>
-        </div>
-        <div class="col">
-          <h1>{{.Title}}</h1>
-    {{ with .Params.subtitle }}
-    <span class="subtitle">{{.}}</span>
-    {{ end }}
-      {{ range .Site.Data.mission }}
-      <p>{{ .text }}</p>
-      {{ end }}
-        </div>
+  <section class="container">
+    <div class="row">
+      <div class="col">
       </div>
-    </section>
-  </header>
+      <div class="col">
+        <h1>{{.Title}}</h1>
+  {{ with .Params.subtitle }}
+  <span class="subtitle">{{.}}</span>
+  {{ end }}
+    {{ range .Site.Data.mission }}
+    <p>{{ .text }}</p>
+    {{ end }}
+      </div>
+    </div>
+  </section>
   {{ partial "components/cta.html" . }}
   <div class="homepage-content">
     <!-- Note that the content for index.html, as a sort of list page, will pull from content/_index.md -->

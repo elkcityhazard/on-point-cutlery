@@ -1,7 +1,6 @@
 ---
-title: Thank you!  
+title: Successful Form Submission 
 description: "Thank you for contacting On Point Cutlery"
 noindex: true
 ---
-
-Thank you for contacting On Point Cutlery.  We will review your message and get in touch as soon as possible!
+ Thank you for contacting On Point Cutlery.  For immediate assistance during regular business hours, please contact our telephone number. Otherwise, we will respond as soon as possible.

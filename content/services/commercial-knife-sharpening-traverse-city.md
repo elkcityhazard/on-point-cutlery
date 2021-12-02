@@ -1,7 +1,9 @@
 ---
-title: Commercial Knife Sharpening
+title: Traverse City Commercial Knife Sharpening
 description: "On Point Cutlery offers a comprehensive knife and tool sharpening package for commercial businesses and restaurants.  We service Northern Lower Michigan."
-date: 2021-01-22
+date: 2021-09-25
+tags:
+   - services
 ---
 We offer a variety of commercial knife services.  Whether you want your kitchen's knives sharpened or want to scale your business by investing in a commercial knife exchange program, we have you covered.  We come to you and handle gathering, sharpening, and replacing your knives.  In addition to knives, we sharpen many other tools and blades.  Take a look at our commercial services to see if we can help improve your experience with freshly honed edges.
 

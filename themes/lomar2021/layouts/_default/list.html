@@ -1,0 +1,33 @@
+{{ define "main" }}
+<main id="mainContent" class="p-3 my-3 mx-auto">
+    {{ .Content }}
+</main>
+
+<!-- Services -->
+<section class="services">
+    <div class="container">
+        <div class="row align-items-stretch flex-row justify-content-start">
+            {{ range .Pages }}
+            <div class="col-12 col-lg-4 my-3" data-aos="fade-up" data-aos-duration="1250">
+                <div class="expertise card rounded box-shadow h-100">
+                    <div class="card-body">
+                        <div class="title-wrapper">
+                            <div class="icon" style="display: none;">
+                                <img src="{{.Site.BaseURL}}images/icons/cleaver.webp" alt="cleaver" height="100" width="100">
+                            </div> <!-- end of icon -->
+                            <h2 class="service"><a href="{{- .RelPermalink | absURL -}}">{{ .Title }}</a></h2>
+                        </div> <!-- end of title wrapper -->
+                        <p>{{ .Description }}</p>
+                    </div>
+                    <div class="card-footer text-center p-2">
+                        <a href="{{ .RelPermalink | absURL}}" class="button-text btn btn-primary text-uppercase mx-auto text-white font-weight-bolder" title="Traverse City Knife Sharpening">{{ .Title }}</a>
+                    </div>
+                </div> <!-- end of expertise -->
+            </div> <!-- end of col -->
+            {{ end }}
+        </div> <!-- end of row -->
+    </div>
+</section>
+<!-- End Services-->
+
+{{ end }}

@@ -1,10 +1,11 @@
+
 <div class="row box-shadow">
     <label id="nav-toggle-label" for="nav-toggle" aria-label="primary" tabindex="0">
         <a href="{{ .Site.BaseURL }}" title="{{ .Site.Title }}">On Point Cutlery</a>
       <span class="hamburger"></span>
     </label>
     <input type="checkbox" name="nav-toggle" id="nav-toggle" />
-    <nav class="main-nav" itemscope='itemscope' itemtype='http://schema.org/SiteNavigationElement' role='navigation'>   
+    <nav id="navList" class="main-nav" itemscope='itemscope' itemtype='http://schema.org/SiteNavigationElement' role='navigation'>   
         <a class="logo" href="{{ .Site.BaseURL }}" itemprop="url" title="{{ .Site.Title }}"><img src="{{ .Site.BaseURL}}images/logo.png" alt="logo" height="100px" width="auto"></a>
 <ul>
   {{ $currentPage := . }}

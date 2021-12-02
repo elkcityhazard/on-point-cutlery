@@ -140,10 +140,10 @@
                 "notes" : "Per Edge"
             },
             "6" : {
-                "type" : "Chisels",
-                "size" : "varying",
-                "cost" : "$4.00 per inch",
-                "notes" : "$4.00 minimum"
+                "type" : "-",
+                "size" : "-",
+                "cost" : "-",
+                "notes" : "-"
             },
             "7": {
                 "type" : "Food Processor Blades",

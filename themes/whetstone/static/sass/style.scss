@@ -1,5 +1,6 @@
 /* Whetstone Theme Styles - Andrew McCall */
 
+@import './modal';
 /*
 Swedish Palette FlatUI.com
 */
@@ -36,25 +37,25 @@ body {
   background: #fff;
   font-family: 'Dejavu Sans', Helvetica, sans-serif, monospace;
   font-size: 18px;
+  height: 100%;
   transition: all 450ms ease-in-out 350ms;
   scroll-behavior: smooth;
+  width: 100%;
 }
 
-body.hide-me {
-  opacity: 0;
-  transform-origin: bottom center;
-  transition: all 500ms ease-out 500ms;
+.preloader {
+  background: #000;
+  height: 100vh;
+  left: 0;
+  position: fixed;
+  top: 0;
+  transition: all 250ms linear 250ms;
+  -webkit-transition: all 250ms linear 250ms;
+  -moz-transition: all 250ms linear 250ms;
+  width: 100vw;
+  z-index: 999999999999;
 }
 
-#card-1 {
-  transform: translateX(-100%);
-}
-#card-2 {
-  transform: translateY(50%);
-}
-#card-3 {
-  transform: translateX(100%);
-}
 
 h1,
 h2,
@@ -63,6 +64,19 @@ h4,
 h5,
 h6 {
   padding: 0 0.25em;
+}
+
+footer.card-footer {
+  display: block;
+  text-align: center;
+  width: 100%;
+}
+
+h1 + span.subtitle {
+  display: block;
+  margin: 0 auto;
+  padding: 1em;
+  text-align: center;
 }
 
 img {
@@ -229,13 +243,14 @@ p {
     }
   }
   .row {
-    padding: 0 0.25em;
+    padding: 0;
     .container {
       display: block;
       margin: 0 auto;
       width: 100%;
       h2 {
         font-size: 5vmin;
+        padding: 1rem;
       }
     }
     .card-header {
@@ -353,6 +368,7 @@ p {
           justify-content: center;
           p {
             color: $london-square;
+            text-align: left;
           }
         }
       }
@@ -362,10 +378,13 @@ p {
       }
     }
     .col-50 {
-      margin: 0 auto;
+      background: #eee;
+      margin: 1rem auto;
+      padding: .5rem;
+      box-shadow: 2px 2px 20px -10px rgba(0, 0, 0, 0.25);
       width: 100%;
       .card {
-        align-items: stretch;
+        align-items: flex-start;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -377,11 +396,15 @@ p {
           transition: all 250ms ease-in-out 250ms;
         }
         .card-body {
+          margin: .25em auto;
           text-align: center;
           img + p {
             color: $black-pearl;
             font-weight: 400;
             padding: 1em;
+          }
+          p {
+            max-width: 40ch;
           }
         }
         .card-body + .card-footer {
@@ -435,9 +458,10 @@ p {
     }
     p {
       color: $london-square;
-      font-style: italic;
+      font-size: .75em;
       margin: auto;
       max-width: 60ch;
+      padding: 1rem;
     }
   }
   .clients {
@@ -486,7 +510,8 @@ p {
         .row {
           .col-50 {
             span.testimonial {
-              max-width: 60ch;
+              display: inline-block;
+              padding: 1rem;
               text-align: left;
             }
             figure {
@@ -519,31 +544,6 @@ p {
   }
   #content {
     padding-top: 66px;
-    main {
-      .homepage-header {
-        .row {
-          .col {
-            h1 {
-              padding: 0;
-              text-align: center;
-            }
-            h1 + span {
-              color: $london-square;
-              display: inline-block;
-              font-weight: 200;
-              font-style: initial;
-              text-align: center;
-              padding: 0 0.25em;
-            }
-
-            p {
-              text-align: left;
-              padding: 1em;
-            }
-          }
-        }
-      }
-    }
   }
   .main-footer {
     .row {
@@ -636,6 +636,7 @@ p {
   align-items: center;
   background: #fff;
   box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
@@ -644,12 +645,13 @@ p {
   z-index: 999999999;
   a {
     color: $london-square;
-    padding: 0.25vmin 0.5vmin;
+    padding: .5rem;
     text-decoration: none;
   }
   .hamburger {
     background-color: $good-night;
     border-radius: 10px;
+    cursor: pointer;
     height: 3px;
     margin: 1.75em 2em;
     position: relative;
@@ -682,7 +684,7 @@ p {
   top: calc(66px);
   transition: height 250ms ease-in-out 0.3s;
   width: 100%;
-  z-index: 99999999999;
+  z-index: 999;
   a.logo {
     display: none;
     text-decoration: none;
@@ -691,6 +693,8 @@ p {
     background: rgba(255, 255, 255, 0.85);
     display: block;
     list-style: none;
+    position: relative;
+    z-index: 100000000;
     li {
       padding: 0.5em 2em;
       a {
@@ -709,22 +713,6 @@ p {
   }
 }
 
-#nav-toggle {
-  &:checked ~ nav {
-    height: 100vh;
-  }
-}
-
-main {
-  .homepage-header {
-    /*background-image: linear-gradient(to bottom, rgba(255,255,255,0.65), rgba(255,255,255,0.65)),
-                       url('../images/grinding-wheel.jpg'); */
-    background-size: cover;
-    background-position: center;
-    min-width: 100vmin;
-  }
-}
-
 .main-header {
   background-size: cover;
   background-position: center;
@@ -732,12 +720,12 @@ main {
 }
 
 @media screen and (min-width: 768px) {
-  main {
-    .homepage-header {
-      text-align: center;
-    }
+  section.container .col h1 {
+    text-align: center;
   }
+  
   .wrapper {
+    min-height: 100%;
     .row {
       .container {
         padding: 0;
@@ -745,14 +733,22 @@ main {
       }
     }
     #content {
+      height: 100%;
+      .homepage-header {
+        background: url('/images/on-point-cutlery-header.jpeg') no-repeat center top / contain; 
+        min-height: 50vh;
+      }
       .single-page {
         h1,h2,h3,h4,h5,h6 {
+          margin: 1em auto;
+          text-align: center;
           padding-top: 1em;
         }
         .row {
           p {
             font-style: initial;
-            text-align: center;
+            margin: auto;
+            text-align: left;
           }
           ul {
             align-items: center;
@@ -838,6 +834,7 @@ main {
 }
 
 @media screen and (min-width: 968px) {
+
   #nav-toggle-label {
     display: none;
   }
@@ -848,42 +845,44 @@ main {
     min-height: 100vh;
     #content {
       padding-top: 0;
+      .homepage-header {
+        background-size: cover;
+        min-height: 100vh;
+      }
       main {
         margin: 0 auto;
-        max-width: 968px;
-        .homepage-header {
-          .container {
-            .row {
-              padding: 0;
-              .col {
-                margin: 0 auto;
-                padding: 1em;
-                width: 50%;
-              }
-            }
-          }
-        }
+        max-width: 1366px;
       }
     }
     .row {
-      align-items: center;
+      align-items: flex-start;
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
       justify-content: center;
+      p {
+        font-size: 1em;
+      }
       .container {
         display: flex;
         flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
       }
       .col-33 {
+        margin: auto;
         width: 33%;
       }
       .col-50 {
         align-items: center;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        border-radius: 15px;
         display: flex;
-        justify-content: center;
-        margin: auto;
-        width: 45%;
+        flex-wrap: wrap;
+        justify-content: start;
+        margin: 1rem;
+        flex: 0 1;
+        width: 100%;
       }
       .portrait {
         margin-right: -3em;
@@ -905,8 +904,11 @@ main {
     .clients {
       flex-direction: column;
       header {
+        margin: 0 auto;
         h2 {
+          display: block;
           font-size: 2.5vmax;
+          text-align: center;
         }
       }
       .container {
@@ -1060,33 +1062,6 @@ main {
     max-width: 1366px;
     #content {
       margin: 0 auto;
-      main {
-        .homepage-header {
-          .container {
-            .row {
-              .col {
-                margin: 0 auto;
-                width: 45%;
-                figure {
-                  margin-top: 0;
-                }
-                .subtitle {
-                  margin-left: 0;
-                  padding: 0;
-                  text-align: left;
-                }
-                p {
-                  padding: 1.5em;
-                  text-align: left;
-                }
-                &:nth-child(2n) {
-                  padding-top: 3em;
-                }
-              }
-            }
-          }
-        }
-      }
     }
     .row {
       .container {
@@ -1098,14 +1073,21 @@ main {
       ul {
         li {
           a {
+            padding: .5em 1em .25em;
             font-size: 1.25vmax;
             font-weight: 500;
+            transition: all 250ms linear;
+            -webkit-transition: all 250ms linear;
+            -moz-transition: all 250ms linear;
+            &::after {
+              bottom: 0%;
+            }
+            }
           }
         }
       }
     }
   }
-}
 
 @media screen and (min-width: 1920px) {
   #top {
@@ -1129,8 +1111,15 @@ main {
       .container {
         display: flex;
         flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
         margin: 0 auto;
         max-width: 1366px;
+        text-align: center;
+        .col-50 {
+          flex: 1 1;
+          margin: 1rem;
+        }
       }
       .main-nav {
         padding: 0;
@@ -1150,70 +1139,7 @@ main {
       }
     }
   }
-  main {
-    .homepage-header {
-      background-attachment: fixed;
-      background-image: url('../images/grinding-wheel.webp');
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-      height: calc(100vh - 45px);
-      opacity: 1;
-      position: relative;
-      transition: background-position 0ms ease;
-      width: 100%;
-      .container {
-        display: block;
-        margin: 0 auto 1em;
-        min-width: 768px;
-        width: 100%;
-        .row {
-          display: flex;
-          .col {
-            margin: 0 auto;
-            padding: 1em;
-            width: 50%;
-            figure {
-              img {
-                display: block;
-                padding-top: 1em;
-                object-fit: cover;
-              }
-            }
-            h1 {
-              color: #000;
-              display: block;
-              font-weight: 700;
-              margin-top: 0;
-              text-align: center;
-            }
-            h1 + .subtitle {
-              color: #333 !important;
-              display: inline-block;
-              padding-left: 0.5em;
-              font-weight: 600;
-            }
-            &:nth-child(odd) {
-              display: none;
-            }
-            &:nth-child(2) {
-              background-color: rgba(255,255,255, 0.66);
-              left: 50%;
-              position: absolute;
-              top: 50%;
-              transform: translate(-50%, -50%);
-            }
-          }
-        }
-        p {
-          color: #000;
-          font-style: italic;
-          font-weight: 400;
-          padding-top: 0.75em;
-        }
-      }
-    }
-  }
+
   #toTop {
     span {
       font-size: 3vmax;

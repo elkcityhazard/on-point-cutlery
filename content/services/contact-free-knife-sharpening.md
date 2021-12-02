@@ -2,6 +2,8 @@
 title: Contact Free Knife Sharpening
 description: "We prioritize the health and safety of our customers.  As an essential service we make sure to practice all local mandates regarding covid-19 safety."
 date: 2021-01-22
+tags:
+   - services
 ---
 
 We care about the health and safety of Northern Michigan.  That is why we make sure to practice all local mandates regarding covid-19 safety measures. We will update this page as needed as new information comes available to keeping your cutley and tool maintenance as safe as possible.
