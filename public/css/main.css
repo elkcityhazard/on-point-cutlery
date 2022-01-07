@@ -16343,6 +16343,13 @@ input[type='checkbox'] {
 	margin-bottom: 0.5rem;
 }
 
+.header .container .row .col-lg-8 p {
+	font-weight: 800;
+	text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.55);
+	transform: translateY(-10rem);
+	-webkit-transform :translateY(-10rem);
+}
+
 .header h5 {
 	flex: 1;
 	text-transform: uppercase;
@@ -17005,6 +17012,13 @@ a:hover.back-to-top {
 		text-align: left;
 	}
 
+	.header .container .row .col-lg-8 p {
+		font-weight: 800;
+		text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.55);
+		transform: translateY(-10rem);
+		-webkit-transform :translateY(-10rem);
+	}
+
 	/* Services */
 	.basic-2 .services-decoration {
 		height: 40px;
@@ -17040,6 +17054,15 @@ a:hover.back-to-top {
 		margin-right: auto;
 		margin-left: auto;
 	}
+
+	.header .container .row .col-lg-8 p {
+		font-weight: 800;
+		text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.55);
+		transform: translateY(-12rem);
+		-webkit-transform :translateY(-12rem);
+	}
+
+
 	/* end of general styles */
 
 

@@ -2,6 +2,7 @@
 title: Woodworking Tools
 description: "Sharp woodworking tools is a necessity and not a luxury. We sharpen all types of woodworking tools so that you don't have to. If you are not comfortable with restoring your  edge then leave it to us! We do tool sharpening in Traverse City, Michigan."
 date: 2021-01-22
+draft: true
 tags:
    - services
 ---

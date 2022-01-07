@@ -128,81 +128,63 @@
                 "notes" : "-"
             },
             "4" : {
-                "type" : "Pruning Clippers",
-                "size" : "-",
-                "cost" : "$5.00",
-                "notes" : "-"
-            },
-            "5" : {
                 "type" : "Hatchets & Axes",
                 "size" : "-",
                 "cost" : "$5.00",
                 "notes" : "Per Edge"
             },
-            "6" : {
-                "type" : "-",
-                "size" : "-",
-                "cost" : "-",
-                "notes" : "-"
-            },
-            "7": {
+            "5": {
                 "type" : "Food Processor Blades",
                 "size" : "-",
                 "cost" : "$4.00 / Blade",
                 "notes" : "-"
             },
-            "8" : {
+            "6" : {
                 "type" : "Asian Blades",
                 "size" : "varying",
                 "cost" : "$2.00 / inch",
                 "notes" : "-"
             },
-            "9" : {
+            "7" : {
                 "type" : "Serrated Asian Blades",
                 "size" : "varying ",
                 "cost" : "$1.00",
                 "notes" : "-"
             },
-            "10" : {
+            "8" : {
                 "type" : "Hedge Trimmers",
                 "size" : "-",
                 "cost" : "$8.00",
                 "notes" : "-"
             },
-            "11" : {
+            "9" : {
                 "type" : "Grass Shears & Loppers",
                 "size" : "-",
                 "cost" : "$6.00",
                 "notes" : "-"
             },
-            "12" : {
+            "10" : {
                 "type" : "Pruning Clippers",
                 "size" : "5 - 10 inches",
                 "cost" : "$4.00 - $8.00 / Blade",
                 "notes" : "-"
             },
-            "13" : {
+            "11" : {
                 "type" : "Common Scissors",
                 "size" : "varying",
                 "cost" : "$5.00",
                 "notes" : "-"
             },
-            "14" : {
+            "12" : {
                 "type" : "Hand Pruners",
                 "size" : "-",
                 "cost" : "$11.00",
                 "notes" : "-"
             },
-            "15" : {
+            "13" : {
                 "type" : "Pocket Knives",
                 "size" : "varying",
                 "cost" : "$6.00",
-                "notes" : "-"
-            },
-            "16" : {
-                "type" : "Auger Blades",
-                "size" : "-",
-                "cost" : "$10.00",
                 "notes" : "-"
             }
         }
