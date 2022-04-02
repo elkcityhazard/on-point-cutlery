@@ -15676,6 +15676,7 @@ Table Of Contents:
 - Statistics
 - Testimonials
 - Contact
+- Min Price Banner
 - Footer
 - Copyright
 - Back To Top Button
@@ -16832,6 +16833,23 @@ input[type='checkbox'] {
 	border: 1px solid #7f838d;
 	background-color: #666a75;
 	color: #efefef;
+}
+
+/**************************/
+/***   Min Price Banner ***/
+/**************************/
+
+.min-price {
+	height: fit-content;
+	position: fixed;
+	width:  100vw;
+	bottom: 0;
+	left:  0;
+	z-index: 9999;
+}
+
+.min-price .row .col-12 .fs-4 {
+	font-size: 1.75em;
 }
 
 
