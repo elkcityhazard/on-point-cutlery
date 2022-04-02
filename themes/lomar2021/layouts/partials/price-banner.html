@@ -1,0 +1,27 @@
+<section class="min-price container-fluid text-center p-3 bg-dark">
+	<div class="row">
+		<div class="col-12">
+			<h3 class="h2-heading mb-3 text-warning">Minimum Order Update</h3>
+			<p class="fs-4 text-danger"><strong class="fw-bold">Date:</strong> 04/02/2022</p>
+			<p class="lead p-3 text-info">Until further notice we request a minimum service order of no less than $35 USD. Prices are subject to change at our discretion.</p>
+			<button class="btn btn-primary close-modal" id="minPrice" aria-label="close min price banner">I understand</button>
+		</div>
+	</div>
+</section>
+
+<script type="text/javascript" defer>
+
+	const closeModal = (element) => {
+		if (!element) {
+			return null
+		}
+		element.style.display = "none";
+	}
+
+	document.getElementById('minPrice').addEventListener('click', (e) => {
+		e.preventDefault();
+		const modal = document.querySelector('.min-price')
+		closeModal(modal)
+	})
+
+</script>
