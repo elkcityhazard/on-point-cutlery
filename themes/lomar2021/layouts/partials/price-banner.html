@@ -1,4 +1,4 @@
-<section class="min-price container-fluid text-center p-3 bg-dark">
+<section class="min-price container-fluid text-center p-3 bg-dark" aria-expanded="true">
 	<div class="row">
 		<div class="col-12">
 			<h3 class="h2-heading mb-3 text-warning">Minimum Order Update</h3>
@@ -15,11 +15,13 @@
 		if (!element) {
 			return null
 		}
+		element.setAttribute('aria-expanded', false);
 		element.style.display = "none";
 	}
 
 	document.getElementById('minPrice').addEventListener('click', (e) => {
 		e.preventDefault();
+		this.setAttribute('aria-pressed', true);
 		const modal = document.querySelector('.min-price')
 		closeModal(modal)
 	})
