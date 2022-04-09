@@ -118,9 +118,13 @@
 
 	document.getElementById('minPrice').addEventListener('click', (e) => {
 		e.preventDefault();
-		this.setAttribute('aria-pressed', true);
+		if (!e.target) {
+			alert('there has been an error');
+		}
+		e.target.setAttribute('aria-pressed', true);
 		const modal = document.querySelector('.min-price')
 		closeModal(modal)
+		return clearInterval(updateCounter)
 	})
 
 </script>
