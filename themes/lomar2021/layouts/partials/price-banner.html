@@ -1,22 +1,35 @@
 <style type="text/css">
 
 	.min-price {
-		opacity:  0.95;
+		opacity:  0;
+		transition:  all 0.75s ease 500ms;
+		-webkit-transition:  all 0.75s ease 500ms;
 	}
 
 .day,
 .hour,
 .minute,
 .promo-second {
-	background:  #000;
-	color:  fff;
-	display:  inline-block;
+	background:  #fff;
+	box-shadow:  2px 2px 15px -5px #000;
+	border-radius: 50%;
+	color:  #000;
+	cursor:  pointer;
+	display:  inline-grid;
+	place-items:  center;
+	height:  40px;
+	width:  40px;
 	margin: 10px;
-	opacity:  0;
-	padding:  1em;
-	transition: all 1000ms ease 500ms;
-	-webkit-transition: all 1000ms ease 500ms;
+	transition: all 500ms ease;
+	-webkit-transition: all 500ms ease;
 	font-weight:  700;
+}
+
+.day:hover,
+.hour:hover,
+.minute:hover,
+.promo-second:hover {
+	transform:  scale(1.15) rotateZ(720deg);
 }
 
 #cost {
@@ -88,8 +101,12 @@
 	const updateCounter = setInterval(() => {
 		const arr = [d, h, m, s]
 
+		document.querySelector('.min-price').classList.add('fade-in')
+
 		for (let i of arr) {
-			i.classList.add('fade-in')
+			i.addEventListener('click', (e) => {
+				location.assign('/contact-us');
+			})
 		}
 
 		d.textContent = date.days();
