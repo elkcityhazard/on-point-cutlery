@@ -1,15 +1,112 @@
+<style type="text/css">
+
+	.min-price {
+		opacity:  0.95;
+	}
+
+.day,
+.hour,
+.minute,
+.promo-second {
+	background:  #000;
+	color:  fff;
+	display:  inline-block;
+	margin: 10px;
+	opacity:  0;
+	padding:  1em;
+	transition: all 1000ms ease 500ms;
+	-webkit-transition: all 1000ms ease 500ms;
+	font-weight:  700;
+}
+
+#cost {
+	font-weight:  700;
+}
+
+.fade-in {
+	opacity:  1;
+}
+</style>
+
 <section class="min-price container-fluid text-center p-3 bg-dark" aria-expanded="true">
 	<div class="row">
 		<div class="col-12">
-			<h3 class="h2-heading mb-3 text-warning">Minimum Order Update</h3>
-			<p class="fs-4 text-danger"><strong class="fw-bold">Date:</strong> 04/02/2022</p>
-			<p class="lead p-3 text-info">Until further notice we request a minimum service order of no less than $35 USD. Prices are subject to change at our discretion.</p>
-			<button class="btn btn-primary close-modal" id="minPrice" aria-label="close min price banner">I understand</button>
+			<h3 class="h2-heading mb-3 text-warning text-uppercase">Minimum Order Notice</h3>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-12 col-lg-9 col-xl-6 mx-auto text-center text-uppercase">
+			<p class="text-white d-flex flex-column flex-sm-column flex-md-row justify-content-center align-items-center"><span class="day"></span> Days <span class="hour"></span> Hours <span class="minute"></span> Minutes <span class="promo-second"></span> Seconds </p>
+			<p class="lead p-3 text-info"><strong class="text-uppercase text-light">Winter Pricing: </strong>Until further notice we request a minimum service order of no less than <span id="cost" class="text-light">$35</span> USD. Prices are subject to change at our discretion.</p>
+			<button class="btn btn-primary close-modal my-3" id="minPrice" aria-label="close min price banner">I understand</button>
 		</div>
 	</div>
 </section>
 
 <script type="text/javascript" defer>
+
+	const cost = document.getElementById('cost');
+	const d = document.querySelector('.day');
+	const h = document.querySelector('.hour');
+	const m = document.querySelector('.minute');
+	const s = document.querySelector('.promo-second');
+	
+
+	// Create the Date Object
+
+	const date = {
+
+		//	Today's Date
+		today: function() {
+    	let d = Date.now();
+			return d;
+		},
+		//	Future Date
+		future: function() {
+			const futureDate = new Date("May 30, 2022 00:00:00");
+			
+      return futureDate.getTime()
+		},
+    difference: function() {
+    		return this.future() - this.today()
+    },
+    days: function() {
+    return Math.floor(this.difference() / 1000 / 60 / 60 / 24 )
+    },
+    hours: function() {
+    return Math.floor(this.difference() / 1000 / 60 / 60 % 24 )
+    },
+    minutes: function() {
+    return Math.floor(this.difference() / 1000 / 60)  % 60 
+    },
+    seconds: function() {
+    return Math.floor(this.difference() / 1000 ) % 60
+    },
+
+	}
+
+	const updateCounter = setInterval(() => {
+		const arr = [d, h, m, s]
+
+		for (let i of arr) {
+			i.classList.add('fade-in')
+		}
+
+		d.textContent = date.days();
+		h.textContent = date.hours();
+		m.textContent = date.minutes();
+		s.textContent = date.seconds();
+
+		if (date.difference() <= 0) {
+			cost.textContent = "$40"
+		} else {
+			cost.textContent = "$35"
+		}
+
+	}, 1000);
+
+
+
 
 	const closeModal = (element) => {
 		if (!element) {
