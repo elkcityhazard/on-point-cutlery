@@ -1,46 +1,45 @@
 <style type="text/css">
-
 	.min-price {
-		max-height:  100vh;
-		opacity:  0;
-		overflow-y:  auto;
-		transition:  all 0.75s ease 500ms;
-		-webkit-transition:  all 0.75s ease 500ms;
+		max-height: 100vh;
+		opacity: 0;
+		overflow-y: auto;
+		transition: all 0.75s ease 500ms;
+		-webkit-transition: all 0.75s ease 500ms;
 	}
 
-.day,
-.hour,
-.minute,
-.promo-second {
-	background:  #fff;
-	box-shadow:  2px 2px 15px -5px #000;
-	border-radius: 50%;
-	color:  #000;
-	cursor:  pointer;
-	display:  inline-grid;
-	place-items:  center;
-	height:  40px;
-	width:  40px;
-	margin: 10px;
-	transition: all 500ms ease;
-	-webkit-transition: all 500ms ease;
-	font-weight:  700;
-}
+	.day,
+	.hour,
+	.minute,
+	.promo-second {
+		background: #fff;
+		box-shadow: 2px 2px 15px -5px #000;
+		border-radius: 50%;
+		color: #000;
+		cursor: pointer;
+		display: inline-grid;
+		place-items: center;
+		height: 40px;
+		width: 40px;
+		margin: 10px;
+		transition: all 500ms ease;
+		-webkit-transition: all 500ms ease;
+		font-weight: 700;
+	}
 
-.day:hover,
-.hour:hover,
-.minute:hover,
-.promo-second:hover {
-	transform:  scale(1.15) rotateZ(720deg);
-}
+	.day:hover,
+	.hour:hover,
+	.minute:hover,
+	.promo-second:hover {
+		transform: scale(1.15) rotateZ(720deg);
+	}
 
-#cost {
-	font-weight:  700;
-}
+	#cost {
+		font-weight: 700;
+	}
 
-.fade-in {
-	opacity:  1;
-}
+	.fade-in {
+		opacity: 1;
+	}
 </style>
 
 <section class="min-price container-fluid text-center p-3 bg-dark" aria-expanded="true">
@@ -51,99 +50,18 @@
 	</div>
 	<div class="row">
 		<div class="col-12 col-lg-9 col-xl-6 mx-auto text-center text-uppercase">
-			<p class="text-white d-flex flex-column flex-sm-column flex-md-row justify-content-center align-items-center"><span class="day"></span> Days <span class="hour"></span> Hours <span class="minute"></span> Minutes <span class="promo-second"></span> Seconds </p>
-			<p class="lead p-3 text-info"><strong class="text-uppercase text-light">Winter Pricing: </strong>Until further notice we request a minimum service order of no less than <span id="cost" class="text-light">$35</span> USD. Prices are subject to change at our discretion.</p>
-			<button class="btn btn-primary close-modal my-3" id="minPrice" aria-label="close min price banner">I understand</button>
+			<p
+				class="text-white d-flex flex-column flex-sm-column flex-md-row justify-content-center align-items-center">
+				<span class="day"></span> Days <span class="hour"></span> Hours <span class="minute"></span> Minutes
+				<span class="promo-second"></span> Seconds </p>
+			<p class="lead p-3 text-info"><strong class="text-uppercase text-light">Winter Pricing: </strong>Until
+				further notice we request a minimum service order of no less than <span id="cost"
+					class="text-light">$35</span> USD. Prices are subject to change at our discretion.</p>
+			<button class="btn btn-primary close-modal my-3" id="minPrice" aria-label="close min price banner">I
+				understand</button>
 		</div>
 	</div>
 </section>
 
-<script type="text/javascript" defer>
-
-	const cost = document.getElementById('cost');
-	const d = document.querySelector('.day');
-	const h = document.querySelector('.hour');
-	const m = document.querySelector('.minute');
-	const s = document.querySelector('.promo-second');
-	
-
-	// Create the Date Object
-
-	const date = {
-
-		//	Today's Date
-		today: function() {
-    	let d = Date.now();
-			return d;
-		},
-		//	Future Date
-		future: function() {
-			const futureDate = new Date("May 30, 2022 00:00:00");
-			
-      return futureDate.getTime()
-		},
-    difference: function() {
-    		return this.future() - this.today()
-    },
-    days: function() {
-    return Math.floor(this.difference() / 1000 / 60 / 60 / 24 )
-    },
-    hours: function() {
-    return Math.floor(this.difference() / 1000 / 60 / 60 % 24 )
-    },
-    minutes: function() {
-    return Math.floor(this.difference() / 1000 / 60)  % 60 
-    },
-    seconds: function() {
-    return Math.floor(this.difference() / 1000 ) % 60
-    },
-
-	}
-
-	const updateCounter = setInterval(() => {
-		const arr = [d, h, m, s]
-
-		document.querySelector('.min-price').classList.add('fade-in')
-
-		for (let i of arr) {
-			i.addEventListener('click', (e) => {
-				location.assign('/contact-us');
-			})
-		}
-
-		d.textContent = date.days();
-		h.textContent = date.hours();
-		m.textContent = date.minutes();
-		s.textContent = date.seconds();
-
-		if (date.difference() <= 0) {
-			cost.textContent = "$40"
-		} else {
-			cost.textContent = "$35"
-		}
-
-	}, 1000);
 
 
-
-
-	const closeModal = (element) => {
-		if (!element) {
-			return null
-		}
-		element.setAttribute('aria-expanded', false);
-		element.style.display = "none";
-	}
-
-	document.getElementById('minPrice').addEventListener('click', (e) => {
-		e.preventDefault();
-		if (!e.target) {
-			alert('there has been an error');
-		}
-		e.target.setAttribute('aria-pressed', true);
-		const modal = document.querySelector('.min-price')
-		closeModal(modal)
-		return clearInterval(updateCounter)
-	})
-
-</script>
