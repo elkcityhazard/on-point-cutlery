@@ -48,6 +48,7 @@ function showCountDown(future) {
 
     if (dateCheck !== prevDate) {
         localStorage.setItem('views', 0)
+        views = 0;
     }
 
     if (dateCheck === prevDate && views > 1) {
