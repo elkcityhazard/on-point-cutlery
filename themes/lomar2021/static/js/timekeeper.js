@@ -43,9 +43,8 @@ function DateCountdown(future) {
 function showCountDown(future) {
 
 
-    if (!views) {
+    if (views) {
         document.querySelector('.min-price').style.display = 'none';
-        sessionStorage.setItem('views', JSON.stringify(views))
         return null;
     }
 
@@ -91,9 +90,6 @@ const closeModal = (element) => {
     }
     element.setAttribute('aria-expanded', false);
     element.style.display = "none";
-    views++ ;
-    localStorage.setItem('views', JSON.stringify(views))
-    localStorage.setItem('storedDate', JSON.stringify(new Date(Date.now()).toDateString()))
 }
 
 document.getElementById('minPrice').addEventListener('click', (e) => {
@@ -104,6 +100,7 @@ document.getElementById('minPrice').addEventListener('click', (e) => {
     e.target.setAttribute('aria-pressed', true);
     const modal = document.querySelector('.min-price')
     closeModal(modal)
+    sessionStorage.setItem('views', true)
     return clearInterval(showCountDown.updateCounter)
 })
 

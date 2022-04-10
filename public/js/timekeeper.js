@@ -7,8 +7,7 @@ const cost = document.getElementById('cost');
    const m = document.querySelector('.minute');
    const s = document.querySelector('.promo-second');
 
-let views = localStorage.getItem('views')
-let storedDate = localStorage.getItem('storedDate')
+let views = sessionStorage.getItem('views')
 
 
 // Create the countdown object constructor
@@ -43,16 +42,9 @@ function DateCountdown(future) {
 
 function showCountDown(future) {
 
-    const dateCheck = new Date(Date.now()).toDateString();
-    const prevDate = JSON.parse(storedDate)
 
-    if (dateCheck !== prevDate) {
-        localStorage.setItem('views', 0)
-    }
-
-    if (dateCheck === prevDate && views > 1) {
+    if (views) {
         document.querySelector('.min-price').style.display = 'none';
-        localStorage.setItem('storedDate', JSON.stringify(dateCheck))
         return null;
     }
 
@@ -98,9 +90,6 @@ const closeModal = (element) => {
     }
     element.setAttribute('aria-expanded', false);
     element.style.display = "none";
-    views++ ;
-    localStorage.setItem('views', JSON.stringify(views))
-    localStorage.setItem('storedDate', JSON.stringify(new Date(Date.now()).toDateString()))
 }
 
 document.getElementById('minPrice').addEventListener('click', (e) => {
@@ -111,6 +100,7 @@ document.getElementById('minPrice').addEventListener('click', (e) => {
     e.target.setAttribute('aria-pressed', true);
     const modal = document.querySelector('.min-price')
     closeModal(modal)
+    sessionStorage.setItem('views', true)
     return clearInterval(showCountDown.updateCounter)
 })
 
