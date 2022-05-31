@@ -75,7 +75,7 @@ function showCountDown(future) {
             s.textContent = date.seconds();
 
             if (date.difference() <= 0) {
-                cost.textContent = "$45"
+                cost.textContent = "$50"
             } else {
                 cost.textContent = "$40"
             }
@@ -84,7 +84,7 @@ function showCountDown(future) {
     }
 };
 
-const rand = Math.floor(Math.random() * 3 + 1)
+const rand = Math.random() * 3 + 1
 
 
 const future = Date.now() + (1000 * 24 * 60 * 60) *  rand
