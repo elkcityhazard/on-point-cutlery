@@ -48,6 +48,10 @@ function showCountDown(future) {
         return null;
     }
 
+    if (Date.now() > future) {
+        return null
+    }
+
 
     if (!future) {
         return null
