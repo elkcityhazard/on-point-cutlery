@@ -75,18 +75,24 @@ function showCountDown(future) {
             s.textContent = date.seconds();
 
             if (date.difference() <= 0) {
-                cost.textContent = "$40"
+                cost.textContent = "$45"
             } else {
-                cost.textContent = "$35"
+                cost.textContent = "$40"
             }
 
         }, 1000);
     }
 };
 
+const rand = Math.floor(Math.random() * 3 + 1)
 
 
-showCountDown("May 30, 2022 00:00:00");
+const future = Date.now() + (1000 * 24 * 60 * 60) *  rand
+
+
+
+
+showCountDown(future);
 
 const closeModal = (element) => {
     if (!element) {
