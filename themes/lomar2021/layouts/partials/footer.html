@@ -308,4 +308,23 @@
         document.getElementById("contactForm").submit();
     }
 
+
+    document.onload = function () {
+
+
+        const loaded = sessionStorage.getItem('modal-prompt')
+
+        if (!loaded) {
+            swal({
+                title: "Heads Up!",
+                text: "We are a mobile-only knife sharpening service. We come to you!",
+                icon: "warning",
+            })
+            sessionStorage.setItem('modal-prompt', true)
+        }
+
+    }
+
+
+
 </script>
