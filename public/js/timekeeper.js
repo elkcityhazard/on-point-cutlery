@@ -49,7 +49,9 @@ function showCountDown(future) {
     }
 
     if (new Date(Date.now()).getDay()  == 0 || new Date(Date.now()).getDay() == 6) {
-        return null
+        var weekend = 2
+    } else {
+        var weekend = 0
     }
 
     if (Date.now() > future) {
@@ -88,7 +90,7 @@ function showCountDown(future) {
     }
 };
 
-const rand = Math.random() * 3 + 1
+const rand = Math.random() * 3 + 1 + weekend
 
 
 const future = Date.now() + (1000 * 24 * 60 * 60) *  rand
