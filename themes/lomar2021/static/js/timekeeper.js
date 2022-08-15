@@ -42,6 +42,8 @@ function DateCountdown(future) {
 
 function showCountDown(future) {
 
+    let weekend
+
 
     if (views) {
         document.querySelector('.min-price').style.display = 'none';
@@ -49,9 +51,9 @@ function showCountDown(future) {
     }
 
     if (new Date(Date.now()).getDay()  == 0 || new Date(Date.now()).getDay() == 6) {
-        var weekend = 2
+        weekend = 2
     } else {
-        var weekend = 0
+        weekend = 0
     }
 
     if (Date.now() > future) {
