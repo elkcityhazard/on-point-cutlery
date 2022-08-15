@@ -1,6 +1,6 @@
 <style type="text/css">
 	.min-price {
-		max-height: 100vh;
+		height: 0;
 		opacity: 0;
 		overflow-y: auto;
 		transition: all 0.75s ease 500ms;
@@ -20,7 +20,10 @@
 		place-items: center;
 		height: 40px;
 		width: 40px;
-		margin: 10px;
+		margin: 0px;
+		margin-left: 5px;
+		margin-right: 5px;
+		position: relative;
 		transition: all 500ms ease;
 		-webkit-transition: all 500ms ease;
 		font-weight: 700;
@@ -38,6 +41,7 @@
 	}
 
 	.fade-in {
+		height: auto;
 		opacity: 1;
 	}
 </style>
@@ -50,7 +54,7 @@
 	</div>
 	<div class="row">
 		<div class="col-12 col-lg-9 col-xl-6 mx-auto text-center text-uppercase">
-			<p class="text-white d-flex flex-column flex-sm-column flex-md-row justify-content-center align-items-center">
+			<p class="text-white d-flex flex-row justify-content-center align-items-center">
 				<span class="day"></span> Days <span class="hour"></span> Hours <span class="minute"></span> Minutes
 				<span class="promo-second"></span> Seconds </p>
 			<p class="lead p-3 text-info"><strong class="text-uppercase text-light">Minimum Price Notice: </strong>Until
