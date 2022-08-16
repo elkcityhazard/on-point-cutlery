@@ -39,10 +39,9 @@ function DateCountdown(future) {
 
 //	@variable date
 //	@typeof String
+let weekend 
 
 function showCountDown(future) {
-
-    let weekend
 
 
     if (views) {
