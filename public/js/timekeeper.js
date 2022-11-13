@@ -37,22 +37,41 @@ function DateCountdown(future) {
         }
 };
 
-//	@variable date
-//	@typeof String
-let weekend 
-
-function showCountDown(future) {
 
 
-    if (views) {
-        document.querySelector('.min-price').style.display = 'none';
-        return null;
-    }
+
+function ReturnFutureDate() {
+
+    let weekend
 
     if (new Date(Date.now()).getDay()  == 0 || new Date(Date.now()).getDay() == 6) {
         weekend = 2
     } else {
         weekend = 0
+    }
+
+    //	@variable date
+//	@typeof String
+
+const rand = Math.random() * 3 + 1 + weekend
+
+
+const future = Date.now() + (1000 * 24 * 60 * 60) *  rand
+
+
+return future
+
+}
+
+const future = ReturnFutureDate()
+
+function showCountDown(future) {
+
+
+
+    if (views !== null) {
+        document.querySelector('.min-price').style.display = 'none';
+        return
     }
 
     if (Date.now() > future) {
@@ -68,7 +87,8 @@ function showCountDown(future) {
             const date = new DateCountdown(future)
             const arr = [d, h, m, s]
 
-            document.querySelector('.min-price').classList.add('fade-in')
+            const banner = document.querySelector('.min-price')
+            banner.classList.add('fade-in')
 
             for (let i of arr) {
                 i.addEventListener('click', (e) => {
@@ -82,21 +102,14 @@ function showCountDown(future) {
             s.textContent = date.seconds();
 
             if (date.difference() <= 0) {
-                cost.textContent = "$50"
+                cost.textContent = "$60"
             } else {
-                cost.textContent = "$40"
+                cost.textContent = "$50"
             }
 
         }, 1000);
     }
 };
-
-const rand = Math.random() * 3 + 1 + weekend
-
-
-const future = Date.now() + (1000 * 24 * 60 * 60) *  rand
-
-
 
 
 showCountDown(future);
