@@ -134,6 +134,8 @@
             <h2 id="serving-traverse-city-and-surrounding-areas-since-2013">Serving Traverse City and Surrounding Areas Since 2013</h2>
 <p>On Point Cutlery was established in 2013 by Kevin Sloan.  Located in beautiful Traverse City, Michigan, On Point Cutlery services restaurant and home kitchens in Northern Lower Michigan. Kevin has a passion for ensuring that your edges are restored professionally and by removing as little materials as possible from your cutlery and tools.  On Point Cutlery is a self-contained mobile solution for ensuring your business or home kitchen as the safest, sharpest knives possible.</p>
 
+
+          <div id="confirmation"></div>
         </main>
         <aside class="col-12 col-lg-4 mx-auto pt-5">
             <section class="contact-us">
@@ -196,17 +198,46 @@
                 
                 
                 
-                
-                <div class="row">
-                    <div class="col-12">
-
-                    </div>
                 </div>
             </section>
         </aside>
     </div>
 </div>
 
+<style>
+#confirmation {
+  line-height: 1.5;
+  font-size: 3rem;
+  font-weight: 600;
+  text-align: center;
+  margin: 1em auto;
+}
+</style>
+
+
+
+<script defer>
+
+(function(){
+
+  document.addEventListener("DOMContentLoaded", (e) => {
+
+const confirmation = document.getElementById("confirmation")
+
+    console.log(confirmation)
+
+  if (!confirmation || typeof confirmation === "undefined") return null
+const confMsg = window.confirm("Hey, thanks for contacting us!  Just a quick reminder: our minimum service fee is $50USD.  Do you understand?")
+
+    confMsg ? 
+      confirmation.innerText = "Thank you for confirming"  : 
+      confirmation.innerText = "Heads Up!!! Our minimum service fee is $50 USD.  Thank you. " 
+})
+})
+()
+
+
+</script>
 
 
     </div>

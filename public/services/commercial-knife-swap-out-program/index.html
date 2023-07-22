@@ -169,6 +169,8 @@
 <h3 id="professional-knife-services">Professional Knife Services</h3>
 <p>On Point Cutlery has been in business since 2013 offering professional commercial knife services.  Our restaurant knife service will keep your knifes sharp and your costs low.  We are a knife sharpening company based in Traverse City, Michigan and we offer a variety of knife rental services to fit your needs.</p>
 
+
+          <div id="confirmation"></div>
         </main>
         <aside class="col-12 col-lg-4 mx-auto pt-5">
             <section class="contact-us">
@@ -240,17 +242,46 @@
                 </ul>
                 
                 
-                
-                <div class="row">
-                    <div class="col-12">
-
-                    </div>
                 </div>
             </section>
         </aside>
     </div>
 </div>
 
+<style>
+#confirmation {
+  line-height: 1.5;
+  font-size: 3rem;
+  font-weight: 600;
+  text-align: center;
+  margin: 1em auto;
+}
+</style>
+
+
+
+<script defer>
+
+(function(){
+
+  document.addEventListener("DOMContentLoaded", (e) => {
+
+const confirmation = document.getElementById("confirmation")
+
+    console.log(confirmation)
+
+  if (!confirmation || typeof confirmation === "undefined") return null
+const confMsg = window.confirm("Hey, thanks for contacting us!  Just a quick reminder: our minimum service fee is $50USD.  Do you understand?")
+
+    confMsg ? 
+      confirmation.innerText = "Thank you for confirming"  : 
+      confirmation.innerText = "Heads Up!!! Our minimum service fee is $50 USD.  Thank you. " 
+})
+})
+()
+
+
+</script>
 
 
     </div>

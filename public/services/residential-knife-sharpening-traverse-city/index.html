@@ -137,6 +137,8 @@
 <h3 id="traverse-city-residential-knife-sharpening">Traverse City Residential Knife Sharpening</h3>
 <p>Do not waste time transporting your tools and leaving them for days at a shop.  We come to your house and sharpen your knives on premise.   You will have your knives and tools sharpened that day and returned to you.  We service most of Northern Lower Michigan.  Take a look below to see our service area. If you do not see your service area listed, give us a call and we will do our best to come and sharpen your knives.  We look forward to saving your time, money, and effort and giving you an exceptionally sharpened tool that is returned to you in a new or better condition.  Get started today <a href="tel:+12316761314">call now</a>.</p>
 
+
+          <div id="confirmation"></div>
         </main>
         <aside class="col-12 col-lg-4 mx-auto pt-5">
             <section class="contact-us">
@@ -199,17 +201,46 @@
                 
                 
                 
-                
-                <div class="row">
-                    <div class="col-12">
-
-                    </div>
                 </div>
             </section>
         </aside>
     </div>
 </div>
 
+<style>
+#confirmation {
+  line-height: 1.5;
+  font-size: 3rem;
+  font-weight: 600;
+  text-align: center;
+  margin: 1em auto;
+}
+</style>
+
+
+
+<script defer>
+
+(function(){
+
+  document.addEventListener("DOMContentLoaded", (e) => {
+
+const confirmation = document.getElementById("confirmation")
+
+    console.log(confirmation)
+
+  if (!confirmation || typeof confirmation === "undefined") return null
+const confMsg = window.confirm("Hey, thanks for contacting us!  Just a quick reminder: our minimum service fee is $50USD.  Do you understand?")
+
+    confMsg ? 
+      confirmation.innerText = "Thank you for confirming"  : 
+      confirmation.innerText = "Heads Up!!! Our minimum service fee is $50 USD.  Thank you. " 
+})
+})
+()
+
+
+</script>
 
 
     </div>
